@@ -5,8 +5,8 @@ export default function Logo({ className = "h-12" }: { className?: string }) {
     <Image
       src="/logo.png"
       alt="Disintox - Let the Dis-Infect Begin"
-      width={231}
-      height={116}
+      width={130}
+      height={175}
       className={className}
       priority
     />
