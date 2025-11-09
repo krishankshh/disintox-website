@@ -1,5 +1,7 @@
 'use client';
 
+import ScrollReveal from '../animations/ScrollReveal';
+
 const features = [
   {
     icon: (
@@ -88,44 +90,62 @@ const features = [
 
 export default function USPSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-            Why Choose Disintox<sup className="text-2xl">®</sup>?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the unique advantages of Chlorine Dioxide ClO₂ technology
-          </p>
-        </div>
+    <section className="py-24 bg-gradient-to-b from-white to-clinical-gray-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red-100 rounded-full blur-3xl opacity-20 animate-float-slow"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-green-100 rounded-full blur-3xl opacity-20 animate-float"></div>
 
-        {/* Features Grid - Clean Layout matching PDF */}
-        <div className="space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Section Header */}
+        <ScrollReveal direction="up">
+          <div className="text-center mb-20">
+            <h2 className="section-title">
+              Why Choose <span className="gradient-text">Disintox<sup className="text-3xl">®</sup></span>?
+            </h2>
+            <p className="section-subtitle">
+              Discover the unique advantages of Chlorine Dioxide ClO₂ technology
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Features Grid with staggered animations */}
+        <div className="space-y-8">
           {features.map((feature, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-start gap-6 group">
-              {/* Red Circle Icon - matching PDF style */}
-              <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
+            <ScrollReveal
+              key={index}
+              direction={index % 2 === 0 ? 'left' : 'right'}
+              delay={index * 100}
+            >
+              <div className="flex flex-col md:flex-row items-start gap-8 group p-6 rounded-2xl hover:bg-white hover:shadow-card-hover transition-all duration-300">
+                {/* Icon with enhanced effects */}
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 bg-gradient-hero rounded-full flex items-center justify-center shadow-lg hover-lift group-hover:shadow-xl-colored transition-all duration-300 relative">
+                    {feature.icon}
+                    {/* Glow effect */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-hero opacity-0 group-hover:opacity-50 blur-xl transition-opacity duration-300"></div>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1 pt-2">
+                  <h3 className="text-2xl font-bold text-clinical-gray-900 mb-3 leading-tight group-hover:text-brand-red-600 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-lg text-clinical-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="flex-1 pt-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        {/* Bottom Green Bar - matching PDF */}
-        <div className="mt-16 h-2 bg-green-600 rounded-full"></div>
+        {/* Bottom accent bar with gradient */}
+        <ScrollReveal direction="up" delay={800}>
+          <div className="mt-20 h-3 bg-gradient-green rounded-full shadow-glow-green relative overflow-hidden">
+            <div className="absolute inset-0 bg-shimmer animate-shimmer"></div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
