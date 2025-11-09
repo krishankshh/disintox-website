@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center bg-white">
@@ -72,25 +74,13 @@ export default function Hero() {
 
                   {/* Logo */}
                   <div className="bg-white p-4 rounded-lg">
-                    <div className="flex flex-col items-center">
-                      <div className="flex items-baseline space-x-0.5">
-                        <span className="font-bold text-xl text-gray-700">DIS</span>
-                        <span className="text-[6px] align-super text-gray-500">®</span>
-                        <span className="font-bold text-xl">
-                          <span className="text-red-600">I</span>
-                          <span className="text-green-600">N</span>
-                          <span className="text-red-600">T</span>
-                          <span className="relative inline-block">
-                            <span className="text-gray-700">O</span>
-                            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-green-500 rounded-full -z-10"></span>
-                          </span>
-                          <span className="text-gray-700">X</span>
-                        </span>
-                      </div>
-                      <p className="text-[8px] font-medium text-gray-600 tracking-wide mt-0.5 uppercase">
-                        LET THE DIS-INFECT BEGIN
-                      </p>
-                    </div>
+                    <Image
+                      src="/logo.png"
+                      alt="Disintox Logo"
+                      width={150}
+                      height={75}
+                      className="mx-auto"
+                    />
                   </div>
 
                   {/* Bottom approval badges */}
