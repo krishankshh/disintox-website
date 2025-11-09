@@ -30,7 +30,7 @@ export default function DemoForm() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error) {
+    } catch {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -52,7 +52,7 @@ export default function DemoForm() {
 
           {submitStatus === 'success' && (
             <div className="mb-6 p-4 bg-chlorine-50 border border-chlorine-200 rounded-lg text-chlorine-800">
-              Thank you for your interest! We'll contact you within 48 hours to schedule your demonstration.
+              Thank you for your interest! We&apos;ll contact you within 48 hours to schedule your demonstration.
             </div>
           )}
 
