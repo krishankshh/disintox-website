@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Disintox® - Clinical Disinfection Website
 
-## Getting Started
+Production-ready marketing website for Disinfect Sales & Marketing LLP — Disintox® (Chlorine Dioxide tablets & gel).
 
-First, run the development server:
+## 🎯 Project Overview
 
+A modern, clinical, and authoritative marketing website designed to convert hospitals, healthcare procurement officers, and government buyers to request product demonstrations.
+
+**Tech Stack:**
+- Next.js 15 (App Router) with TypeScript
+- Tailwind CSS for styling
+- Sanity CMS ready for content management
+- React Hook Form for form handling
+- Vercel deployment ready
+
+## 🚀 Quick Start
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Set up environment variables:
+```bash
+cp .env.local.example .env.local
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-## Learn More
+## 🎨 Design Features
 
-To learn more about Next.js, take a look at the following resources:
+- **Clinical & Authoritative Design** - Clean white + muted blues/teals with chlorine-green accent
+- **Responsive** - Works beautifully on desktop, tablet, and mobile
+- **Animations** - Subtle micro-animations and molecule motifs
+- **Accessibility** - Keyboard navigation and screen reader support
+- **SEO Optimized** - Comprehensive meta tags and structured data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deploy to Vercel
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npx vercel
+```
 
-## Deploy on Vercel
+Add environment variables in Vercel dashboard, then deploy to production.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📞 Support
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: customercare@dis-infect.in
+- Phone: +91 7045 66 44 66
+- Website: www.dis-infect.in
+
+© 2024 Disinfect Sales & Marketing LLP. All rights reserved.
