@@ -1,15 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
-});
+// Fonts are now loaded via @import in globals.css to avoid build-time Google Fonts fetching issues
 
 export const metadata: Metadata = {
   title: "Disintox® - Clinical-Grade Chlorine Dioxide Disinfection for Healthcare",
@@ -31,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         <Header />
         <main className="min-h-screen pt-16">
           {children}
