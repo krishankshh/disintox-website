@@ -1,131 +1,157 @@
 'use client';
 
-const features = [
+import ScrollReveal from '../animations/ScrollReveal';
+
+const bentoFeatures = [
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.87-.96-7-5.17-7-9V8.3l7-3.5 7 3.5V11c0 3.83-3.13 8.04-7 9z"/>
-        <circle cx="12" cy="12" r="3"/>
-      </svg>
-    ),
-    title: 'ClO₂ is a most versatile molecule',
-    description: 'effective in Liquid, Solid & Gaseous State.'
+    size: 'large', // 2x2
+    icon: '🛡️',
+    title: '99.99% Pathogen Elimination',
+    description: 'Proven efficacy against bacteria, viruses, fungi, spores, and antibiotic-resistant strains including COVID-19, SARS-CoV-2, and MDRO.',
+    color: 'from-primary-500 to-primary-600'
   },
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-        <circle cx="12" cy="10" r="2" fill="white"/>
-        <circle cx="12" cy="14" r="2" fill="white"/>
-        <circle cx="12" cy="18" r="1.5" fill="white"/>
-      </svg>
-    ),
-    title: 'A broad spectrum microbial disinfectant',
-    description: 'effective on Virus, Bacteria, Fungus, Mold & Pathogens.'
+    size: 'normal',
+    icon: '⚡',
+    title: 'Fast-Acting Formula',
+    description: 'Rapid 3-4 hour fumigation vs conventional 12-14 hours.',
+    color: 'from-secondary-500 to-secondary-600'
   },
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-        <path fill="white" d="M13 9h-2v2h2V9zm0 4h-2v6h2v-6z"/>
-      </svg>
-    ),
-    title: 'ClO₂ is known for its fast-acting properties',
-    description: '& its eco-friendly nature.'
+    size: 'normal',
+    icon: '🌿',
+    title: 'Safe & Non-Toxic',
+    description: 'Non-corrosive, non-carcinogenic with no harmful residues.',
+    color: 'from-accent-500 to-accent-600'
   },
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10"/>
-        <path fill="white" stroke="white" strokeWidth="2" d="M9 12l2 2 4-4"/>
-      </svg>
-    ),
-    title: 'Superior Disinfection Efficacy',
-    description: 'Unlike traditional disinfectants, ClO₂ has a unique mode of action, targeting pathogens by disrupting their cell walls and enzymatic processes.'
+    size: 'wide', // 2x1
+    icon: '🏆',
+    title: 'Patented Technology',
+    description: 'Indian Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA across 5 countries.',
+    color: 'from-primary-600 to-secondary-600'
   },
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-        <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="2"/>
-      </svg>
-    ),
-    title: 'Safe for Hospital Use & Human Friendly',
-    description: 'In a healthcare environment, the necessity of prioritizing safety is paramount. Our tablets meticulously dispense ClO₂ with precision & stability.'
+    size: 'normal',
+    icon: '🧪',
+    title: 'Broad Spectrum',
+    description: 'Effective on smallest pathogens (0.124 nm) and across all states - liquid, solid & gas.',
+    color: 'from-primary-400 to-primary-500'
   },
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10"/>
-        <path fill="white" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"/>
-        <line x1="8" y1="12" x2="16" y2="12" stroke="red" strokeWidth="3"/>
-      </svg>
-    ),
-    title: 'Non-Corrosive & Non Carcinogenic',
-    description: 'Set your worries about potential harm to hospital surfaces and equipment aside. Our precise formulation ensures compatibility with an array of surfaces.'
+    size: 'normal',
+    icon: '💧',
+    title: 'Low Concentration',
+    description: 'Effective at 100 PPM vs 1000+ PPM for traditional disinfectants.',
+    color: 'from-secondary-400 to-secondary-500'
   },
   {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10"/>
-        <path fill="white" d="M9 10h6v1H9v-1zm0 3h6v1H9v-1zm0 3h4v1H9v-1z"/>
-      </svg>
-    ),
+    size: 'tall', // 1x2
+    icon: '🏥',
+    title: 'Hospital-Safe',
+    description: 'Meticulously formulated for precision & stability. Compatible with all hospital surfaces and equipment.',
+    color: 'from-accent-400 to-accent-500'
+  },
+  {
+    size: 'normal',
+    icon: '🌬️',
     title: 'Odor Control',
-    description: 'Chlorine Dioxide Disintox® is one of the strongest and safest odor removal chemicals. It releases a deep penetrating vapor when in contact with water.'
+    description: 'Deep penetrating vapor for complete odor elimination.',
+    color: 'from-primary-500 to-secondary-500'
   },
-  {
-    icon: (
-      <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
-        <path fill="white" d="M9 12l2 2 4-4" stroke="white" strokeWidth="1.5"/>
-      </svg>
-    ),
-    title: 'Convenient & Portable',
-    description: 'Experience the unparalleled convenience and portability of our tablets. They empower you to maintain top-notch infection control standards across your entire facility.'
-  }
 ];
 
 export default function USPSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-            Why Choose Disintox<sup className="text-2xl">®</sup>?
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the unique advantages of Chlorine Dioxide ClO₂ technology
-          </p>
-        </div>
+    <section className="py-32 bg-gradient-to-b from-white via-clinical-gray-50 to-white relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-20 animate-float-slow"></div>
+      <div className="absolute bottom-20 left-0 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-20 animate-float"></div>
 
-        {/* Features Grid - Clean Layout matching PDF */}
-        <div className="space-y-12">
-          {features.map((feature, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-start gap-6 group">
-              {/* Red Circle Icon - matching PDF style */}
-              <div className="flex-shrink-0">
-                <div className="w-24 h-24 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
+      <div className="max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 relative">
+        {/* Section Header */}
+        <ScrollReveal direction="up">
+          <div className="text-center mb-20 space-y-6">
+            <div className="inline-block bg-primary-50 border border-primary-200 rounded-full px-6 py-2">
+              <span className="text-primary-700 font-semibold text-sm">Why Choose Disintox®</span>
+            </div>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-clinical-gray-900 leading-tight">
+              The <span className="gradient-text-premium">Ultimate</span>
+              <br />Disinfection Solution
+            </h2>
+            <p className="text-2xl text-clinical-gray-600 max-w-3xl mx-auto font-light">
+              Discover the unique advantages of Chlorine Dioxide ClO₂ technology
+            </p>
+          </div>
+        </ScrollReveal>
+
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[280px]">
+          {bentoFeatures.map((feature, index) => (
+            <ScrollReveal
+              key={index}
+              direction={index % 2 === 0 ? 'left' : 'right'}
+              delay={index * 50}
+            >
+              <div className={`
+                bento-card group
+                ${feature.size === 'large' ? 'lg:col-span-2 lg:row-span-2' : ''}
+                ${feature.size === 'wide' ? 'md:col-span-2' : ''}
+                ${feature.size === 'tall' ? 'md:row-span-2' : ''}
+                bg-white relative overflow-hidden
+              `}>
+                {/* Gradient background on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+
+                {/* Content */}
+                <div className="relative z-10 h-full flex flex-col p-8">
+                  {/* Icon */}
+                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-500">
+                    {feature.icon}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-clinical-gray-900 mb-4 leading-tight group-hover:gradient-text transition-all duration-300">
+                    {feature.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="text-clinical-gray-600 leading-relaxed text-lg flex-grow">
+                    {feature.description}
+                  </p>
+
+                  {/* Decorative dot pattern */}
+                  <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="w-2 h-2 rounded-full bg-primary-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-secondary-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-secondary-400"></div>
+                      <div className="w-2 h-2 rounded-full bg-primary-400"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="flex-1 pt-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 leading-tight">
-                  {feature.title}
-                </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        {/* Bottom Green Bar - matching PDF */}
-        <div className="mt-16 h-2 bg-green-600 rounded-full"></div>
+        {/* Bottom CTA */}
+        <ScrollReveal direction="up" delay={400}>
+          <div className="mt-20 text-center">
+            <div className="inline-flex items-center gap-8 premium-card px-12 py-8">
+              <div>
+                <div className="text-5xl font-black gradient-text mb-2">1000+</div>
+                <div className="text-sm text-clinical-gray-600 font-medium">Healthcare Facilities Trust Us</div>
+              </div>
+              <div className="w-px h-16 bg-clinical-gray-200"></div>
+              <div>
+                <a href="#demo-form" className="btn-primary inline-block">
+                  Join Them Today →
+                </a>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

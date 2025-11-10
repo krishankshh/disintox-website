@@ -114,15 +114,17 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#demo-form"
-              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-clinical-gray-50 transition-all"
+              className="btn-primary group text-center"
             >
-              Request a Demo
+              <span className="relative z-10">Request a Demo</span>
+              <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>
             <a
               href="/products"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
+              className="btn-secondary group text-center"
             >
               View Products
+              <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
             </a>
           </div>
         </div>
