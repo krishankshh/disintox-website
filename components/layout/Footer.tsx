@@ -97,9 +97,9 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* KMATS Branding */}
-        <div className="mt-6 flex items-center justify-center gap-3 text-sm text-clinical-gray-400">
-          <span>Website and Digital Presence by</span>
+        {/* KMATS Branding - Responsive */}
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-clinical-gray-400 px-4">
+          <span className="text-center">Website and Digital Presence by</span>
           <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg">
             <Image
               src="/kmats_logo.png"
