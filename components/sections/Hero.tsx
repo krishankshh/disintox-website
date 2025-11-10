@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import FloatingParticles from '../animations/FloatingParticles';
+import CountUpNumber from '../animations/CountUpNumber';
 
 export default function Hero() {
   const scrollToDemo = () => {
@@ -10,175 +10,177 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center bg-white overflow-hidden">
-      {/* Red Background Section with animated gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-600 via-red-700 to-red-900">
-        {/* Floating Particles */}
-        <FloatingParticles />
+      {/* Animated Gradient Mesh Background */}
+      <div className="absolute inset-0 bg-gradient-mesh opacity-30"></div>
 
-        {/* Wavy White Overlay */}
-        <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 1200 800">
-          <path
-            d="M0,400 Q300,200 600,400 T1200,400 L1200,800 L0,800 Z"
-            fill="white"
-            opacity="0.1"
-          />
-          <path
-            d="M0,500 Q300,300 600,500 T1200,500 L1200,800 L0,800 Z"
-            fill="white"
-            opacity="0.15"
-          />
-        </svg>
-      </div>
+      {/* Grid Pattern Overlay */}
+      <div className="absolute inset-0" style={{
+        backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(14, 165, 233, 0.05) 1px, transparent 0)',
+        backgroundSize: '40px 40px'
+      }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content - Diamond Frame */}
-          <div className="relative animate-fade-in-left">
-            <div className="relative aspect-[3/4] max-w-md mx-auto hover-lift">
-              {/* White textured border */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 transform rotate-2"
-                   style={{clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'}}></div>
+      <div className="relative max-w-[1400px] mx-auto px-8 sm:px-12 lg:px-16 py-24 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-              {/* Inner content area */}
-              <div className="absolute inset-4 bg-gray-600 overflow-hidden"
-                   style={{clipPath: 'polygon(50% 2%, 98% 26%, 98% 74%, 50% 98%, 2% 74%, 2% 26%)'}}>
+          {/* LEFT: Content */}
+          <div className="space-y-10 animate-fade-in-left">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 bg-primary-50 border border-primary-200 rounded-full px-6 py-3 animate-fade-in-down">
+              <span className="w-2 h-2 bg-secondary-500 rounded-full animate-pulse"></span>
+              <span className="text-primary-700 font-semibold text-sm">Patented ClO₂ Technology</span>
+            </div>
 
-                <div className="w-full h-full bg-gray-700 flex flex-col items-center justify-center p-8 text-center relative">
-                  {/* ClO2 badge with pulse effect */}
-                  <div className="absolute top-4 right-4 animate-pulse-glow">
-                    <div className="bg-yellow-400 text-red-600 font-black text-lg px-4 py-2 rounded-full border-4 border-yellow-500 shadow-xl">
-                      ClO₂
-                    </div>
-                  </div>
+            {/* Main Headline - MUCH LARGER */}
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] text-clinical-gray-900">
+              Clinical-Grade
+              <br />
+              <span className="gradient-text-premium">Disinfection</span>
+              <br />
+              That Works
+            </h1>
 
-                  {/* Heading */}
-                  <div className="space-y-2 mb-6">
-                    <p className="text-yellow-400 text-sm font-semibold">
-                      Chlorine Dioxide (ClO₂) Disintox® Tablets
-                    </p>
-                    <p className="text-white text-lg font-light italic leading-relaxed">
-                      Empowering every<br />
-                      healthcare space<br />
-                      with the most necessary
-                    </p>
-                  </div>
+            {/* Subheadline */}
+            <p className="text-2xl md:text-3xl text-clinical-gray-600 leading-relaxed max-w-xl font-light">
+              Eliminate <span className="font-bold gradient-text">99.99%</span> of pathogens with
+              <span className="text-primary-600 font-semibold"> chlorine dioxide tablets</span> —
+              trusted by India's leading healthcare facilities
+            </p>
 
-                  {/* S.H.I.E.L.D. */}
-                  <div className="mb-6">
-                    <h2 className="text-yellow-400 text-5xl md:text-6xl font-black tracking-wider mb-2 animate-float">
-                      S.H.I.E.L.D.
-                    </h2>
-                    <p className="text-white text-xs leading-relaxed max-w-xs mx-auto">
-                      <span className="text-yellow-400 font-semibold">S</span>cience-driven{' '}
-                      <span className="text-yellow-400 font-semibold">H</span>ygiene{' '}
-                      <span className="text-yellow-400 font-semibold">I</span>nnovations for<br />
-                      <span className="text-yellow-400 font-semibold">E</span>ffective and{' '}
-                      <span className="text-yellow-400 font-semibold">L</span>ong-lasting{' '}
-                      <span className="text-yellow-400 font-semibold">D</span>isinfection
-                    </p>
-                  </div>
+            {/* Stats Row */}
+            <div className="grid grid-cols-3 gap-6 pt-4">
+              <div className="premium-card text-center">
+                <div className="text-5xl font-black gradient-text mb-2">
+                  <CountUpNumber end={99.99} decimals={2} suffix="%" />
+                </div>
+                <div className="text-sm text-clinical-gray-600 font-medium">Efficacy Rate</div>
+              </div>
+              <div className="premium-card text-center">
+                <div className="text-5xl font-black gradient-text mb-2">
+                  <CountUpNumber end={100} suffix="%" />
+                </div>
+                <div className="text-sm text-clinical-gray-600 font-medium">Non-Toxic</div>
+              </div>
+              <div className="premium-card text-center">
+                <div className="text-5xl font-black gradient-text mb-2">3-4h</div>
+                <div className="text-sm text-clinical-gray-600 font-medium">Fumigation</div>
+              </div>
+            </div>
 
-                  {/* Logo */}
-                  <div className="bg-white p-4 rounded-lg shadow-xl">
-                    <Image
-                      src="/logo.png"
-                      alt="Disintox Logo"
-                      width={150}
-                      height={75}
-                      className="mx-auto"
-                    />
-                  </div>
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-5 pt-4">
+              <button
+                onClick={scrollToDemo}
+                className="btn-primary group text-center"
+              >
+                <span className="relative z-10">Request Demo</span>
+                <span className="ml-3 inline-block transition-transform group-hover:translate-x-1 text-xl">→</span>
+              </button>
+              <a
+                href="/products"
+                className="btn-secondary group text-center"
+              >
+                View Products
+                <span className="ml-3 inline-block transition-transform group-hover:translate-x-1 text-xl">→</span>
+              </a>
+            </div>
 
-                  {/* Approval badges with hover effect */}
-                  <div className="absolute bottom-4 right-4 flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover-lift cursor-pointer">
-                      <span className="text-[8px] font-bold text-blue-600">WHO</span>
-                    </div>
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover-lift cursor-pointer">
-                      <span className="text-[8px] font-bold text-blue-600">EPA</span>
-                    </div>
-                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center hover-lift cursor-pointer">
-                      <span className="text-[8px] font-bold text-red-600">FDA</span>
-                    </div>
-                  </div>
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center gap-4 pt-6 border-t border-clinical-gray-200">
+              <span className="text-sm text-clinical-gray-500 font-medium">Approved by:</span>
+              <div className="flex items-center gap-4">
+                <div className="px-4 py-2 bg-white rounded-lg shadow-card hover-lift cursor-pointer border border-clinical-gray-100">
+                  <span className="text-primary-600 font-bold text-sm">WHO</span>
+                </div>
+                <div className="px-4 py-2 bg-white rounded-lg shadow-card hover-lift cursor-pointer border border-clinical-gray-100">
+                  <span className="text-primary-600 font-bold text-sm">US EPA</span>
+                </div>
+                <div className="px-4 py-2 bg-white rounded-lg shadow-card hover-lift cursor-pointer border border-clinical-gray-100">
+                  <span className="text-primary-600 font-bold text-sm">FDA</span>
+                </div>
+                <div className="px-4 py-2 bg-white rounded-lg shadow-card hover-lift cursor-pointer border border-clinical-gray-100">
+                  <span className="text-secondary-600 font-bold text-sm">ISO 9001</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT: Visual */}
+          <div className="relative animate-fade-in-right">
+            {/* Main Product Card with 3D Effect */}
+            <div className="card-3d bg-gradient-to-br from-primary-500 to-secondary-500 rounded-[3rem] p-12 shadow-3d relative overflow-hidden">
+              {/* Decorative Elements */}
+              <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-10 left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+
+              {/* Content */}
+              <div className="relative z-10 text-center text-white space-y-8">
+                {/* ClO₂ Badge */}
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-xl animate-pulse-glow">
+                  <span className="text-3xl font-black gradient-text">ClO₂</span>
+                </div>
+
+                {/* Tagline */}
+                <div className="space-y-2">
+                  <p className="text-lg opacity-90 font-medium">Chlorine Dioxide Disintox® Tablets</p>
+                  <p className="text-2xl font-light italic opacity-95 leading-relaxed">
+                    Empowering healthcare<br />with science-driven hygiene
+                  </p>
+                </div>
+
+                {/* S.H.I.E.L.D. */}
+                <div className="space-y-4 py-8">
+                  <h2 className="text-7xl font-black tracking-wider animate-float drop-shadow-lg">
+                    S.H.I.E.L.D.
+                  </h2>
+                  <p className="text-sm leading-relaxed max-w-sm mx-auto opacity-90">
+                    <span className="font-bold">S</span>cience-driven{' '}
+                    <span className="font-bold">H</span>ygiene{' '}
+                    <span className="font-bold">I</span>nnovations for<br />
+                    <span className="font-bold">E</span>ffective and{' '}
+                    <span className="font-bold">L</span>ong-lasting{' '}
+                    <span className="font-bold">D</span>isinfection
+                  </p>
+                </div>
+
+                {/* Logo */}
+                <div className="inline-block bg-white px-8 py-6 rounded-2xl shadow-2xl">
+                  <Image
+                    src="/logo.png"
+                    alt="Disintox Logo"
+                    width={130}
+                    height={175}
+                    className="mx-auto"
+                  />
+                </div>
+
+                {/* Made in India */}
+                <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+                  <span className="font-bold text-white text-sm">🇮🇳 Made in India</span>
                 </div>
               </div>
             </div>
 
-            {/* Made in India badge */}
-            <div className="absolute bottom-4 left-4 bg-red-700 text-white px-3 py-1.5 rounded text-xs font-bold shadow-xl hover-lift cursor-pointer">
-              MADE IN INDIA
-            </div>
-          </div>
-
-          {/* Right Content - Text and CTA */}
-          <div className="text-white space-y-8 animate-fade-in-right">
-            <div className="space-y-6">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-tight animate-fade-in-up">
-                Advanced Hospital <span className="text-yellow-400">Disinfection</span>
-              </h1>
-              <p className="text-xl md:text-2xl font-light leading-relaxed text-red-100">
-                Chlorine Dioxide (ClO₂) tablets delivering{' '}
-                <span className="font-bold text-yellow-400 text-3xl gradient-text">99.99%</span>{' '}
-                pathogen elimination with zero toxicity
-              </p>
+            {/* Floating Info Cards */}
+            <div className="absolute -left-8 top-1/4 premium-card w-48 animate-float">
+              <div className="text-4xl font-black gradient-text mb-1">386338</div>
+              <div className="text-xs text-clinical-gray-600 font-medium">Patent Number</div>
             </div>
 
-            {/* Key benefits with glassmorphism */}
-            <div className="grid grid-cols-2 gap-4 py-6">
-              <div className="glass p-6 rounded-2xl border border-white/20 card-interactive">
-                <div className="text-4xl font-black text-yellow-400 mb-2">99.99%</div>
-                <div className="text-sm text-red-100">Efficacy Rate</div>
-              </div>
-              <div className="glass p-6 rounded-2xl border border-white/20 card-interactive">
-                <div className="text-4xl font-black text-yellow-400 mb-2">100%</div>
-                <div className="text-sm text-red-100">Non-Toxic</div>
-              </div>
-              <div className="glass p-6 rounded-2xl border border-white/20 card-interactive">
-                <div className="text-4xl font-black text-yellow-400 mb-2">EPA</div>
-                <div className="text-sm text-red-100">Approved</div>
-              </div>
-              <div className="glass p-6 rounded-2xl border border-white/20 card-interactive">
-                <div className="text-4xl font-black text-yellow-400 mb-2">WHO</div>
-                <div className="text-sm text-red-100">Recognized</div>
-              </div>
-            </div>
-
-            {/* Enhanced CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={scrollToDemo}
-                className="btn-primary group"
-              >
-                <span className="relative z-10">Request Demo</span>
-                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
-              </button>
-              <button className="btn-secondary group">
-                Download Brochure
-                <span className="ml-2 inline-block transition-transform group-hover:translate-y-1">↓</span>
-              </button>
-            </div>
-
-            {/* Trust indicators with badge pulse */}
-            <div className="flex flex-wrap gap-3 pt-4">
-              <div className="glass px-6 py-3 rounded-full text-sm font-semibold border border-white/20 hover-lift badge-pulse">
-                ✓ Patent #386338
-              </div>
-              <div className="glass px-6 py-3 rounded-full text-sm font-semibold border border-white/20 hover-lift">
-                ✓ EDL Maharashtra
-              </div>
-              <div className="glass px-6 py-3 rounded-full text-sm font-semibold border border-white/20 hover-lift">
-                ✓ ISO Certified
-              </div>
+            <div className="absolute -right-8 bottom-1/4 premium-card w-48 animate-float-slow">
+              <div className="text-4xl font-black gradient-text mb-1">1000+</div>
+              <div className="text-xs text-clinical-gray-600 font-medium">Hospitals Served</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full p-1">
-          <div className="w-1 h-3 bg-white rounded-full mx-auto animate-pulse"></div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-sm text-clinical-gray-500 font-medium">Scroll to explore</span>
+          <div className="w-6 h-10 border-2 border-primary-300 rounded-full p-1">
+            <div className="w-1 h-3 bg-primary-500 rounded-full mx-auto animate-pulse"></div>
+          </div>
         </div>
       </div>
     </section>

@@ -23,15 +23,15 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-clinical-gray-700 hover:text-brand-red-600 transition-colors font-semibold text-sm relative group"
+                className="text-clinical-gray-700 hover:text-primary-600 transition-colors font-semibold text-sm relative group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-red-600 transition-all group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-hero transition-all group-hover:w-full"></span>
               </Link>
             ))}
-            <button className="bg-gradient-hero text-white px-6 py-2.5 rounded-lg font-bold hover:shadow-xl transition-all transform hover:scale-105">
+            <a href="#demo-form" className="bg-gradient-hero text-white px-6 py-3 rounded-xl font-bold hover:shadow-glow-blue hover:scale-105 transition-all">
               Request Demo
-            </button>
+            </a>
           </nav>
 
           {/* Mobile menu button */}

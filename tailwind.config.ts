@@ -9,7 +9,41 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Disintox brand colors from PDF
+        // NEW: Premium Medical Color Scheme
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9', // Main clinical blue
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+        },
+        secondary: {
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          200: '#bbf7d0',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#10b981', // Efficacy green
+          600: '#059669',
+          700: '#047857',
+          800: '#065f46',
+          900: '#064e3b',
+        },
+        accent: {
+          50: '#fef3c7',
+          100: '#fde68a',
+          200: '#fcd34d',
+          300: '#fbbf24',
+          400: '#f59e0b',
+          500: '#d97706', // Warm accent
+          600: '#b45309',
+        },
+        // Legacy colors (keeping for gradual transition)
         brand: {
           red: {
             50: '#fef2f2',
@@ -17,7 +51,7 @@ const config: Config = {
             200: '#fecaca',
             300: '#fca5a5',
             400: '#f87171',
-            500: '#dc2626', // Primary brand red
+            500: '#dc2626',
             600: '#c81e1e',
             700: '#b91c1c',
             800: '#991b1b',
@@ -29,7 +63,7 @@ const config: Config = {
             200: '#bbf7d0',
             300: '#86efac',
             400: '#4ade80',
-            500: '#22c55e', // Chlorine green
+            500: '#22c55e',
             600: '#16a34a',
             700: '#15803d',
             800: '#166534',
@@ -64,9 +98,6 @@ const config: Config = {
         navy: {
           500: '#1e3a8a',
           600: '#1e40af',
-        },
-        blue: {
-          400: '#60a5fa',
         },
       },
       fontFamily: {
@@ -177,20 +208,29 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-clinical': 'linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)',
-        'gradient-hero': 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)',
-        'gradient-brand': 'linear-gradient(135deg, #dc2626 0%, #22c55e 100%)',
-        'gradient-green': 'linear-gradient(135deg, #22c55e 0%, #15803d 100%)',
-        'gradient-mesh': 'radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 1) 0px, transparent 0%), radial-gradient(at 97% 21%, hsla(125, 98%, 72%, 1) 0px, transparent 50%), radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 1) 0px, transparent 50%), radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 1) 0px, transparent 50%), radial-gradient(at 97% 96%, hsla(38, 60%, 74%, 1) 0px, transparent 50%), radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 1) 0px, transparent 50%), radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%)',
+        // NEW: Modern Medical Gradients
+        'gradient-hero': 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)', // Blue gradient
+        'gradient-hero-alt': 'linear-gradient(135deg, #0ea5e9 0%, #10b981 50%, #0ea5e9 100%)', // Blue-Green
+        'gradient-brand': 'linear-gradient(135deg, #0ea5e9 0%, #10b981 100%)', // Blue to Green
+        'gradient-green': 'linear-gradient(135deg, #10b981 0%, #047857 100%)',
+        'gradient-premium': 'linear-gradient(135deg, #0c4a6e 0%, #0ea5e9 50%, #10b981 100%)',
+        'gradient-mesh': 'radial-gradient(at 20% 30%, hsla(197, 100%, 63%, 0.5) 0px, transparent 50%), radial-gradient(at 80% 70%, hsla(158, 84%, 57%, 0.4) 0px, transparent 50%), radial-gradient(at 50% 50%, hsla(197, 100%, 80%, 0.3) 0px, transparent 50%), radial-gradient(at 10% 90%, hsla(158, 100%, 80%, 0.3) 0px, transparent 50%)',
         'shimmer': 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent)',
+        // Legacy (keeping for compatibility)
+        'gradient-hero-red': 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)',
+        'gradient-brand-red': 'linear-gradient(135deg, #dc2626 0%, #22c55e 100%)',
       },
       boxShadow: {
         'clinical': '0 4px 20px rgba(14, 165, 233, 0.1)',
         'card': '0 2px 10px rgba(0, 0, 0, 0.05)',
         'card-hover': '0 10px 40px rgba(0, 0, 0, 0.15)',
+        'card-premium': '0 20px 60px -15px rgba(14, 165, 233, 0.4)',
+        'glow-blue': '0 0 40px rgba(14, 165, 233, 0.6)',
+        'glow-green': '0 0 40px rgba(16, 185, 129, 0.6)',
         'glow-red': '0 0 20px rgba(220, 38, 38, 0.5)',
-        'glow-green': '0 0 20px rgba(34, 197, 94, 0.5)',
-        'xl-colored': '0 20px 50px rgba(220, 38, 38, 0.3)',
+        'xl-colored': '0 20px 50px rgba(14, 165, 233, 0.3)',
         'inner-glow': 'inset 0 0 20px rgba(255, 255, 255, 0.2)',
+        '3d': '0 20px 60px -10px rgba(0, 0, 0, 0.3), 0 0 1px rgba(0, 0, 0, 0.1)',
       },
       backdropBlur: {
         xs: '2px',
@@ -202,6 +242,13 @@ const config: Config = {
         '18': '4.5rem',
         '112': '28rem',
         '128': '32rem',
+        '144': '36rem',
+        '160': '40rem',
+      },
+      fontSize: {
+        '8xl': ['6rem', { lineHeight: '1' }],
+        '9xl': ['8rem', { lineHeight: '1' }],
+        '10xl': ['10rem', { lineHeight: '1' }],
       },
       transitionTimingFunction: {
         'bounce-in': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
