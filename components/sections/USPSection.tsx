@@ -85,8 +85,8 @@ export default function USPSection() {
           </div>
         </ScrollReveal>
 
-        {/* Bento Grid - Responsive */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 auto-rows-auto lg:auto-rows-[280px]">
+        {/* Bento Grid - Responsive, no overlaps */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {bentoFeatures.map((feature, index) => (
             <ScrollReveal
               key={index}
@@ -95,10 +95,10 @@ export default function USPSection() {
             >
               <div className={`
                 bento-card group
-                ${feature.size === 'large' ? 'lg:col-span-2 lg:row-span-2' : ''}
+                ${feature.size === 'large' ? 'md:col-span-2 lg:col-span-2' : ''}
                 ${feature.size === 'wide' ? 'md:col-span-2' : ''}
-                ${feature.size === 'tall' ? 'md:row-span-2' : ''}
-                bg-white relative overflow-hidden min-h-[240px]
+                ${feature.size === 'tall' ? 'md:col-span-1 lg:col-span-1' : ''}
+                bg-white relative overflow-hidden min-h-[280px]
               `}>
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>

@@ -110,32 +110,32 @@ export default function Hero() {
           {/* RIGHT: Visual */}
           <div className="relative animate-fade-in-right mt-12 lg:mt-0">
             {/* Main Product Card with 3D Effect */}
-            <div className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl sm:rounded-3xl lg:rounded-[3rem] p-8 sm:p-10 lg:p-12 shadow-3d relative overflow-hidden mx-auto max-w-lg lg:max-w-none">
+            <div className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-3d relative overflow-hidden mx-auto max-w-md lg:max-w-lg">
               {/* Decorative Elements */}
               <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-10 left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
 
               {/* Content */}
-              <div className="relative z-10 text-center text-white space-y-6 sm:space-y-8">
+              <div className="relative z-10 text-center text-white space-y-4 sm:space-y-6">
                 {/* ClO₂ Badge */}
-                <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-xl sm:rounded-2xl shadow-xl animate-pulse-glow">
-                  <span className="text-2xl sm:text-3xl font-black gradient-text">ClO₂</span>
+                <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white rounded-xl shadow-xl animate-pulse-glow">
+                  <span className="text-xl sm:text-2xl font-black gradient-text">ClO₂</span>
                 </div>
 
                 {/* Tagline */}
-                <div className="space-y-2">
-                  <p className="text-base sm:text-lg opacity-90 font-medium">Chlorine Dioxide Disintox® Tablets</p>
-                  <p className="text-xl sm:text-2xl font-light italic opacity-95 leading-relaxed">
+                <div className="space-y-1 sm:space-y-2">
+                  <p className="text-sm sm:text-base opacity-90 font-medium">Chlorine Dioxide Disintox® Tablets</p>
+                  <p className="text-lg sm:text-xl font-light italic opacity-95 leading-relaxed">
                     Empowering healthcare<br />with science-driven hygiene
                   </p>
                 </div>
 
                 {/* S.H.I.E.L.D. */}
-                <div className="space-y-3 sm:space-y-4 py-6 sm:py-8">
-                  <h2 className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-wider animate-float drop-shadow-lg">
+                <div className="space-y-2 sm:space-y-3 py-4 sm:py-6">
+                  <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-wider animate-float drop-shadow-lg">
                     S.H.I.E.L.D.
                   </h2>
-                  <p className="text-xs sm:text-sm leading-relaxed max-w-xs sm:max-w-sm mx-auto opacity-90">
+                  <p className="text-xs leading-relaxed max-w-xs mx-auto opacity-90 px-2">
                     <span className="font-bold">S</span>cience-driven{' '}
                     <span className="font-bold">H</span>ygiene{' '}
                     <span className="font-bold">I</span>nnovations for<br />
@@ -146,44 +146,32 @@ export default function Hero() {
                 </div>
 
                 {/* Logo */}
-                <div className="inline-block bg-white px-6 sm:px-8 py-4 sm:py-6 rounded-xl sm:rounded-2xl shadow-2xl">
+                <div className="inline-block bg-white px-4 sm:px-6 py-3 sm:py-4 rounded-xl shadow-2xl">
                   <Image
                     src="/logo.png"
                     alt="Disintox Logo"
-                    width={100}
-                    height={135}
-                    className="mx-auto sm:w-[130px] sm:h-[175px]"
+                    width={90}
+                    height={120}
+                    className="mx-auto sm:w-[110px] sm:h-[148px]"
                   />
                 </div>
 
                 {/* Made in India */}
-                <div className="inline-block bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 sm:py-3 rounded-full">
-                  <span className="font-bold text-white text-xs sm:text-sm">🇮🇳 Made in India</span>
+                <div className="inline-block bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                  <span className="font-bold text-white text-xs">🇮🇳 Made in India</span>
                 </div>
               </div>
             </div>
 
-            {/* Floating Info Cards - Hidden on mobile/tablet, visible on large desktop */}
-            <div className="hidden xl:block absolute -left-8 top-1/4 premium-card w-48 animate-float z-20">
-              <div className="text-2xl font-black gradient-text mb-2">Patent #</div>
-              <div className="text-3xl font-black text-primary-600 mb-1">386338</div>
-              <div className="text-xs text-clinical-gray-600 font-medium">Indian Patent</div>
-            </div>
-
-            <div className="hidden xl:block absolute -right-8 bottom-1/4 premium-card w-48 animate-float-slow z-20">
-              <div className="text-4xl font-black gradient-text mb-2">1000+</div>
-              <div className="text-sm text-clinical-gray-700 font-semibold">Hospitals Served</div>
-            </div>
-
-            {/* Mobile/Tablet Info Cards - Stacked below gradient card */}
-            <div className="grid grid-cols-2 gap-4 mt-6 xl:hidden">
-              <div className="premium-card p-4 text-center">
-                <div className="text-xl sm:text-2xl font-black gradient-text mb-1">Patent #</div>
-                <div className="text-2xl sm:text-3xl font-black text-primary-600 mb-1">386338</div>
-                <div className="text-xs text-clinical-gray-600 font-medium">Indian Patent</div>
+            {/* Info Cards - Always stacked below gradient card */}
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6 max-w-md lg:max-w-lg mx-auto">
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-primary-100 text-center">
+                <div className="text-lg sm:text-xl font-black gradient-text mb-1">Patent #</div>
+                <div className="text-xl sm:text-2xl font-black text-primary-600">386338</div>
+                <div className="text-xs text-clinical-gray-600 font-medium mt-1">Indian Patent</div>
               </div>
-              <div className="premium-card p-4 text-center">
-                <div className="text-3xl sm:text-4xl font-black gradient-text mb-1">1000+</div>
+              <div className="bg-white rounded-xl p-3 sm:p-4 shadow-lg border border-secondary-100 text-center">
+                <div className="text-2xl sm:text-3xl font-black gradient-text mb-1">1000+</div>
                 <div className="text-xs sm:text-sm text-clinical-gray-700 font-semibold">Hospitals Served</div>
               </div>
             </div>
