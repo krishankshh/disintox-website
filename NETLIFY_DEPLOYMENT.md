@@ -20,7 +20,7 @@ Netlify should auto-detect Next.js settings, but verify:
 
 - **Base directory:** (leave empty)
 - **Build command:** `npm run build`
-- **Publish directory:** `.next`
+- **Publish directory:** (leave empty - let @netlify/plugin-nextjs handle it)
 - **Functions directory:** `netlify/functions`
 
 ### 3. Environment Variables
@@ -98,7 +98,7 @@ Once connected, every push to your main branch will auto-deploy:
 
 ### Build Fails
 - Check Netlify build logs
-- Verify Node version (should be 18)
+- Verify Node version (should be 20)
 - Ensure all dependencies in package.json
 
 ### Images Not Loading
