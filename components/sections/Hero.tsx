@@ -46,23 +46,26 @@ export default function Hero() {
               trusted by India's leading healthcare facilities
             </p>
 
-            {/* Stats Row */}
-            <div className="grid grid-cols-3 gap-6 pt-4">
-              <div className="premium-card text-center">
-                <div className="text-5xl font-black gradient-text mb-2">
+            {/* Stats Row - Enhanced Visibility */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 max-w-4xl">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-primary-100 hover:shadow-2xl hover:-translate-y-1 transition-all">
+                <div className="text-6xl md:text-7xl font-black text-primary-600 mb-3">
                   <CountUpNumber end={99.99} decimals={2} suffix="%" />
                 </div>
-                <div className="text-sm text-clinical-gray-600 font-medium">Efficacy Rate</div>
+                <div className="text-base font-bold text-clinical-gray-700 uppercase tracking-wide">Efficacy Rate</div>
+                <div className="text-xs text-clinical-gray-500 mt-1">Pathogen Elimination</div>
               </div>
-              <div className="premium-card text-center">
-                <div className="text-5xl font-black gradient-text mb-2">
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-secondary-100 hover:shadow-2xl hover:-translate-y-1 transition-all">
+                <div className="text-6xl md:text-7xl font-black text-secondary-600 mb-3">
                   <CountUpNumber end={100} suffix="%" />
                 </div>
-                <div className="text-sm text-clinical-gray-600 font-medium">Non-Toxic</div>
+                <div className="text-base font-bold text-clinical-gray-700 uppercase tracking-wide">Non-Toxic</div>
+                <div className="text-xs text-clinical-gray-500 mt-1">Safe for Humans</div>
               </div>
-              <div className="premium-card text-center">
-                <div className="text-5xl font-black gradient-text mb-2">3-4h</div>
-                <div className="text-sm text-clinical-gray-600 font-medium">Fumigation</div>
+              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-accent-100 hover:shadow-2xl hover:-translate-y-1 transition-all">
+                <div className="text-6xl md:text-7xl font-black text-accent-600 mb-3">3-4h</div>
+                <div className="text-base font-bold text-clinical-gray-700 uppercase tracking-wide">Fumigation</div>
+                <div className="text-xs text-clinical-gray-500 mt-1">vs 12-14h Traditional</div>
               </div>
             </div>
 
