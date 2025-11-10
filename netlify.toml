@@ -1,0 +1,68 @@
+# Netlify configuration for Next.js deployment
+
+[build]
+  # Build command
+  command = "npm run build"
+
+  # Publish directory (Next.js outputs to .next)
+  publish = ".next"
+
+  # Functions directory for API routes
+  functions = "netlify/functions"
+
+[build.environment]
+  # Node version
+  NODE_VERSION = "18"
+
+  # Next.js specific settings
+  NEXT_TELEMETRY_DISABLED = "1"
+
+  # Use system TLS certificates for font fetching
+  NEXT_TURBOPACK_EXPERIMENTAL_USE_SYSTEM_TLS_CERTS = "1"
+
+# Settings for Next.js on Netlify
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirects and rewrites
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Form handling
+[forms]
+  # Demo request form
+  [[forms.submissions]]
+    name = "demo-request"
+    action = "/thank-you"
+
+# Environment variables (add these in Netlify dashboard)
+# SENDGRID_API_KEY - for email notifications
+# SMTP_FROM - sender email address
+# CRM_WEBHOOK_URL - for CRM integration (optional)
