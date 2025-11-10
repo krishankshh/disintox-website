@@ -289,7 +289,7 @@ body {
   }
 
   .btn-secondary {
-    @apply border-3 border-primary-500 text-primary-600 px-10 py-5 rounded-2xl font-bold text-lg;
+    @apply border-2 border-primary-500 text-primary-600 px-10 py-5 rounded-2xl font-bold text-lg;
     @apply transition-all duration-300 ease-out bg-white;
     @apply hover:bg-gradient-hero hover:text-white hover:border-transparent hover:shadow-glow-blue hover:-translate-y-2;
     @apply active:translate-y-0;
