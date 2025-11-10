@@ -4,7 +4,7 @@ import ScrollReveal from '../animations/ScrollReveal';
 
 const bentoFeatures = [
   {
-    size: 'large', // 2x2
+    size: 'normal',
     icon: '🛡️',
     title: '99.99% Pathogen Elimination',
     description: 'Proven efficacy against bacteria, viruses, fungi, spores, and antibiotic-resistant strains including COVID-19, SARS-CoV-2, and MDRO.',
@@ -14,49 +14,49 @@ const bentoFeatures = [
     size: 'normal',
     icon: '⚡',
     title: 'Fast-Acting Formula',
-    description: 'Rapid 3-4 hour fumigation vs conventional 12-14 hours.',
+    description: 'Rapid 3-4 hour fumigation vs conventional 12-14 hours. Minimal disruption to operations.',
     color: 'from-secondary-500 to-secondary-600'
   },
   {
     size: 'normal',
     icon: '🌿',
     title: 'Safe & Non-Toxic',
-    description: 'Non-corrosive, non-carcinogenic with no harmful residues.',
+    description: 'Non-corrosive, non-carcinogenic with no harmful residues. Safe for patients, staff, and equipment.',
     color: 'from-accent-500 to-accent-600'
   },
   {
-    size: 'wide', // 2x1
+    size: 'normal',
     icon: '🏆',
     title: 'Patented Technology',
-    description: 'Indian Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA across 5 countries.',
+    description: 'Indian Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA.',
     color: 'from-primary-600 to-secondary-600'
   },
   {
     size: 'normal',
     icon: '🧪',
     title: 'Broad Spectrum',
-    description: 'Effective on smallest pathogens (0.124 nm) and across all states - liquid, solid & gas.',
+    description: 'Effective on smallest pathogens (0.124 nm) across all states - liquid, solid & gas.',
     color: 'from-primary-400 to-primary-500'
   },
   {
     size: 'normal',
     icon: '💧',
     title: 'Low Concentration',
-    description: 'Effective at 100 PPM vs 1000+ PPM for traditional disinfectants.',
+    description: 'Effective at 100 PPM vs 1000+ PPM for traditional disinfectants. More economical.',
     color: 'from-secondary-400 to-secondary-500'
   },
   {
-    size: 'tall', // 1x2
+    size: 'normal',
     icon: '🏥',
     title: 'Hospital-Safe',
-    description: 'Meticulously formulated for precision & stability. Compatible with all hospital surfaces and equipment.',
+    description: 'Meticulously formulated for precision & stability. Compatible with all hospital surfaces.',
     color: 'from-accent-400 to-accent-500'
   },
   {
     size: 'normal',
     icon: '🌬️',
     title: 'Odor Control',
-    description: 'Deep penetrating vapor for complete odor elimination.',
+    description: 'Deep penetrating vapor for complete odor elimination. Fresh, clean environment.',
     color: 'from-primary-500 to-secondary-500'
   },
 ];
@@ -85,7 +85,7 @@ export default function USPSection() {
           </div>
         </ScrollReveal>
 
-        {/* Bento Grid - Responsive, no overlaps */}
+        {/* Symmetric Grid - All cards same size */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {bentoFeatures.map((feature, index) => (
             <ScrollReveal
@@ -93,13 +93,7 @@ export default function USPSection() {
               direction={index % 2 === 0 ? 'left' : 'right'}
               delay={index * 50}
             >
-              <div className={`
-                bento-card group
-                ${feature.size === 'large' ? 'md:col-span-2 lg:col-span-2' : ''}
-                ${feature.size === 'wide' ? 'md:col-span-2' : ''}
-                ${feature.size === 'tall' ? 'md:col-span-1 lg:col-span-1' : ''}
-                bg-white relative overflow-hidden min-h-[280px]
-              `}>
+              <div className="bento-card group bg-white relative overflow-hidden min-h-[280px]">
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
 
