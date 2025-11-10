@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { LogoWithTagline } from '@/components/ui/Logo';
 import { COMPANY_INFO, NAVIGATION_LINKS } from '@/lib/constants';
 
@@ -94,6 +95,21 @@ export default function Footer() {
             <strong>Regulatory Compliance:</strong> Disintox® is manufactured under strict quality controls and
             complies with all applicable regulations. Always use as directed. For professional and institutional use only.
           </p>
+        </div>
+
+        {/* KMATS Branding */}
+        <div className="mt-6 flex items-center justify-center gap-3 text-sm text-clinical-gray-400">
+          <span>Website and Digital Presence by</span>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg">
+            <Image
+              src="/kmats_logo.png"
+              alt="KMATS"
+              width={32}
+              height={32}
+              className="object-contain"
+            />
+            <span className="font-bold text-clinical-gray-900">KMATS</span>
+          </div>
         </div>
       </div>
     </footer>
