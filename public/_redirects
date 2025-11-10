@@ -1,0 +1,7 @@
+# Netlify Redirects for Next.js SPA routing
+
+# API routes
+/api/*  /.netlify/functions/:splat  200
+
+# Handle client-side routing - redirect all to index
+/*    /index.html   200
