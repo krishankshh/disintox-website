@@ -150,9 +150,9 @@ export default function Hero() {
                   <Image
                     src="/logo.png"
                     alt="Disintox Logo"
-                    width={90}
+                    width={110}
                     height={120}
-                    className="mx-auto sm:w-[110px] sm:h-[148px]"
+                    className="mx-auto sm:w-[110px] sm:h-[70px]"
                   />
                 </div>
 
