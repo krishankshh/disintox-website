@@ -55,23 +55,23 @@ body {
     -webkit-backdrop-filter: blur(20px) saturate(180%);
   }
 
-  /* Gradient Text - Updated for Blue/Green */
+  /* Gradient Text - Red/Green Color Scheme */
   .gradient-text {
-    background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #22c55e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-text-hero {
-    background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-text-premium {
-    background: linear-gradient(135deg, #0c4a6e 0%, #0ea5e9 50%, #10b981 100%);
+    background: linear-gradient(135deg, #7f1d1d 0%, #dc2626 50%, #22c55e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -263,11 +263,11 @@ body {
     transform: scale(1);
   }
 
-  /* Button Enhancements - NEW Blue/Green Theme */
+  /* Button Enhancements - Red/Green Theme */
   .btn-primary {
     @apply bg-gradient-hero text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-card-premium;
     @apply transition-all duration-300 ease-out;
-    @apply hover:shadow-glow-blue hover:-translate-y-2 hover:scale-105;
+    @apply hover:shadow-glow-red hover:-translate-y-2 hover:scale-105;
     @apply active:translate-y-0 active:scale-100;
     position: relative;
     overflow: hidden;
@@ -291,7 +291,7 @@ body {
   .btn-secondary {
     @apply border-2 border-primary-500 text-primary-600 px-10 py-5 rounded-2xl font-bold text-lg;
     @apply transition-all duration-300 ease-out bg-white;
-    @apply hover:bg-gradient-hero hover:text-white hover:border-transparent hover:shadow-glow-blue hover:-translate-y-2;
+    @apply hover:bg-gradient-hero hover:text-white hover:border-transparent hover:shadow-glow-red hover:-translate-y-2;
     @apply active:translate-y-0;
   }
 
@@ -336,7 +336,7 @@ body {
     @apply bg-white rounded-3xl p-8 shadow-card-premium;
     @apply transition-all duration-500 ease-out;
     @apply hover:shadow-3d hover:-translate-y-3;
-    border: 1px solid rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(220, 38, 38, 0.1);
   }
 
   .bento-card {
@@ -364,7 +364,7 @@ body {
   .input-float-label input:focus ~ label,
   .input-float-label input:not(:placeholder-shown) ~ label {
     transform: translateY(-1.5rem) scale(0.85);
-    color: #0ea5e9;
+    color: #dc2626;
   }
 
   .input-float-label label {
@@ -378,7 +378,7 @@ body {
   /* Progress Bar */
   .progress-bar {
     height: 4px;
-    background: linear-gradient(90deg, #0ea5e9 0%, #10b981 100%);
+    background: linear-gradient(90deg, #dc2626 0%, #22c55e 100%);
     transform-origin: left;
     transition: transform 0.3s ease;
   }
