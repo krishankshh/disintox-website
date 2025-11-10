@@ -161,14 +161,15 @@ export default function Hero() {
             </div>
 
             {/* Floating Info Cards */}
-            <div className="absolute -left-8 top-1/4 premium-card w-48 animate-float">
-              <div className="text-4xl font-black gradient-text mb-1">386338</div>
-              <div className="text-xs text-clinical-gray-600 font-medium">Patent Number</div>
+            <div className="absolute left-0 top-1/4 premium-card w-56 animate-float z-20">
+              <div className="text-3xl font-black gradient-text mb-2">Patent #</div>
+              <div className="text-4xl font-black text-primary-600 mb-1">386338</div>
+              <div className="text-xs text-clinical-gray-600 font-medium">Indian Patent</div>
             </div>
 
-            <div className="absolute -right-8 bottom-1/4 premium-card w-48 animate-float-slow">
-              <div className="text-4xl font-black gradient-text mb-1">1000+</div>
-              <div className="text-xs text-clinical-gray-600 font-medium">Hospitals Served</div>
+            <div className="absolute right-0 bottom-1/4 premium-card w-56 animate-float-slow z-20">
+              <div className="text-5xl font-black gradient-text mb-2">1000+</div>
+              <div className="text-sm text-clinical-gray-700 font-semibold">Hospitals Served</div>
             </div>
           </div>
         </div>
