@@ -4,8 +4,8 @@
   # Build command
   command = "npm run build"
 
-  # Publish directory (Next.js outputs to .next)
-  publish = ".next"
+  # Do not set publish directory - let @netlify/plugin-nextjs handle it
+  # This ensures static files from public/ are served correctly
 
   # Functions directory for API routes
   functions = "netlify/functions"
