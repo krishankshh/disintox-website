@@ -29,8 +29,8 @@ export default function Header() {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-hero transition-all group-hover:w-full"></span>
               </Link>
             ))}
-            <a href="#demo-form" className="bg-gradient-hero text-white px-6 py-3 rounded-xl font-bold hover:shadow-glow-blue hover:scale-105 transition-all">
-              Request Demo
+            <a href="/demo" className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+              View Demo
             </a>
           </nav>
 
@@ -71,9 +71,9 @@ export default function Header() {
                   {link.name}
                 </Link>
               ))}
-              <button className="bg-gradient-hero text-white px-6 py-3 rounded-lg font-bold hover:shadow-xl transition-all">
-                Request Demo
-              </button>
+              <a href="/demo" className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center">
+                View Demo
+              </a>
             </nav>
           </div>
         )}

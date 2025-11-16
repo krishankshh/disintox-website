@@ -70,16 +70,16 @@ export default function ContactPage() {
 
             <div className="bg-gradient-clinical rounded-lg p-8 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-clinical-gray-900 mb-4">
-                Request a Product Demo
+                Watch Product Demonstrations
               </h3>
               <p className="text-clinical-gray-700 mb-6">
-                Experience the effectiveness of Disintox® firsthand. Fill out our demo request form and our team will contact you within 48 hours to schedule a demonstration at your facility.
+                Experience the effectiveness of Disintox® firsthand. Watch our detailed product demonstration videos to see how our disinfection solutions work in real healthcare settings.
               </p>
               <Link
-                href="/#demo-form"
-                className="bg-gradient-hero text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-clinical hover:shadow-xl transition-all transform hover:scale-105 text-center"
+                href="/demo"
+                className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors text-center"
               >
-                Request Demo Now
+                View Demonstrations →
               </Link>
             </div>
           </div>

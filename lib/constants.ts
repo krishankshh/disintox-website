@@ -222,7 +222,6 @@ export const SEO_KEYWORDS = [
 export const NAVIGATION_LINKS = [
   { name: 'Home', href: '/' },
   { name: 'Products', href: '/products' },
-  { name: 'Solutions', href: '/solutions' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Resources', href: '/resources' },
   { name: 'About', href: '/about' },
