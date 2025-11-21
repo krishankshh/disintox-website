@@ -14,7 +14,7 @@ const products = [
     name: 'Disintox® Tablets',
     tagline: 'Effervescent Chlorine Dioxide Tablets',
     description: 'Our flagship product - patented effervescent tablets that dissolve in water to create a powerful chlorine dioxide disinfection solution.',
-    image: '/logo.png',
+    image: '/products/tablet.jpg',
     applications: ['Surface Disinfection', 'Fumigation', 'Water Treatment', 'Equipment Sterilization'],
     specifications: [
       { label: 'Efficacy', value: '99.99% pathogen elimination' },
