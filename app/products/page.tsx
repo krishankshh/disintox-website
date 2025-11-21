@@ -3,13 +3,14 @@ import { PRODUCT_FEATURES, ORGANISMS_KILLED, APPLICATION_METHODS, COMPARISON_DAT
 
 export const metadata = {
   title: 'Products - Disintox® Chlorine Dioxide Disinfection',
-  description: 'Comprehensive range of Disintox® chlorine dioxide products for healthcare disinfection. Tablets, gel, and solutions with 99.99% efficacy.',
+  description: 'Disintox® chlorine dioxide products for healthcare disinfection. Effervescent tablets and ready-to-use gel with 99.99% efficacy against pathogens.',
 };
 
 // Product catalog data
 const products = [
   {
     id: 1,
+    anchor: 'tablets',
     name: 'Disintox® Tablets',
     tagline: 'Effervescent Chlorine Dioxide Tablets',
     description: 'Our flagship product - patented effervescent tablets that dissolve in water to create a powerful chlorine dioxide disinfection solution.',
@@ -38,6 +39,7 @@ const products = [
   },
   {
     id: 2,
+    anchor: 'gel',
     name: 'Disintox® Gel',
     tagline: 'Ready-to-Use Chlorine Dioxide Gel',
     description: 'Viscous gel formulation ideal for vertical surfaces, equipment, and targeted application areas requiring extended contact time.',
@@ -64,35 +66,6 @@ const products = [
       'Deep penetration for mold and odor'
     ]
   },
-  {
-    id: 3,
-    name: 'Disintox® Solution',
-    tagline: 'Pre-Mixed Chlorine Dioxide Solution',
-    description: 'Stabilized aqueous solution for immediate use in spraying, fogging, and automated dispensing systems.',
-    image: '/logo.png',
-    applications: ['Spray Application', 'Fogging Systems', 'Automated Dispensers', 'HVAC Disinfection'],
-    specifications: [
-      { label: 'Efficacy', value: '99.99% pathogen elimination' },
-      { label: 'Concentration', value: '500-1000 PPM' },
-      { label: 'Form', value: 'Aqueous solution' },
-      { label: 'Stability', value: '6 months in dark bottles' },
-      { label: 'Application', value: 'Spray/Fog' },
-      { label: 'Dilution', value: 'As per requirement' }
-    ],
-    packaging: [
-      '1L bottles',
-      '5L cans',
-      '20L drums',
-      'Customized bulk packaging'
-    ],
-    advantages: [
-      'Ready for immediate use',
-      'Compatible with fogging machines',
-      'Stable formulation',
-      'Uniform concentration',
-      'Ideal for automation'
-    ]
-  }
 ];
 
 export default function ProductsPage() {
@@ -105,7 +78,7 @@ export default function ProductsPage() {
             Our Products
           </h1>
           <p className="text-xl text-clinical-gray-600 max-w-3xl mx-auto">
-            Comprehensive range of Disintox® chlorine dioxide products for superior healthcare disinfection. Patented technology, proven efficacy.
+            Two powerful Disintox® chlorine dioxide formulations for superior healthcare disinfection. Patented technology, proven 99.99% efficacy.
           </p>
         </div>
 
@@ -114,7 +87,8 @@ export default function ProductsPage() {
           {products.map((product, index) => (
             <article
               key={product.id}
-              className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 overflow-hidden"
+              id={product.anchor}
+              className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 overflow-hidden scroll-mt-24"
             >
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-8">
                 {/* Left: Product Image & Basic Info */}
@@ -200,7 +174,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Product Features Section */}
-        <section className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8 mb-12">
+        <section id="features" className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8 mb-12 scroll-mt-24">
           <h2 className="text-3xl font-bold text-clinical-gray-900 mb-6 text-center">
             Why Choose Disintox® Products?
           </h2>
@@ -220,7 +194,7 @@ export default function ProductsPage() {
         </section>
 
         {/* Organisms Killed Section */}
-        <section className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8 mb-12">
+        <section id="efficacy" className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8 mb-12 scroll-mt-24">
           <h2 className="text-3xl font-bold text-clinical-gray-900 mb-6 text-center">
             Proven Efficacy Against Pathogens
           </h2>

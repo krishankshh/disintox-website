@@ -1,4 +1,4 @@
-import { USP, Sector, Certificate, Approval } from './types';
+import { USP, Sector, Certificate, Approval, NavigationLink } from './types';
 
 export const COMPANY_INFO = {
   name: 'Disinfect Sales & Marketing LLP',
@@ -96,12 +96,12 @@ export const CERTIFICATES: Certificate[] = [
 ];
 
 export const APPROVALS: Approval[] = [
-  { organization: 'WHO', logo: '/images/approvals/who.svg', year: '1992', description: 'Approved for drinking water disinfection' },
-  { organization: 'US EPA', logo: '/images/approvals/epa.svg', year: '1967-1988', description: 'Registered as sanitizer, disinfectant & sterilizer' },
-  { organization: 'FDA', logo: '/images/approvals/fda.svg', year: '1985-2002', description: 'Approved in 5 countries for medical device sterilization' },
-  { organization: 'FSSAI', logo: '/images/approvals/fssai.svg', year: '2024', description: 'Food safety certification' },
-  { organization: 'ISO 9001:2015', logo: '/images/approvals/iso.svg', year: '2024', description: 'Quality management system' },
-  { organization: 'NSF', logo: '/images/approvals/nsf.svg', year: '2024', description: 'Public health standards' },
+  { organization: 'WHO', logo: '/images/approvals/who.jpg', year: '1992', description: 'Approved for drinking water disinfection' },
+  { organization: 'US EPA', logo: '/images/approvals/epa.png', year: '1967-1988', description: 'Registered as sanitizer, disinfectant & sterilizer' },
+  { organization: 'FDA', logo: '/images/approvals/fda.jpg', year: '1985-2002', description: 'Approved in 5 countries for medical device sterilization' },
+  { organization: 'FSSAI', logo: '/images/approvals/fssai.jpg', year: '2024', description: 'Food safety certification' },
+  { organization: 'ISO 9001:2015', logo: '/images/approvals/iso.jpg', year: '2024', description: 'Quality management system' },
+  { organization: 'NSF', logo: '/images/approvals/nsf.png', year: '2024', description: 'Public health standards' },
 ];
 
 export const PRODUCT_FEATURES = [
@@ -219,11 +219,50 @@ export const SEO_KEYWORDS = [
   'medical device sterilization',
 ];
 
-export const NAVIGATION_LINKS = [
+export const NAVIGATION_LINKS: NavigationLink[] = [
   { name: 'Home', href: '/' },
-  { name: 'Products', href: '/products' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Resources', href: '/resources' },
+  {
+    name: 'Products',
+    href: '/products',
+    dropdown: [
+      { name: 'Disintox® Tablets', href: '/products#tablets' },
+      { name: 'Disintox® Gel', href: '/products#gel' },
+      { name: 'Product Features', href: '/products#features' },
+      { name: 'Efficacy & Specifications', href: '/products#efficacy' },
+    ]
+  },
+  {
+    name: 'Applications',
+    href: '/applications',
+    dropdown: [
+      { name: 'Hospitals', href: '/applications#hospitals' },
+      { name: 'Water Treatment', href: '/applications#water-treatment' },
+      { name: 'Food Processing', href: '/applications#food-processing' },
+      { name: 'Laboratories', href: '/applications#laboratories' },
+      { name: 'Transport', href: '/applications#transport' },
+    ]
+  },
+  {
+    name: 'Case Studies',
+    href: '/case-studies',
+    dropdown: [
+      { name: 'Hospitals', href: '/case-studies#hospitals' },
+      { name: 'Water Treatment', href: '/case-studies#water' },
+      { name: 'Food Processing', href: '/case-studies#food' },
+      { name: 'Laboratories', href: '/case-studies#labs' },
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    dropdown: [
+      { name: 'Documentation', href: '/resources#documentation' },
+      { name: 'Certifications', href: '/resources#certifications' },
+      { name: 'FAQs', href: '/resources#faqs' },
+      { name: 'Downloads', href: '/resources#downloads' },
+    ]
+  },
+  { name: 'PPM Calculator', href: '/calculator' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];

@@ -149,9 +149,9 @@ export default function ImageComparisonSlider({
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-lg"></div>
       </div>
 
-      {/* Instruction Tooltip (shows on first load) */}
-      {sliderPosition === 50 && !isDragging && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-clinical-gray-900 bg-opacity-90 text-white px-4 py-2 rounded-lg text-sm animate-pulse pointer-events-none">
+      {/* Instruction Tooltip (always visible) */}
+      {!isDragging && (
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-lg animate-pulse pointer-events-none border-2 border-white">
           ← Drag to compare →
         </div>
       )}

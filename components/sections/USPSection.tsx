@@ -63,56 +63,69 @@ const bentoFeatures = [
 
 export default function USPSection() {
   return (
-    <section className="py-16 sm:py-24 bg-clinical-gray-50">
-      {/* Removed background decorations for simplicity */}
+    <section className="py-16 sm:py-24 bg-gradient-to-br from-primary-50 via-white to-secondary-50 relative overflow-hidden">
+      {/* Enhanced background decorations */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-primary-400 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-secondary-400 rounded-full blur-3xl"></div>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header - simplified */}
-        <div className="text-center mb-12 sm:mb-16 space-y-4">
-          <div className="inline-block bg-primary-50 border border-primary-200 rounded-full px-6 py-2">
-            <span className="text-primary-700 font-semibold text-sm">Why Choose Disintox®</span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Enhanced Section Header */}
+        <div className="text-center mb-12 sm:mb-16 space-y-6">
+          <div className="inline-block bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full px-8 py-3 shadow-lg transform hover:scale-105 transition-transform">
+            <span className="font-bold text-base">⭐ Why Choose Disintox® ⭐</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-clinical-gray-900 leading-tight px-4">
-            The <span className="text-primary-600">Ultimate</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-clinical-gray-900 leading-tight px-4">
+            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Ultimate</span>
             <br />Disinfection Solution
           </h2>
-          <p className="text-lg sm:text-xl text-clinical-gray-600 max-w-3xl mx-auto px-4">
+          <p className="text-xl sm:text-2xl text-clinical-gray-700 max-w-3xl mx-auto px-4 font-medium">
             Discover the unique advantages of Chlorine Dioxide ClO₂ technology
           </p>
+          <div className="flex justify-center">
+            <div className="h-1 w-32 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>
+          </div>
         </div>
 
-        {/* Simplified Grid */}
+        {/* Enhanced Grid with spotlight effect */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {bentoFeatures.map((feature, index) => (
-            <div key={index} className="bg-white rounded-lg border border-clinical-gray-200 shadow-sm hover:shadow-md transition-shadow p-6 min-h-[280px] flex flex-col">
-              {/* Icon */}
-              <div className="text-5xl mb-4">
+            <div key={index} className="bg-white rounded-xl border-2 border-primary-200 shadow-lg hover:shadow-2xl hover:scale-105 hover:border-primary-400 transition-all duration-300 p-6 min-h-[280px] flex flex-col relative overflow-hidden group">
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300" style={{background: `linear-gradient(to bottom right, var(--tw-gradient-stops))`}}></div>
+
+              {/* Icon with enhanced styling */}
+              <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
 
-              {/* Title */}
-              <h3 className="text-xl font-bold text-clinical-gray-900 mb-3 leading-tight">
+              {/* Title with accent */}
+              <h3 className="text-xl font-extrabold text-clinical-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-clinical-gray-600 leading-relaxed text-base flex-grow">
+              <p className="text-clinical-gray-700 leading-relaxed text-base flex-grow font-medium">
                 {feature.description}
               </p>
+
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-primary-400 to-secondary-400 opacity-10 rounded-bl-full"></div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA - simplified */}
+        {/* Enhanced Bottom CTA */}
         <div className="mt-16 text-center px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 bg-white rounded-lg border border-clinical-gray-200 shadow-md px-8 py-6 max-w-2xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 bg-gradient-to-r from-white to-primary-50 rounded-2xl border-2 border-primary-300 shadow-2xl px-8 py-8 max-w-2xl mx-auto hover:shadow-primary-500/50 transition-all duration-300">
             <div>
-              <div className="text-5xl font-bold text-primary-600 mb-2">1000+</div>
-              <div className="text-sm text-clinical-gray-600 font-medium">Healthcare Facilities Trust Us</div>
+              <div className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600 mb-2">1000+</div>
+              <div className="text-base text-clinical-gray-700 font-bold">Healthcare Facilities Trust Us</div>
             </div>
-            <div className="hidden sm:block w-px h-16 bg-clinical-gray-200"></div>
+            <div className="hidden sm:block w-px h-20 bg-gradient-to-b from-primary-400 to-secondary-400"></div>
             <div>
-              <a href="/demo" className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-block">
+              <a href="/demo" className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-10 py-4 rounded-xl font-bold hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 inline-block shadow-lg hover:shadow-xl transform hover:scale-105">
                 View Demo →
               </a>
             </div>

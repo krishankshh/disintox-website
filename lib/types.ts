@@ -104,3 +104,12 @@ export interface Approval {
   year: string;
   description: string;
 }
+
+export interface NavigationLink {
+  name: string;
+  href: string;
+  dropdown?: {
+    name: string;
+    href: string;
+  }[];
+}
