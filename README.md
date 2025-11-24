@@ -1,10 +1,10 @@
-# Disintox® - Clinical Disinfection Website
+# Disintox® - Hospital Disinfection Website
 
 Production-ready marketing website for Disinfect Sales & Marketing LLP — Disintox® (Chlorine Dioxide tablets & gel).
 
 ## 🎯 Project Overview
 
-A modern, clinical, and authoritative marketing website designed to convert hospitals, healthcare procurement officers, and government buyers to request product demonstrations.
+A modern, Hospital, and authoritative marketing website designed to convert hospitals, healthcare procurement officers, and government buyers to request product demonstrations.
 
 **Tech Stack:**
 - Next.js 15 (App Router) with TypeScript
@@ -34,7 +34,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the website.
 
 ## 🎨 Design Features
 
-- **Clinical & Authoritative Design** - Clean white + muted blues/teals with chlorine-green accent
+- **Hospital & Authoritative Design** - Clean white + muted blues/teals with chlorine-green accent
 - **Responsive** - Works beautifully on desktop, tablet, and mobile
 - **Animations** - Subtle micro-animations and molecule motifs
 - **Accessibility** - Keyboard navigation and screen reader support

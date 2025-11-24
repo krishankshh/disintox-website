@@ -10,7 +10,7 @@ import StructuredData from "@/components/analytics/StructuredData";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dis-infect.in'),
   title: {
-    default: "Disintox® - Clinical-Grade Chlorine Dioxide Disinfection for Healthcare",
+    default: "Disintox® - Hospital-Grade Chlorine Dioxide Disinfection for Healthcare",
     template: "%s | Disintox®"
   },
   description: "Advanced ClO₂ disinfection technology for hospitals. Patented, WHO & EPA approved. 99.99% pathogen elimination. Listed in Maharashtra EDL. Request a demo today.",
@@ -28,20 +28,20 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.dis-infect.in",
     siteName: "Disintox®",
-    title: "Disintox® - Clinical-Grade Disinfection for Healthcare Facilities",
+    title: "Disintox® - Hospital-Grade Disinfection for Healthcare Facilities",
     description: "Patented chlorine dioxide tablets for hospital disinfection. 99.99% efficacy against bacteria, viruses, and fungi.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Disintox® - Clinical-Grade Chlorine Dioxide Disinfection",
+        alt: "Disintox® - Hospital-Grade Chlorine Dioxide Disinfection",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Disintox® - Clinical-Grade Disinfection for Healthcare",
+    title: "Disintox® - Hospital-Grade Disinfection for Healthcare",
     description: "99.99% efficacy against pathogens. Patented ClO₂ technology trusted by hospitals nationwide.",
     images: ["/opengraph-image"],
   },

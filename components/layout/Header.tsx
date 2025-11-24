@@ -10,7 +10,7 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white backdrop-blur-md shadow-md border-b border-clinical-gray-100">
+    <header className="fixed w-full top-0 z-50 bg-white backdrop-blur-md shadow-md border-b border-Hospital-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3">
           {/* Logo */}
@@ -29,7 +29,7 @@ export default function Header() {
               >
                 <Link
                   href={link.href}
-                  className="text-clinical-gray-700 hover:text-primary-600 transition-colors font-semibold text-sm relative flex items-center gap-1 py-2"
+                  className="text-Hospital-gray-700 hover:text-primary-600 transition-colors font-semibold text-sm relative flex items-center gap-1 py-2"
                 >
                   {link.name}
                   {link.dropdown && (
@@ -43,12 +43,12 @@ export default function Header() {
                 {/* Dropdown Menu */}
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-0 pt-2 w-56">
-                    <div className="bg-white rounded-lg shadow-xl border border-clinical-gray-200 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                    <div className="bg-white rounded-lg shadow-xl border border-Hospital-gray-200 py-2 animate-in fade-in slide-in-from-top-2 duration-200">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block px-4 py-2 text-sm text-clinical-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors font-medium"
+                          className="block px-4 py-2 text-sm text-Hospital-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors font-medium"
                         >
                           {item.name}
                         </Link>
@@ -66,7 +66,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-clinical-gray-700 hover:bg-clinical-gray-100"
+            className="lg:hidden p-2 rounded-md text-Hospital-gray-700 hover:bg-Hospital-gray-100"
           >
             <svg
               className="h-6 w-6"
@@ -88,14 +88,14 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-clinical-gray-200">
+          <div className="lg:hidden py-4 border-t border-Hospital-gray-200">
             <nav className="flex flex-col space-y-2">
               {NAVIGATION_LINKS.map((link) => (
                 <div key={link.name}>
                   <div className="flex items-center justify-between">
                     <Link
                       href={link.href}
-                      className="text-clinical-gray-700 hover:text-primary-600 transition-colors font-semibold py-2 flex-grow"
+                      className="text-Hospital-gray-700 hover:text-primary-600 transition-colors font-semibold py-2 flex-grow"
                       onClick={() => !link.dropdown && setIsMenuOpen(false)}
                     >
                       {link.name}
@@ -103,7 +103,7 @@ export default function Header() {
                     {link.dropdown && (
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
-                        className="p-2 text-clinical-gray-700"
+                        className="p-2 text-Hospital-gray-700"
                       >
                         <svg
                           className={`w-4 h-4 transition-transform ${activeDropdown === link.name ? 'rotate-180' : ''}`}
@@ -122,7 +122,7 @@ export default function Header() {
                         <Link
                           key={item.name}
                           href={item.href}
-                          className="block text-sm text-clinical-gray-600 hover:text-primary-600 transition-colors py-1"
+                          className="block text-sm text-Hospital-gray-600 hover:text-primary-600 transition-colors py-1"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {item.name}

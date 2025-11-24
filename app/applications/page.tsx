@@ -15,13 +15,13 @@ export default function ApplicationsPage() {
             <div className="inline-block bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full px-8 py-3 shadow-lg mb-6">
               <span className="font-bold text-base">Applications</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-clinical-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-Hospital-gray-900 mb-6">
               Versatile Solutions for Every{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
                 Industry
               </span>
             </h1>
-            <p className="text-xl text-clinical-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
               From healthcare to food processing, discover how Disintox® adapts to your specific disinfection needs
             </p>
           </div>
@@ -32,10 +32,10 @@ export default function ApplicationsPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-clinical-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-Hospital-gray-900 mb-4">
               Tailored Solutions for Every Healthcare Sector
             </h2>
-            <p className="text-lg text-clinical-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-Hospital-gray-600 max-w-3xl mx-auto">
               From hospitals to laboratories, our disinfection technology adapts to your specific needs
             </p>
           </div>
@@ -45,9 +45,9 @@ export default function ApplicationsPage() {
               <div
                 key={index}
                 id={sector.name.toLowerCase().replace(/\s+/g, '-')}
-                className="bg-white border-2 border-clinical-gray-200 rounded-xl shadow-lg hover:shadow-2xl hover:border-primary-400 transition-all duration-300 p-6 group scroll-mt-24"
+                className="bg-white border-2 border-Hospital-gray-200 rounded-xl shadow-lg hover:shadow-2xl hover:border-primary-400 transition-all duration-300 p-6 group scroll-mt-24"
               >
-                <h3 className="text-2xl font-bold text-clinical-gray-900 mb-4 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-2xl font-bold text-Hospital-gray-900 mb-4 group-hover:text-primary-600 transition-colors">
                   {sector.name}
                 </h3>
                 <div className="space-y-4">
@@ -55,16 +55,16 @@ export default function ApplicationsPage() {
                     <p className="text-sm font-semibold text-primary-600 mb-2 flex items-center gap-2">
                       <span className="text-lg">⚠️</span> Challenge:
                     </p>
-                    <p className="text-sm text-clinical-gray-600 leading-relaxed">{sector.problem}</p>
+                    <p className="text-sm text-Hospital-gray-600 leading-relaxed">{sector.problem}</p>
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-secondary-600 mb-2 flex items-center gap-2">
                       <span className="text-lg">✅</span> Solution:
                     </p>
-                    <p className="text-sm text-clinical-gray-600 leading-relaxed">{sector.solution}</p>
+                    <p className="text-sm text-Hospital-gray-600 leading-relaxed">{sector.solution}</p>
                   </div>
                   {sector.caseSnippet && (
-                    <div className="pt-4 border-t border-clinical-gray-200">
+                    <div className="pt-4 border-t border-Hospital-gray-200">
                       <p className="text-xs text-primary-600 italic font-medium bg-primary-50 p-3 rounded-lg">
                         💡 {sector.caseSnippet}
                       </p>
@@ -78,13 +78,13 @@ export default function ApplicationsPage() {
       </section>
 
       {/* Application Methods */}
-      <section className="py-20 bg-clinical-gray-50">
+      <section className="py-20 bg-Hospital-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-clinical-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-Hospital-gray-900 mb-4">
               Flexible Application Methods
             </h2>
-            <p className="text-lg text-clinical-gray-600">
+            <p className="text-lg text-Hospital-gray-600">
               Multiple delivery options for maximum effectiveness
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function ApplicationsPage() {
                   {method === 'Hand sanitizer' && '🧴'}
                   {method === 'Odor control' && '🌸'}
                 </div>
-                <h3 className="text-base font-bold text-clinical-gray-900 group-hover:text-primary-600 transition-colors">
+                <h3 className="text-base font-bold text-Hospital-gray-900 group-hover:text-primary-600 transition-colors">
                   {method}
                 </h3>
               </div>
@@ -125,7 +125,7 @@ export default function ApplicationsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-clinical-gray-50 transition-colors shadow-lg"
+              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-Hospital-gray-50 transition-colors shadow-lg"
             >
               Contact Us
             </a>

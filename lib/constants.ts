@@ -14,7 +14,7 @@ export const COMPANY_INFO = {
 };
 
 export const HERO_CONTENT = {
-  h1: 'Clinical-Grade Disinfection for Healthcare Facilities',
+  h1: 'Hospital-Grade Disinfection for Healthcare Facilities',
   h2: 'Chlorine Dioxide (ClO₂) Disintox® Tablets - The most advanced, patented disinfection technology trusted by hospitals nationwide',
   primaryCTA: 'Request a Demo',
   secondaryCTA: 'Download Brochure',
@@ -39,7 +39,7 @@ export const USPS: USP[] = [
   {
     icon: 'award',
     title: 'Patented Technology',
-    description: 'Indian Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA across 5 countries.',
+    description: 'Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA across 5 countries.',
   },
 ];
 

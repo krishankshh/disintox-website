@@ -28,7 +28,7 @@ const bentoFeatures = [
     size: 'normal',
     icon: '🏆',
     title: 'Patented Technology',
-    description: 'Indian Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA.',
+    description: 'Patent No. 386338. Listed in Maharashtra EDL. Approved by WHO, US EPA, and FDA.',
     color: 'from-primary-600 to-secondary-600'
   },
   {
@@ -74,13 +74,13 @@ export default function USPSection() {
         {/* Enhanced Section Header */}
         <div className="text-center mb-12 sm:mb-16 space-y-6">
           <div className="inline-block bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full px-8 py-3 shadow-lg transform hover:scale-105 transition-transform">
-            <span className="font-bold text-base">⭐ Why Choose Disintox® ⭐</span>
+            <span className="font-bold text-base">⭐ Why Choose Disintox® ?⭐</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-clinical-gray-900 leading-tight px-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-Hospital-gray-900 leading-tight px-4">
             The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Ultimate</span>
             <br />Disinfection Solution
           </h2>
-          <p className="text-xl sm:text-2xl text-clinical-gray-700 max-w-3xl mx-auto px-4 font-medium">
+          <p className="text-xl sm:text-2xl text-Hospital-gray-700 max-w-3xl mx-auto px-4 font-medium">
             Discover the unique advantages of Chlorine Dioxide ClO₂ technology
           </p>
           <div className="flex justify-center">
@@ -101,12 +101,12 @@ export default function USPSection() {
               </div>
 
               {/* Title with accent */}
-              <h3 className="text-xl font-extrabold text-clinical-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
+              <h3 className="text-xl font-extrabold text-Hospital-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-clinical-gray-700 leading-relaxed text-base flex-grow font-medium">
+              <p className="text-Hospital-gray-700 leading-relaxed text-base flex-grow font-medium">
                 {feature.description}
               </p>
 
@@ -121,7 +121,7 @@ export default function USPSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 bg-gradient-to-r from-white to-primary-50 rounded-2xl border-2 border-primary-300 shadow-2xl px-8 py-8 max-w-2xl mx-auto hover:shadow-primary-500/50 transition-all duration-300">
             <div>
               <div className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600 mb-2">1000+</div>
-              <div className="text-base text-clinical-gray-700 font-bold">Healthcare Facilities Trust Us</div>
+              <div className="text-base text-Hospital-gray-700 font-bold">Healthcare Facilities Trust Us</div>
             </div>
             <div className="hidden sm:block w-px h-20 bg-gradient-to-b from-primary-400 to-secondary-400"></div>
             <div>

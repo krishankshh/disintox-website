@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-clinical-gray-900 text-clinical-gray-300 relative overflow-hidden">
+    <footer className="bg-Hospital-gray-900 text-Hospital-gray-300 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red-500 opacity-5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-brand-green-500 opacity-5 rounded-full blur-3xl"></div>
@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="mb-4">
               <LogoWithTagline className="filter brightness-200" />
             </div>
-            <p className="text-sm mb-4 leading-relaxed text-clinical-gray-400">
+            <p className="text-sm mb-4 leading-relaxed text-Hospital-gray-400">
               {COMPANY_INFO.brand} - Advanced Chlorine Dioxide disinfection technology for healthcare facilities.
               Patented, WHO & EPA approved, listed in Maharashtra EDL.
             </p>
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-clinical-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+        <div className="border-t border-Hospital-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; {currentYear} {COMPANY_INFO.name}. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy-policy" className="hover:text-primary-400 transition-colors">
@@ -90,7 +90,7 @@ export default function Footer() {
         </div>
 
         {/* Compliance Note */}
-        <div className="mt-6 p-4 bg-clinical-gray-800 rounded-lg text-xs text-clinical-gray-400">
+        <div className="mt-6 p-4 bg-Hospital-gray-800 rounded-lg text-xs text-Hospital-gray-400">
           <p>
             <strong>Regulatory Compliance:</strong> Disintox® is manufactured under strict quality controls and
             complies with all applicable regulations. Always use as directed. For professional and institutional use only.
@@ -98,7 +98,7 @@ export default function Footer() {
         </div>
 
         {/* KMATS Branding - Responsive */}
-        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-clinical-gray-400 px-4">
+        <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm text-Hospital-gray-400 px-4">
           <span className="text-center">Website and Digital Presence by</span>
           <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg">
             <Image
@@ -108,7 +108,7 @@ export default function Footer() {
               height={32}
               className="object-contain"
             />
-            <span className="font-bold text-clinical-gray-900">KMATS</span>
+            <span className="font-bold text-Hospital-gray-900">KMATS</span>
           </div>
         </div>
       </div>

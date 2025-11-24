@@ -80,7 +80,7 @@ const config: Config = {
           darkGreen: '#15803d',
           yellow: '#eab308',
         },
-        clinical: {
+        Hospital: {
           white: '#ffffff',
           gray: {
             50: '#f9fafb',
@@ -207,7 +207,7 @@ const config: Config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-clinical': 'linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)',
+        'gradient-Hospital': 'linear-gradient(135deg, #ffffff 0%, #f9fafb 100%)',
         // NEW: Red & Green Gradients
         'gradient-hero': 'linear-gradient(135deg, #dc2626 0%, #991b1b 100%)', // Red gradient
         'gradient-hero-alt': 'linear-gradient(135deg, #dc2626 0%, #22c55e 50%, #dc2626 100%)', // Red-Green-Red
@@ -221,7 +221,7 @@ const config: Config = {
         'gradient-brand-red': 'linear-gradient(135deg, #dc2626 0%, #22c55e 100%)',
       },
       boxShadow: {
-        'clinical': '0 4px 20px rgba(220, 38, 38, 0.1)',
+        'Hospital': '0 4px 20px rgba(220, 38, 38, 0.1)',
         'card': '0 2px 10px rgba(0, 0, 0, 0.05)',
         'card-hover': '0 10px 40px rgba(0, 0, 0, 0.15)',
         'card-premium': '0 20px 60px -15px rgba(220, 38, 38, 0.4)',

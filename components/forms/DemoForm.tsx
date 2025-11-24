@@ -38,14 +38,14 @@ export default function DemoForm() {
   };
 
   return (
-    <section id="demo-form" className="py-20 bg-gradient-clinical">
+    <section id="demo-form" className="py-20 bg-gradient-Hospital">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-clinical-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-Hospital-gray-900 mb-4">
               Request a Product Demonstration
             </h2>
-            <p className="text-lg text-clinical-gray-600">
+            <p className="text-lg text-Hospital-gray-600">
               Experience the power of Disintox® firsthand. Our team will contact you within 48 hours.
             </p>
           </div>
@@ -65,13 +65,13 @@ export default function DemoForm() {
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                   Full Name *
                 </label>
                 <input
                   {...register('name', { required: 'Name is required' })}
                   type="text"
-                  className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Dr. John Doe"
                 />
                 {errors.name && (
@@ -80,13 +80,13 @@ export default function DemoForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                   Organization *
                 </label>
                 <input
                   {...register('organization', { required: 'Organization is required' })}
                   type="text"
-                  className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Hospital Name / Institution"
                 />
                 {errors.organization && (
@@ -95,13 +95,13 @@ export default function DemoForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                   Role / Designation *
                 </label>
                 <input
                   {...register('role', { required: 'Role is required' })}
                   type="text"
-                  className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="Procurement Officer / Administrator"
                 />
                 {errors.role && (
@@ -110,13 +110,13 @@ export default function DemoForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                   Phone Number *
                 </label>
                 <input
                   {...register('phone', { required: 'Phone is required' })}
                   type="tel"
-                  className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="+91 98765 43210"
                 />
                 {errors.phone && (
@@ -125,7 +125,7 @@ export default function DemoForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                   Email Address *
                 </label>
                 <input
@@ -137,7 +137,7 @@ export default function DemoForm() {
                     },
                   })}
                   type="email"
-                  className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                   placeholder="johndoe@hospital.com"
                 />
                 {errors.email && (
@@ -146,12 +146,12 @@ export default function DemoForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+                <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                   Sector *
                 </label>
                 <select
                   {...register('sector', { required: 'Sector is required' })}
-                  className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                  className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 >
                   <option value="">Select Sector</option>
                   <option value="hospitals">Hospitals & Healthcare</option>
@@ -168,13 +168,13 @@ export default function DemoForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-clinical-gray-700 mb-2">
+              <label className="block text-sm font-semibold text-Hospital-gray-700 mb-2">
                 Message / Requirements
               </label>
               <textarea
                 {...register('message')}
                 rows={4}
-                className="w-full px-4 py-3 border border-clinical-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                className="w-full px-4 py-3 border border-Hospital-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
                 placeholder="Tell us about your specific needs or questions..."
               />
             </div>
@@ -183,9 +183,9 @@ export default function DemoForm() {
               <input
                 {...register('privacyConsent', { required: 'You must accept the privacy policy' })}
                 type="checkbox"
-                className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-clinical-gray-300 rounded"
+                className="mt-1 h-4 w-4 text-primary-600 focus:ring-primary-500 border-Hospital-gray-300 rounded"
               />
-              <label className="ml-2 block text-sm text-clinical-gray-600">
+              <label className="ml-2 block text-sm text-Hospital-gray-600">
                 I agree to the <a href="/privacy-policy" className="text-primary-600 hover:underline">Privacy Policy</a> and consent to be contacted about Disintox® products.
               </label>
             </div>
@@ -196,7 +196,7 @@ export default function DemoForm() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-gradient-hero text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-clinical hover:shadow-xl transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-gradient-hero text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-Hospital hover:shadow-xl transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? 'Submitting...' : 'Request Demo'}
             </button>

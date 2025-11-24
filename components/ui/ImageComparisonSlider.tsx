@@ -115,7 +115,7 @@ export default function ImageComparisonSlider({
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center cursor-ew-resize hover:scale-110 transition-transform">
           {/* Left Arrow */}
           <svg
-            className="w-4 h-4 text-clinical-gray-700 absolute left-2"
+            className="w-4 h-4 text-Hospital-gray-700 absolute left-2"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ export default function ImageComparisonSlider({
           </svg>
           {/* Right Arrow */}
           <svg
-            className="w-4 h-4 text-clinical-gray-700 absolute right-2"
+            className="w-4 h-4 text-Hospital-gray-700 absolute right-2"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

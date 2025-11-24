@@ -95,34 +95,34 @@ const demoVideos = [
 
 export default function DemoPage() {
   return (
-    <main className="min-h-screen pt-24 pb-16 bg-clinical-gray-50">
+    <main className="min-h-screen pt-24 pb-16 bg-Hospital-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-clinical-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-Hospital-gray-900 mb-4">
             Product Demonstrations
           </h1>
-          <p className="text-xl text-clinical-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
             Watch comprehensive video tutorials on how to properly use Disintox® products for maximum efficacy and safety.
           </p>
         </div>
 
         {/* Quick Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
             <div className="text-4xl mb-3">🎥</div>
             <div className="text-2xl font-bold text-primary-600 mb-2">6</div>
-            <div className="text-sm text-clinical-gray-600">Video Tutorials</div>
+            <div className="text-sm text-Hospital-gray-600">Video Tutorials</div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
             <div className="text-4xl mb-3">⏱️</div>
             <div className="text-2xl font-bold text-primary-600 mb-2">35 min</div>
-            <div className="text-sm text-clinical-gray-600">Total Duration</div>
+            <div className="text-sm text-Hospital-gray-600">Total Duration</div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
             <div className="text-4xl mb-3">✅</div>
             <div className="text-2xl font-bold text-primary-600 mb-2">100%</div>
-            <div className="text-sm text-clinical-gray-600">Best Practices</div>
+            <div className="text-sm text-Hospital-gray-600">Best Practices</div>
           </div>
         </div>
 
@@ -131,11 +131,11 @@ export default function DemoPage() {
           {demoVideos.map((video, index) => (
             <article
               key={video.id}
-              className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 overflow-hidden"
+              className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 overflow-hidden"
             >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                 {/* Left: Video Player */}
-                <div className="bg-clinical-gray-900 relative">
+                <div className="bg-Hospital-gray-900 relative">
                   <video
                     controls
                     className="w-full h-full object-cover"
@@ -144,7 +144,7 @@ export default function DemoPage() {
                     <source src={video.videoUrl} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
-                  <div className="absolute top-4 right-4 bg-clinical-gray-900 bg-opacity-75 text-white px-3 py-1 rounded text-sm font-semibold">
+                  <div className="absolute top-4 right-4 bg-Hospital-gray-900 bg-opacity-75 text-white px-3 py-1 rounded text-sm font-semibold">
                     {video.duration}
                   </div>
                 </div>
@@ -155,18 +155,18 @@ export default function DemoPage() {
                     <span className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm font-semibold">
                       Video {index + 1}
                     </span>
-                    <span className="text-clinical-gray-500 text-sm">{video.duration}</span>
+                    <span className="text-Hospital-gray-500 text-sm">{video.duration}</span>
                   </div>
 
-                  <h2 className="text-2xl font-bold text-clinical-gray-900 mb-3">
+                  <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-3">
                     {video.title}
                   </h2>
 
-                  <p className="text-clinical-gray-700 mb-6 leading-relaxed">
+                  <p className="text-Hospital-gray-700 mb-6 leading-relaxed">
                     {video.description}
                   </p>
 
-                  <h3 className="text-lg font-bold text-clinical-gray-900 mb-3">
+                  <h3 className="text-lg font-bold text-Hospital-gray-900 mb-3">
                     Topics Covered:
                   </h3>
                   <ul className="space-y-2">
@@ -175,7 +175,7 @@ export default function DemoPage() {
                         <svg className="w-5 h-5 text-secondary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
-                        <span className="text-clinical-gray-700">{topic}</span>
+                        <span className="text-Hospital-gray-700">{topic}</span>
                       </li>
                     ))}
                   </ul>
@@ -186,15 +186,15 @@ export default function DemoPage() {
         </div>
 
         {/* Additional Resources Section */}
-        <div className="mt-12 bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8">
-          <h2 className="text-2xl font-bold text-clinical-gray-900 mb-6 text-center">
+        <div className="mt-12 bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8">
+          <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-6 text-center">
             Need More Information?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-4xl mb-3">📄</div>
-              <h3 className="font-bold text-clinical-gray-900 mb-2">Documentation</h3>
-              <p className="text-sm text-clinical-gray-600 mb-4">
+              <h3 className="font-bold text-Hospital-gray-900 mb-2">Documentation</h3>
+              <p className="text-sm text-Hospital-gray-600 mb-4">
                 Download user manuals, safety data sheets, and technical specifications
               </p>
               <Link
@@ -206,8 +206,8 @@ export default function DemoPage() {
             </div>
             <div className="text-center">
               <div className="text-4xl mb-3">🔬</div>
-              <h3 className="font-bold text-clinical-gray-900 mb-2">Product Details</h3>
-              <p className="text-sm text-clinical-gray-600 mb-4">
+              <h3 className="font-bold text-Hospital-gray-900 mb-2">Product Details</h3>
+              <p className="text-sm text-Hospital-gray-600 mb-4">
                 Explore complete product specifications and comparison data
               </p>
               <Link
@@ -219,8 +219,8 @@ export default function DemoPage() {
             </div>
             <div className="text-center">
               <div className="text-4xl mb-3">📞</div>
-              <h3 className="font-bold text-clinical-gray-900 mb-2">Contact Support</h3>
-              <p className="text-sm text-clinical-gray-600 mb-4">
+              <h3 className="font-bold text-Hospital-gray-900 mb-2">Contact Support</h3>
+              <p className="text-sm text-Hospital-gray-600 mb-4">
                 Get personalized training and support from our technical team
               </p>
               <Link
@@ -244,7 +244,7 @@ export default function DemoPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/products"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-clinical-gray-50 transition-colors"
+              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-Hospital-gray-50 transition-colors"
             >
               View Products
             </Link>

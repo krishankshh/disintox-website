@@ -38,7 +38,7 @@ const resourceCategories = [
     icon: '🏆',
     resources: [
       {
-        name: 'Indian Patent Certificate',
+        name: 'Patent Certificate, Govt. of India',
         description: 'Patent No. 386338',
         fileSize: 'PDF, 0.5 MB',
         file: '/pdfs/patent-certificate.pdf'
@@ -117,14 +117,14 @@ const resourceCategories = [
 
 export default function ResourcesPage() {
   return (
-    <main className="min-h-screen pt-24 pb-16 bg-clinical-gray-50">
+    <main className="min-h-screen pt-24 pb-16 bg-Hospital-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-clinical-gray-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-Hospital-gray-900 mb-4">
             Resources & Downloads
           </h1>
-          <p className="text-xl text-clinical-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
             Access product specifications, certificates, technical data sheets, and documentation for procurement and compliance.
           </p>
         </div>
@@ -132,15 +132,15 @@ export default function ResourcesPage() {
         {/* Resource Categories */}
         <div className="space-y-12">
           {resourceCategories.map((category, categoryIndex) => (
-            <section key={categoryIndex} className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8">
+            <section key={categoryIndex} className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8">
               {/* Category Header */}
               <div className="flex items-start gap-4 mb-6">
                 <div className="text-5xl">{category.icon}</div>
                 <div>
-                  <h2 className="text-2xl font-bold text-clinical-gray-900 mb-2">
+                  <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-2">
                     {category.title}
                   </h2>
-                  <p className="text-clinical-gray-600">
+                  <p className="text-Hospital-gray-600">
                     {category.description}
                   </p>
                 </div>
@@ -151,16 +151,16 @@ export default function ResourcesPage() {
                 {category.resources.map((resource, resourceIndex) => (
                   <div
                     key={resourceIndex}
-                    className="border border-clinical-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow"
+                    className="border border-Hospital-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow"
                   >
-                    <h3 className="font-bold text-clinical-gray-900 mb-2">
+                    <h3 className="font-bold text-Hospital-gray-900 mb-2">
                       {resource.name}
                     </h3>
-                    <p className="text-sm text-clinical-gray-600 mb-3">
+                    <p className="text-sm text-Hospital-gray-600 mb-3">
                       {resource.description}
                     </p>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-clinical-gray-500">
+                      <span className="text-xs text-Hospital-gray-500">
                         {resource.fileSize}
                       </span>
                       <a
@@ -179,11 +179,11 @@ export default function ResourcesPage() {
         </div>
 
         {/* Contact Section */}
-        <div className="mt-12 bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-8 text-center">
-          <h2 className="text-2xl font-bold text-clinical-gray-900 mb-4">
+        <div className="mt-12 bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8 text-center">
+          <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-4">
             Need Additional Documentation?
           </h2>
-          <p className="text-clinical-gray-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-Hospital-gray-600 mb-6 max-w-2xl mx-auto">
             Can't find what you're looking for? Contact our team for custom documentation, technical support, or procurement assistance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -204,20 +204,20 @@ export default function ResourcesPage() {
 
         {/* Quick Info */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
             <div className="text-3xl mb-2">📞</div>
-            <div className="font-semibold text-clinical-gray-900">Phone</div>
-            <div className="text-sm text-clinical-gray-600">+91 7045 66 44 66</div>
+            <div className="font-semibold text-Hospital-gray-900">Phone</div>
+            <div className="text-sm text-Hospital-gray-600">+91 7045 66 44 66</div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
             <div className="text-3xl mb-2">✉️</div>
-            <div className="font-semibold text-clinical-gray-900">Email</div>
-            <div className="text-sm text-clinical-gray-600">customercare@dis-infect.in</div>
+            <div className="font-semibold text-Hospital-gray-900">Email</div>
+            <div className="text-sm text-Hospital-gray-600">customercare@dis-infect.in</div>
           </div>
-          <div className="bg-white rounded-lg shadow-sm border border-clinical-gray-200 p-6 text-center">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
             <div className="text-3xl mb-2">🕒</div>
-            <div className="font-semibold text-clinical-gray-900">Business Hours</div>
-            <div className="text-sm text-clinical-gray-600">Mon-Sat: 9:00 AM - 6:00 PM</div>
+            <div className="font-semibold text-Hospital-gray-900">Business Hours</div>
+            <div className="text-sm text-Hospital-gray-600">Mon-Sat: 9:00 AM - 6:00 PM</div>
           </div>
         </div>
       </div>

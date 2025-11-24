@@ -4,9 +4,9 @@ import { APPROVALS } from '@/lib/constants';
 
 export default function ApprovalsSection() {
   return (
-    <section className="py-16 bg-clinical-gray-50">
+    <section className="py-16 bg-Hospital-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-heading font-bold text-center text-clinical-gray-900 mb-12">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-center text-Hospital-gray-900 mb-12">
           Certified & Approved By Leading Regulatory Bodies
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
@@ -42,8 +42,8 @@ export default function ApprovalsSection() {
                 />
               </div>
               <div className="space-y-1">
-                <p className="text-sm font-semibold text-clinical-gray-900">{approval.organization}</p>
-                <p className="text-xs text-clinical-gray-600">{approval.year}</p>
+                <p className="text-sm font-semibold text-Hospital-gray-900">{approval.organization}</p>
+                <p className="text-xs text-Hospital-gray-600">{approval.year}</p>
               </div>
             </div>
           ))}

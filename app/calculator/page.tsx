@@ -7,17 +7,17 @@ export const metadata = {
 
 export default function CalculatorPage() {
   return (
-    <main className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-clinical-gray-50 via-white to-primary-50">
+    <main className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-Hospital-gray-50 via-white to-primary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full px-8 py-3 shadow-lg mb-6">
             <span className="font-bold text-base">🧮 Dosage Calculator</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-clinical-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-Hospital-gray-900 mb-6">
             PPM Calculator
           </h1>
-          <p className="text-xl text-clinical-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
             Calculate the perfect dosage for your disinfection requirements
           </p>
         </div>
@@ -27,24 +27,24 @@ export default function CalculatorPage() {
 
         {/* Additional Information */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-xl shadow-md border border-clinical-gray-200 p-6">
+          <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">
             <div className="text-4xl mb-3">💡</div>
-            <h3 className="text-lg font-bold text-clinical-gray-900 mb-2">Easy to Use</h3>
-            <p className="text-sm text-clinical-gray-600">
+            <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Easy to Use</h3>
+            <p className="text-sm text-Hospital-gray-600">
               Simply enter your water volume and desired PPM to get instant tablet calculations
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow-md border border-clinical-gray-200 p-6">
+          <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">
             <div className="text-4xl mb-3">🎯</div>
-            <h3 className="text-lg font-bold text-clinical-gray-900 mb-2">Accurate Dosing</h3>
-            <p className="text-sm text-clinical-gray-600">
+            <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Accurate Dosing</h3>
+            <p className="text-sm text-Hospital-gray-600">
               Based on Disintox® standard ratio: 1 tablet per 10L produces 100 PPM
             </p>
           </div>
-          <div className="bg-white rounded-xl shadow-md border border-clinical-gray-200 p-6">
+          <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">
             <div className="text-4xl mb-3">✅</div>
-            <h3 className="text-lg font-bold text-clinical-gray-900 mb-2">Optimal Results</h3>
-            <p className="text-sm text-clinical-gray-600">
+            <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Optimal Results</h3>
+            <p className="text-sm text-Hospital-gray-600">
               Achieve the perfect concentration for your specific disinfection needs
             </p>
           </div>
@@ -78,7 +78,7 @@ export default function CalculatorPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-clinical-gray-50 transition-colors shadow-lg"
+              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-Hospital-gray-50 transition-colors shadow-lg"
             >
               Contact Technical Support
             </a>

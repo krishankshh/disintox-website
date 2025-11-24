@@ -481,6 +481,6 @@ body {
   }
 
   .section-subtitle {
-    @apply text-xl text-clinical-gray-600 mb-12 max-w-3xl mx-auto;
+    @apply text-xl text-Hospital-gray-600 mb-12 max-w-3xl mx-auto;
   }
 }
