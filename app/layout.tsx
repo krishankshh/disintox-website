@@ -10,7 +10,7 @@ import StructuredData from "@/components/analytics/StructuredData";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dis-infect.in'),
   title: {
-    default: "Disintox® - Hospital-Grade Chlorine Dioxide (ClO2) Disinfection for Healthcare",
+    default: "Disinfect® - Hospital-Grade Chlorine Dioxide (ClO2) Disinfection for Healthcare",
     template: "%s | Disintox®"
   },
   description: "Advanced ClO₂ disinfection technology for hospitals. Patented, WHO & EPA approved. 99.99% pathogen elimination. Listed in Maharashtra EDL. Request a demo today.",
