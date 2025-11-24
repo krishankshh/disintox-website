@@ -49,12 +49,12 @@ const resourceCategories = [
         fileSize: 'PDF, 0.8 MB',
         file: '/pdfs/edl-certificate.pdf'
       },
-      {
-        name: 'ISO 9001:2015 Certificate',
-        description: 'Quality management system certification',
-        fileSize: 'PDF, 0.6 MB',
-        file: '/pdfs/iso-certificate.pdf'
-      },
+      // {
+      //   name: 'ISO 9001:2015 Certificate',
+      //   description: 'Quality management system certification',
+      //   fileSize: 'PDF, 0.6 MB',
+      //   file: '/pdfs/iso-certificate.pdf'
+      // },
       {
         name: 'Drug License',
         description: 'Manufacturing and distribution licenses',
