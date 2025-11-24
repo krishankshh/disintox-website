@@ -13,7 +13,7 @@ const caseStudies = [
     sector: 'Government Healthcare',
     location: 'Mumbai, Maharashtra',
     challenge: 'High rate of Hospital-Acquired Infections (HAI) in ICU and operation theaters. Traditional fumigation taking 12-14 hours causing operational delays.',
-    solution: 'Implemented Disintox® chlorine dioxide tablets for daily fumigation of ICU, OT, and high-risk areas. Reduced fumigation time to 3-4 hours.',
+    solution: 'Implemented Disintox® Chlorine Dioxide (ClO2) tablets for daily fumigation of ICU, OT, and high-risk areas. Reduced fumigation time to 3-4 hours.',
     results: [
       '67% reduction in HAI within 3 months',
       '70% reduction in fumigation time',
@@ -34,7 +34,7 @@ const caseStudies = [
     sector: 'Water Treatment',
     location: 'Pune, Maharashtra',
     challenge: 'Chlorination creating harmful disinfection byproducts (DBPs). Need for safer alternative meeting WHO standards.',
-    solution: 'Switched to Disintox® chlorine dioxide for water disinfection. Implemented at 100 PPM concentration vs 1000+ PPM with traditional chlorine.',
+    solution: 'Switched to Disintox® Chlorine Dioxide (ClO2) for water disinfection. Implemented at 100 PPM concentration vs 1000+ PPM with traditional chlorine.',
     results: [
       '99.99% pathogen elimination maintained',
       '80% reduction in DBP formation',
@@ -46,7 +46,7 @@ const caseStudies = [
       dbpReduction: '80%',
       chemicalSavings: '90%'
     },
-    testimonial: 'The switch to chlorine dioxide has improved water quality while reducing our chemical footprint significantly.',
+    testimonial: 'The switch to Chlorine Dioxide (ClO2) has improved water quality while reducing our chemical footprint significantly.',
     designation: 'Plant Operations Manager'
   },
   {

@@ -1,6 +1,6 @@
 # Disintox® - Hospital Disinfection Website
 
-Production-ready marketing website for Disinfect Sales & Marketing LLP — Disintox® (Chlorine Dioxide tablets & gel).
+Production-ready marketing website for Disinfect Sales & Marketing LLP — Disintox® (Chlorine Dioxide (ClO2) tablets & gel).
 
 ## 🎯 Project Overview
 

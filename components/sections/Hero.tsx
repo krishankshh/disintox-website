@@ -32,7 +32,7 @@ export default function Hero() {
             {/* Subheadline - simplified */}
             <p className="text-lg sm:text-xl text-Hospital-gray-600 leading-relaxed max-w-xl">
               Eliminates <span className="font-bold text-primary-600">99.99%</span> of pathogens with
-              <span className="text-Hospital-gray-900 font-semibold"> chlorine dioxide tablets</span> —
+              <span className="text-Hospital-gray-900 font-semibold"> Chlorine Dioxide (ClO2) tablets</span> —
               trusted by India's leading healthcare facilities
             </p>
 
@@ -110,7 +110,7 @@ export default function Hero() {
 
                 {/* Tagline - simplified */}
                 <div className="space-y-2">
-                  <p className="text-base font-medium">Chlorine Dioxide Disintox® Tablets</p>
+                  <p className="text-base font-medium">Chlorine Dioxide (ClO2) Disintox® Tablets</p>
                   <p className="text-lg font-light leading-relaxed">
                     Empowering healthcare<br />with science-driven hygiene
                   </p>

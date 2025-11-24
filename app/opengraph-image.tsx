@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'Disintox® - Hospital-Grade Chlorine Dioxide Disinfection';
+export const alt = 'Disintox® - Hospital-Grade Chlorine Dioxide (ClO2) Disinfection';
 export const size = {
   width: 1200,
   height: 630,
@@ -56,7 +56,7 @@ export default async function Image() {
               maxWidth: 900,
             }}
           >
-            Hospital-Grade Chlorine Dioxide Disinfection
+            Hospital-Grade Chlorine Dioxide (ClO2) Disinfection
           </div>
           <div
             style={{

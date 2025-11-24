@@ -16,7 +16,7 @@ export default function AboutPage() {
               About {COMPANY_INFO.brand}
             </h1>
             <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
-              Leading the way in Hospital-grade chlorine dioxide disinfection technology since {COMPANY_INFO.founded}.
+              Leading the way in Hospital-grade Chlorine Dioxide (ClO2) disinfection technology since {COMPANY_INFO.founded}.
             </p>
           </div>
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
                 <strong>{COMPANY_INFO.name}</strong> is a pioneer in providing advanced disinfection solutions for healthcare facilities across India.
               </p>
               <p className="text-Hospital-gray-600">
-                Founded in {COMPANY_INFO.founded}, we hold Patent No. {COMPANY_INFO.patentNumber} for our innovative chlorine dioxide technology.
+                Founded in {COMPANY_INFO.founded}, we hold Patent No. {COMPANY_INFO.patentNumber} for our innovative Chlorine Dioxide (ClO2) technology.
               </p>
             </div>
 

@@ -81,7 +81,7 @@ export default function USPSection() {
             <br />Disinfection Solution
           </h2>
           <p className="text-xl sm:text-2xl text-Hospital-gray-700 max-w-3xl mx-auto px-4 font-medium">
-            Discover the unique advantages of Chlorine Dioxide ClO₂ technology
+            Discover the unique advantages of Chlorine Dioxide (ClO2) ClO₂ technology
           </p>
           <div className="flex justify-center">
             <div className="h-1 w-32 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>

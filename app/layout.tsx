@@ -10,11 +10,11 @@ import StructuredData from "@/components/analytics/StructuredData";
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.dis-infect.in'),
   title: {
-    default: "Disintox® - Hospital-Grade Chlorine Dioxide Disinfection for Healthcare",
+    default: "Disintox® - Hospital-Grade Chlorine Dioxide (ClO2) Disinfection for Healthcare",
     template: "%s | Disintox®"
   },
   description: "Advanced ClO₂ disinfection technology for hospitals. Patented, WHO & EPA approved. 99.99% pathogen elimination. Listed in Maharashtra EDL. Request a demo today.",
-  keywords: "chlorine dioxide disinfectant, hospital fumigation India, Disintox tablets, ClO2 sterilizer, hospital disinfectant, HAI prevention, COVID-19 disinfectant, chlorine dioxide India, hospital disinfection, healthcare disinfection, medical disinfection",
+  keywords: "Chlorine Dioxide (ClO2) disinfectant, hospital fumigation India, Disintox tablets, ClO2 sterilizer, hospital disinfectant, HAI prevention, COVID-19 disinfectant, Chlorine Dioxide (ClO2) India, hospital disinfection, healthcare disinfection, medical disinfection",
   authors: [{ name: "Disinfect Sales & Marketing LLP" }],
   creator: "Disinfect Sales & Marketing LLP",
   publisher: "Disinfect Sales & Marketing LLP",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     url: "https://www.dis-infect.in",
     siteName: "Disintox®",
     title: "Disintox® - Hospital-Grade Disinfection for Healthcare Facilities",
-    description: "Patented chlorine dioxide tablets for hospital disinfection. 99.99% efficacy against bacteria, viruses, and fungi.",
+    description: "Patented Chlorine Dioxide (ClO2) tablets for hospital disinfection. 99.99% efficacy against bacteria, viruses, and fungi.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Disintox® - Hospital-Grade Chlorine Dioxide Disinfection",
+        alt: "Disintox® - Hospital-Grade Chlorine Dioxide (ClO2) Disinfection",
       },
     ],
   },

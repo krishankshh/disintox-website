@@ -20,7 +20,7 @@ export default function Footer() {
               <LogoWithTagline className="filter brightness-200" />
             </div>
             <p className="text-sm mb-4 leading-relaxed text-Hospital-gray-400">
-              {COMPANY_INFO.brand} - Advanced Chlorine Dioxide disinfection technology for healthcare facilities.
+              {COMPANY_INFO.brand} - Advanced Chlorine Dioxide (ClO2) disinfection technology for healthcare facilities.
               Patented, WHO & EPA approved, listed in Maharashtra EDL.
             </p>
             <div className="space-y-2 text-sm">

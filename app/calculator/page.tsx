@@ -2,7 +2,7 @@ import PPMCalculator from "@/components/tools/PPMCalculator";
 
 export const metadata = {
   title: "PPM Calculator | Disintox® - Dosage Calculator",
-  description: "Calculate the correct dosage of Disintox® tablets for your disinfection needs. Easy-to-use PPM calculator for optimal chlorine dioxide concentration.",
+  description: "Calculate the correct dosage of Disintox® tablets for your disinfection needs. Easy-to-use PPM calculator for optimal Chlorine Dioxide (ClO2) concentration.",
 };
 
 export default function CalculatorPage() {

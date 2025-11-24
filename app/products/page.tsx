@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { PRODUCT_FEATURES, ORGANISMS_KILLED, APPLICATION_METHODS, COMPARISON_DATA, FAQS } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Products - Disintox® Chlorine Dioxide Disinfection',
-  description: 'Disintox® chlorine dioxide products for healthcare disinfection. Effervescent tablets and ready-to-use gel with 99.99% efficacy against pathogens.',
+  title: 'Products - Disintox® Chlorine Dioxide (ClO2) Disinfection',
+  description: 'Disintox® Chlorine Dioxide (ClO2) products for healthcare disinfection. Effervescent tablets and ready-to-use gel with 99.99% efficacy against pathogens.',
 };
 
 // Product catalog data
@@ -12,8 +12,8 @@ const products = [
     id: 1,
     anchor: 'tablets',
     name: 'Disintox® Tablets',
-    tagline: 'Effervescent Chlorine Dioxide Tablets',
-    description: 'Our flagship product - patented effervescent tablets that dissolve in water to create a powerful chlorine dioxide disinfection solution.',
+    tagline: 'Effervescent Chlorine Dioxide (ClO2) Tablets',
+    description: 'Our flagship product - patented effervescent tablets that dissolve in water to create a powerful Chlorine Dioxide (ClO2) disinfection solution.',
     image: '/products/tablet.jpg',
     applications: ['Surface Disinfection', 'Fumigation', 'Water Treatment', 'Equipment Sterilization'],
     specifications: [
@@ -41,7 +41,7 @@ const products = [
     id: 2,
     anchor: 'gel',
     name: 'Disintox® Gel',
-    tagline: 'Ready-to-Use Chlorine Dioxide Gel',
+    tagline: 'Ready-to-Use Chlorine Dioxide (ClO2) Gel',
     description: 'Viscous gel formulation ideal for vertical surfaces, equipment, and targeted application areas requiring extended contact time.',
     image: '/logo.png',
     applications: ['Vertical Surface Disinfection', 'Bathroom Sanitization', 'Mold Removal', 'Odor Elimination'],
@@ -78,7 +78,7 @@ export default function ProductsPage() {
             Our Products
           </h1>
           <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
-            Two powerful Disintox® chlorine dioxide formulations for superior healthcare disinfection. Patented technology, proven 99.99% efficacy.
+            Two powerful Disintox® Chlorine Dioxide (ClO2) formulations for superior healthcare disinfection. Patented technology, proven 99.99% efficacy.
           </p>
         </div>
 

@@ -8,7 +8,7 @@ export default function StructuredData() {
     alternateName: COMPANY_INFO.brand,
     url: `https://${COMPANY_INFO.website}`,
     logo: `https://${COMPANY_INFO.website}/logo.png`,
-    description: 'Leading manufacturer of chlorine dioxide disinfection products for healthcare facilities in India.',
+    description: 'Leading manufacturer of Chlorine Dioxide (ClO2) disinfection products for healthcare facilities in India.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: COMPANY_INFO.address,
@@ -34,12 +34,12 @@ export default function StructuredData() {
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Disintox® Chlorine Dioxide Tablets',
+    name: 'Disintox® Chlorine Dioxide (ClO2) Tablets',
     brand: {
       '@type': 'Brand',
       name: COMPANY_INFO.brand,
     },
-    description: 'Patented chlorine dioxide effervescent tablets for hospital disinfection. 99.99% efficacy against bacteria, viruses, and fungi.',
+    description: 'Patented Chlorine Dioxide (ClO2) effervescent tablets for hospital disinfection. 99.99% efficacy against bacteria, viruses, and fungi.',
     manufacturer: {
       '@type': 'Organization',
       name: COMPANY_INFO.name,

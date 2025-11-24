@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Resources & Downloads - Disintox®',
-  description: 'Download product specifications, certificates, technical data sheets, and documentation for Disintox® chlorine dioxide disinfection products.',
+  description: 'Download product specifications, certificates, technical data sheets, and documentation for Disintox® Chlorine Dioxide (ClO2) disinfection products.',
 };
 
 // Resource categories for B2G procurement

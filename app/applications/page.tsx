@@ -2,7 +2,7 @@ import { SECTORS, APPLICATION_METHODS } from "@/lib/constants";
 
 export const metadata = {
   title: "Applications | Disintox® - Healthcare Disinfection Solutions",
-  description: "Discover how Disintox® chlorine dioxide disinfection technology serves hospitals, water treatment, food processing, laboratories, and transport sectors with versatile application methods.",
+  description: "Discover how Disintox® Chlorine Dioxide (ClO2) disinfection technology serves hospitals, water treatment, food processing, laboratories, and transport sectors with versatile application methods.",
 };
 
 export default function ApplicationsPage() {

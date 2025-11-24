@@ -15,7 +15,7 @@ export const COMPANY_INFO = {
 
 export const HERO_CONTENT = {
   h1: 'Hospital-Grade Disinfection for Healthcare Facilities',
-  h2: 'Chlorine Dioxide (ClO₂) Disintox® Tablets - The most advanced, patented disinfection technology trusted by hospitals nationwide',
+  h2: 'Chlorine Dioxide (ClO2) (ClO₂) Disintox® Tablets - The most advanced, patented disinfection technology trusted by hospitals nationwide',
   primaryCTA: 'Request a Demo',
   secondaryCTA: 'Download Brochure',
 };
@@ -53,7 +53,7 @@ export const SECTORS: Sector[] = [
   {
     name: 'Water Treatment',
     problem: 'Contaminated hospital water systems harbor Legionella and other waterborne pathogens that pose serious health risks.',
-    solution: 'Our chlorine dioxide tablets provide effective water disinfection without creating harmful THMs or chlorinated by-products.',
+    solution: 'Our Chlorine Dioxide (ClO2) tablets provide effective water disinfection without creating harmful THMs or chlorinated by-products.',
   },
   {
     name: 'Food Processing',
@@ -174,7 +174,7 @@ export const APPLICATION_METHODS = [
 export const FAQS = [
   {
     question: 'How does Disintox® differ from chlorine bleach?',
-    answer: 'Unlike chlorine bleach (sodium hypochlorite), Chlorine Dioxide is an oxidizing agent, not a chlorinating agent. It works through selective oxidation without creating harmful THMs or chlorinated by-products. It\'s effective at much lower concentrations (100 PPM vs 1000+ PPM) and is non-corrosive and non-toxic.',
+    answer: 'Unlike chlorine bleach (sodium hypochlorite), Chlorine Dioxide (ClO2) is an oxidizing agent, not a chlorinating agent. It works through selective oxidation without creating harmful THMs or chlorinated by-products. It\'s effective at much lower concentrations (100 PPM vs 1000+ PPM) and is non-corrosive and non-toxic.',
   },
   {
     question: 'Is Disintox® safe for use in occupied hospital areas?',
@@ -186,7 +186,7 @@ export const FAQS = [
   },
   {
     question: 'Does Disintox® contribute to antimicrobial resistance?',
-    answer: 'No. Chlorine Dioxide works through oxidation which physically destroys pathogens at the cellular level. This mechanism prevents the development of antimicrobial resistance, unlike antibiotics or some conventional disinfectants.',
+    answer: 'No. Chlorine Dioxide (ClO2) works through oxidation which physically destroys pathogens at the cellular level. This mechanism prevents the development of antimicrobial resistance, unlike antibiotics or some conventional disinfectants.',
   },
   {
     question: 'What documentation do you provide for regulatory compliance?',
@@ -207,7 +207,7 @@ export const COMPARISON_DATA = {
 };
 
 export const SEO_KEYWORDS = [
-  'chlorine dioxide disinfectant',
+  'Chlorine Dioxide (ClO2) disinfectant',
   'hospital fumigation India',
   'Disintox tablets',
   'ClO2 sterilizer',
