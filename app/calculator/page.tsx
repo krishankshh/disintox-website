@@ -2,7 +2,7 @@ import PPMCalculator from "@/components/tools/PPMCalculator";
 
 export const metadata = {
   title: "PPM Calculator | Disintox® - Dosage Calculator",
-  description: "Calculate the correct dosage of Disintox® tablets for your disinfection needs. Easy-to-use PPM calculator for optimal Chlorine Dioxide (ClO2) concentration.",
+  description: "Calculate the correct dosage of Disintox® tablets for your disinfection needs. Easy-to-use PPM calculator for optimal Chlorine Dioxide (ClO<sub>2</sub>) concentration.",
 };
 
 export default function CalculatorPage() {
@@ -38,7 +38,7 @@ export default function CalculatorPage() {
             <div className="text-4xl mb-3">🎯</div>
             <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Accurate Dosing</h3>
             <p className="text-sm text-Hospital-gray-600">
-              Based on Disintox® standard ratio: 1 tablet per 10L produces 100 PPM
+              Based on Disintox® standard ratio: 1 tablet per 10L produces 100 - 120 PPM
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">

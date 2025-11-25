@@ -3,6 +3,7 @@ import USPSection from "@/components/sections/USPSection";
 import ApprovalsSection from "@/components/sections/ApprovalsSection";
 import ImageComparisonSlider from "@/components/ui/ImageComparisonSlider";
 import { PRODUCT_FEATURES } from "@/lib/constants";
+import { ProductIcons } from "@/components/icons/ProductIcons";
 
 export default function Home() {
   return (
@@ -10,9 +11,9 @@ export default function Home() {
       <Hero />
 
       {/* Before/After Comparison Section - simplified */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-Hospital-gray-900 mb-4">
               See The <span className="text-primary-600">Disintox® Difference</span>
             </h2>
@@ -30,16 +31,16 @@ export default function Home() {
           />
 
           {/* Stats below comparison - simplified */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
-            <div className="bg-white border border-Hospital-gray-200 shadow-sm p-6 rounded-lg text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12 max-w-4xl mx-auto">
+            <div className="bg-white border border-Hospital-gray-200 shadow-sm p-4 sm:p-6 rounded-lg text-center">
               <div className="text-4xl font-bold text-primary-600 mb-2">99.99%</div>
               <p className="text-sm text-Hospital-gray-600">Pathogen Elimination</p>
             </div>
-            <div className="bg-white border border-Hospital-gray-200 shadow-sm p-6 rounded-lg text-center">
+            <div className="bg-white border border-Hospital-gray-200 shadow-sm p-4 sm:p-6 rounded-lg text-center">
               <div className="text-4xl font-bold text-primary-600 mb-2">30 Sec</div>
               <p className="text-sm text-Hospital-gray-600">Contact Time</p>
             </div>
-            <div className="bg-white border border-Hospital-gray-200 shadow-sm p-6 rounded-lg text-center">
+            <div className="bg-white border border-Hospital-gray-200 shadow-sm p-4 sm:p-6 rounded-lg text-center">
               <div className="text-4xl font-bold text-primary-600 mb-2">Safe</div>
               <p className="text-sm text-Hospital-gray-600">Non-Toxic Formula</p>
             </div>
@@ -52,35 +53,38 @@ export default function Home() {
       <ApprovalsSection />
 
       {/* Product Features - simplified */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-Hospital-gray-900 mb-4">
-              Unmatched Product Advantages
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">Unmatched</span> Product Advantages
             </h2>
             <p className="text-lg text-Hospital-gray-600">
-              Why Disintox® outperforms conventional disinfectants
+              Discover why Disintox® outperforms conventional disinfectants
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {PRODUCT_FEATURES.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white border border-Hospital-gray-200 p-4 rounded-lg shadow-sm flex items-center space-x-3"
-              >
-                <svg className="w-5 h-5 text-secondary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-sm text-Hospital-gray-700">{feature}</span>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+            {PRODUCT_FEATURES.map((feature, index) => {
+              const IconComponent = ProductIcons[feature.icon as keyof typeof ProductIcons];
+              return (
+                <div
+                  key={index}
+                  className="bg-white border-2 border-Hospital-gray-200 p-4 sm:p-5 rounded-xl shadow-md flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-4 hover:shadow-lg hover:border-primary-300 transition-all group"
+                >
+                  <div className="flex-shrink-0 transform group-hover:scale-110 transition-transform">
+                    <IconComponent />
+                  </div>
+                  <span className="text-sm sm:text-base text-Hospital-gray-700 font-medium text-center sm:text-left">{feature.text}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Call to Action Section - simplified */}
-      <section className="py-16 bg-primary-600 text-white">
+      <section className="py-10 sm:py-16 bg-primary-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Upgrade Your Disinfection Protocol?

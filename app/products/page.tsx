@@ -2,8 +2,8 @@ import Link from 'next/link';
 import { PRODUCT_FEATURES, ORGANISMS_KILLED, APPLICATION_METHODS, COMPARISON_DATA, FAQS } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Products - Disintox® Chlorine Dioxide (ClO2) Disinfection',
-  description: 'Disintox® Chlorine Dioxide (ClO2) products for healthcare disinfection. Effervescent tablets and ready-to-use gel with 99.99% efficacy against pathogens.',
+  title: 'Products - Disintox® Chlorine Dioxide (ClO<sub>2</sub>) Disinfection',
+  description: 'Disintox® Chlorine Dioxide (ClO<sub>2</sub>) products for healthcare disinfection. Effervescent tablets and ready-to-use gel with 99.99% efficacy against pathogens.',
 };
 
 // Product catalog data
@@ -12,13 +12,13 @@ const products = [
     id: 1,
     anchor: 'tablets',
     name: 'Disintox® Tablets',
-    tagline: 'Effervescent Chlorine Dioxide (ClO2) Tablets',
-    description: 'Our flagship product - patented effervescent tablets that dissolve in water to create a powerful Chlorine Dioxide (ClO2) disinfection solution.',
+    tagline: 'Effervescent Chlorine Dioxide (ClO<sub>2</sub>) Tablets',
+    description: 'Our flagship product - patented effervescent tablets that dissolve in water to create a powerful Chlorine Dioxide (ClO<sub>2</sub>) disinfection solution.',
     image: '/products/tablet.jpg',
     applications: ['Surface Disinfection', 'Fumigation', 'Water Treatment', 'Equipment Sterilization'],
     specifications: [
       { label: 'Efficacy', value: '99.99% pathogen elimination' },
-      { label: 'Concentration', value: '100 PPM (adjustable)' },
+      { label: 'Concentration', value: '100 - 120 PPM (adjustable)' },
       { label: 'Contact Time', value: '30 seconds - 4 hours' },
       { label: 'Coverage', value: '1 tablet per 10L water' },
       { label: 'Shelf Life', value: '24 months' },
@@ -41,7 +41,7 @@ const products = [
     id: 2,
     anchor: 'gel',
     name: 'Disintox® Gel',
-    tagline: 'Ready-to-Use Chlorine Dioxide (ClO2) Gel',
+    tagline: 'Ready-to-Use Chlorine Dioxide (ClO<sub>2</sub>) Gel',
     description: 'Viscous gel formulation ideal for vertical surfaces, equipment, and targeted application areas requiring extended contact time.',
     image: '/logo.png',
     applications: ['Vertical Surface Disinfection', 'Bathroom Sanitization', 'Mold Removal', 'Odor Elimination'],
@@ -78,7 +78,7 @@ export default function ProductsPage() {
             Our Products
           </h1>
           <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
-            Two powerful Disintox® Chlorine Dioxide (ClO2) formulations for superior healthcare disinfection. Patented technology, proven 99.99% efficacy.
+            Two powerful Disintox® Chlorine Dioxide (ClO<sub>2</sub>) formulations for superior healthcare disinfection. Patented technology, proven 99.99% efficacy.
           </p>
         </div>
 
@@ -187,7 +187,7 @@ export default function ProductsPage() {
                 <svg className="w-5 h-5 text-secondary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm text-Hospital-gray-700">{feature}</span>
+                <span className="text-sm text-Hospital-gray-700">{typeof feature === 'string' ? feature : feature.text}</span>
               </div>
             ))}
           </div>

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Product Demonstration - Disintox®',
-  description: 'Watch detailed video demonstrations of Disintox® Chlorine Dioxide (ClO2) products. Learn proper usage, application methods, and safety protocols.',
+  description: 'Watch detailed video demonstrations of Disintox® Chlorine Dioxide (ClO<sub>2</sub>) products. Learn proper usage, application methods, and safety protocols.',
 };
 
 // Demo videos data

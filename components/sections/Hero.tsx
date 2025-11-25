@@ -6,14 +6,14 @@ import CountUpNumber from '../animations/CountUpNumber';
 export default function Hero() {
 
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-b from-Hospital-gray-50 to-white overflow-x-hidden">
+    <section className="relative min-h-[600px] lg:min-h-screen flex items-center bg-gradient-to-b from-Hospital-gray-50 to-white overflow-x-hidden">
       {/* Simple background - removed mesh and grid patterns */}
 
-      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* LEFT: Content */}
-          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+          <div className="space-y-4 sm:space-y-8 lg:space-y-10">
             {/* Badge - simplified */}
             <div className="inline-flex items-center gap-2 bg-primary-50 border border-primary-200 rounded-full px-4 sm:px-6 py-2 sm:py-3">
               <span className="w-2 h-2 bg-secondary-500 rounded-full"></span>
@@ -32,27 +32,27 @@ export default function Hero() {
             {/* Subheadline - simplified */}
             <p className="text-lg sm:text-xl text-Hospital-gray-600 leading-relaxed max-w-xl">
               Eliminates <span className="font-bold text-primary-600">99.99%</span> of pathogens with
-              <span className="text-Hospital-gray-900 font-semibold"> Chlorine Dioxide (ClO2) tablets</span> —
+              <span className="text-Hospital-gray-900 font-semibold"> Chlorine Dioxide (ClO<sub>2</sub>) tablets</span> —
               trusted by India's leading healthcare facilities
             </p>
 
             {/* Stats Row - simplified */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 max-w-4xl">
-              <div className="bg-white rounded-lg p-6 shadow-md border border-Hospital-gray-200">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-4 sm:pt-6 max-w-4xl">
+              <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-Hospital-gray-200">
                 <div className="text-4xl font-bold text-primary-600 mb-2">
                   <CountUpNumber end={99.99} decimals={2} suffix="%" />
                 </div>
                 <div className="text-sm font-semibold text-Hospital-gray-700">Efficacy Rate</div>
                 <div className="text-xs text-Hospital-gray-500 mt-1">Pathogen Elimination</div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-Hospital-gray-200">
+              <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-Hospital-gray-200">
                 <div className="text-4xl font-bold text-secondary-600 mb-2">
                   <CountUpNumber end={100} suffix="%" />
                 </div>
                 <div className="text-sm font-semibold text-Hospital-gray-700">Non-Toxic</div>
                 <div className="text-xs text-Hospital-gray-500 mt-1">Safe for Humans</div>
               </div>
-              <div className="bg-white rounded-lg p-6 shadow-md border border-Hospital-gray-200">
+              <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-Hospital-gray-200">
                 <div className="text-4xl font-bold text-accent-600 mb-2">3-4h</div>
                 <div className="text-sm font-semibold text-Hospital-gray-700">Fumigation</div>
                 <div className="text-xs text-Hospital-gray-500 mt-1">vs 12-14h Traditional</div>
@@ -110,7 +110,7 @@ export default function Hero() {
 
                 {/* Tagline - simplified */}
                 <div className="space-y-2">
-                  <p className="text-base font-medium">Chlorine Dioxide (ClO2) Disintox® Tablets</p>
+                  <p className="text-base font-medium">Chlorine Dioxide (ClO<sub>2</sub>) Disintox® Tablets</p>
                   <p className="text-lg font-light leading-relaxed">
                     Empowering healthcare<br />with science-driven hygiene
                   </p>
@@ -145,13 +145,13 @@ export default function Hero() {
             </div>
 
             {/* Info Cards - simplified */}
-            <div className="grid grid-cols-2 gap-4 mt-6 max-w-md mx-auto">
-              <div className="bg-white rounded-lg p-4 shadow-md border border-Hospital-gray-200 text-center">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6 max-w-md mx-auto">
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-md border border-Hospital-gray-200 text-center">
                 <div className="text-sm font-semibold text-Hospital-gray-600 mb-1">Patent #</div>
                 <div className="text-2xl font-bold text-primary-600">386338</div>
                 <div className="text-xs text-Hospital-gray-500 mt-1">Patent, Govt. of India</div>
               </div>
-              <div className="bg-white rounded-lg p-4 shadow-md border border-Hospital-gray-200 text-center">
+              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-md border border-Hospital-gray-200 text-center">
                 <div className="text-3xl font-bold text-secondary-600 mb-1">1000+</div>
                 <div className="text-sm text-Hospital-gray-700 font-semibold">Hospitals Served</div>
               </div>

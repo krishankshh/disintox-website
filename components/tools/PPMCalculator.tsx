@@ -212,7 +212,7 @@ export default function PPMCalculator() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className="font-semibold text-Hospital-gray-900 mb-2">Standard Ratio:</h4>
-                  <p className="text-sm text-Hospital-gray-700">1 tablet per 10L water = 100 PPM</p>
+                  <p className="text-sm text-Hospital-gray-700">1 tablet per 10L water = 100 - 120 PPM</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-Hospital-gray-900 mb-2">Recommended PPM:</h4>

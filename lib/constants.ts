@@ -105,20 +105,21 @@ export const APPROVALS: Approval[] = [
 ];
 
 export const PRODUCT_FEATURES = [
-  'Non-Corrosive',
-  'Non-Carcinogenic',
-  'Non-toxic and environment friendly',
-  'No Residue or No Harmful by-products',
-  'No Anti-Microbial resistance',
-  'Effective at lower concentration (100 PPM vs 1000+ PPM)',
-  'Effective on smallest pathogens (0.124 nm)',
-  'Short contact time',
-  'Easy application - no machinery required',
-  'Does not stain fabric',
-  'Broad-Spectrum Antimicrobial',
-  'No large storage required',
-  'Versatile (liquid, solid & gaseous forms)',
-  'Cost effective',
+  { text: 'Non-Corrosive', icon: 'NonCorrosive' },
+  { text: 'Non-Carcinogenic', icon: 'NonCarcinogenic' },
+  { text: 'Non-toxic and environment friendly', icon: 'NonToxic' },
+  { text: 'No Residue or No Harmful by-products', icon: 'NoResidue' },
+  { text: 'No Anti-Microbial resistance', icon: 'NoResistance' },
+  { text: 'Soil Load Reduction', icon: 'SoilLoadReduction' },
+  { text: 'Effective at lower concentration (100 PPM vs 1000+ PPM)', icon: 'LowConcentration' },
+  { text: 'Effective on smallest pathogens (0.124 nm)', icon: 'SmallPathogen' },
+  { text: 'Short contact time', icon: 'ShortContactTime' },
+  { text: 'Easy application - no machinery required', icon: 'EasyToUse' },
+  { text: 'Does not stain fabric', icon: 'NoStain' },
+  { text: 'Broad-Spectrum Antimicrobial', icon: 'BroadSpectrum' },
+  { text: 'No large storage required', icon: 'NoStorage' },
+  { text: 'Versatile (liquid, solid & gaseous forms)', icon: 'Versatility' },
+  { text: 'Cost effective', icon: 'CostEffective' },
 ];
 
 export const ORGANISMS_KILLED = {
