@@ -5,6 +5,37 @@ export const metadata = {
   description: "Calculate the correct dosage of Disintox® tablets for your disinfection needs. Easy-to-use PPM calculator for optimal Chlorine Dioxide (ClO<sub>2</sub>) concentration.",
 };
 
+// Risk Level Effectiveness data
+const riskLevelData = {
+  'High risk': [
+    { location: 'All ICUs', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Casualty treatment area', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Haemodialysis unit', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Labour room', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Operation theatre', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Procedure rooms', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Respiratory therapy room/area', level: 'High', ppm: '100-200 or above', dirtyTime: '10 mins', cleanTime: '5 mins' }
+  ],
+  'Medium risk': [
+    { location: 'Burn ward', level: 'High', ppm: '100 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'CSSD', level: 'High', ppm: '100 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Laboratory', level: 'High', ppm: '100 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'General ward', level: 'High', ppm: '100 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Patient rooms (Patient on isolation precautions)', level: 'High', ppm: '100 or above', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Soiled linen collection area', level: 'High', ppm: '100 or above', dirtyTime: '10 mins', cleanTime: '5 mins' }
+  ],
+  'Low risk': [
+    { location: 'Echocardiography (No patients with respiratory infection)', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'General public areas', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Offices', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Patient rooms (Patient not on isolation precautions)', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Pharmacy', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Physiotherapy', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Radiology', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' },
+    { location: 'Reception area', level: 'Low', ppm: '100', dirtyTime: '10 mins', cleanTime: '5 mins' }
+  ]
+};
+
 export default function CalculatorPage() {
   return (
     <main className="min-h-screen pt-32 pb-16 bg-gradient-to-br from-Hospital-gray-50 via-white to-primary-50">
@@ -25,30 +56,92 @@ export default function CalculatorPage() {
         {/* Calculator Component */}
         <PPMCalculator />
 
-        {/* Additional Information */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">
-            <div className="text-4xl mb-3">💡</div>
-            <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Easy to Use</h3>
-            <p className="text-sm text-Hospital-gray-600">
-              Simply enter your water volume and desired PPM to get instant tablet calculations
-            </p>
+        {/* Risk Level Effectiveness Section */}
+        <section className="mt-16 bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8">
+          <h2 className="text-3xl font-bold text-Hospital-gray-900 mb-6 text-center">
+            Risk Level Effectiveness
+          </h2>
+          <p className="text-center text-Hospital-gray-600 mb-8 max-w-3xl mx-auto">
+            Disinfection guidelines by risk classification for optimal safety and efficacy
+          </p>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-Hospital-gray-100">
+                  <th className="border border-Hospital-gray-300 px-4 py-3 text-left font-bold text-Hospital-gray-900">
+                    Risk Classification
+                  </th>
+                  <th className="border border-Hospital-gray-300 px-4 py-3 text-left font-bold text-Hospital-gray-900">
+                    Location
+                  </th>
+                  <th className="border border-Hospital-gray-300 px-4 py-3 text-left font-bold text-Hospital-gray-900">
+                    Disinfection Level Required
+                  </th>
+                  <th className="border border-Hospital-gray-300 px-4 py-3 text-left font-bold text-Hospital-gray-900">
+                    PPM
+                  </th>
+                  <th className="border border-Hospital-gray-300 px-4 py-3 text-center font-bold text-Hospital-gray-900" colSpan={2}>
+                    Contact Time
+                  </th>
+                </tr>
+                <tr className="bg-Hospital-gray-100">
+                  <th colSpan={4}></th>
+                  <th className="border border-Hospital-gray-300 px-4 py-2 text-center font-semibold text-Hospital-gray-700 text-sm">
+                    Dirty Condition
+                  </th>
+                  <th className="border border-Hospital-gray-300 px-4 py-2 text-center font-semibold text-Hospital-gray-700 text-sm">
+                    Clean Condition
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(riskLevelData).map(([riskCategory, locations]) => (
+                  locations.map((item, index) => (
+                    <tr
+                      key={`${riskCategory}-${index}`}
+                      className={
+                        riskCategory === 'High risk' ? 'bg-red-50' :
+                        riskCategory === 'Medium risk' ? 'bg-yellow-50' :
+                        'bg-orange-50'
+                      }
+                    >
+                      {index === 0 && (
+                        <td
+                          className="border border-Hospital-gray-300 px-4 py-3 font-bold text-Hospital-gray-900 capitalize align-top"
+                          rowSpan={locations.length}
+                        >
+                          <span className={
+                            riskCategory === 'High risk' ? 'text-red-700' :
+                            riskCategory === 'Medium risk' ? 'text-yellow-700' :
+                            'text-orange-700'
+                          }>
+                            {riskCategory}
+                          </span>
+                        </td>
+                      )}
+                      <td className="border border-Hospital-gray-300 px-4 py-3 text-sm text-Hospital-gray-700">
+                        {item.location}
+                      </td>
+                      <td className="border border-Hospital-gray-300 px-4 py-3 text-sm text-Hospital-gray-700 font-semibold">
+                        {item.level}
+                      </td>
+                      <td className="border border-Hospital-gray-300 px-4 py-3 text-sm text-Hospital-gray-700 font-semibold">
+                        {item.ppm}
+                      </td>
+                      <td className="border border-Hospital-gray-300 px-4 py-3 text-sm text-Hospital-gray-700 text-center">
+                        {item.dirtyTime}
+                      </td>
+                      <td className="border border-Hospital-gray-300 px-4 py-3 text-sm text-Hospital-gray-700 text-center">
+                        {item.cleanTime}
+                      </td>
+                    </tr>
+                  ))
+                ))}
+              </tbody>
+            </table>
           </div>
-          <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">
-            <div className="text-4xl mb-3">🎯</div>
-            <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Accurate Dosing</h3>
-            <p className="text-sm text-Hospital-gray-600">
-              Based on Disintox® standard ratio: 1 tablet per 10L produces 100 - 120 PPM
-            </p>
-          </div>
-          <div className="bg-white rounded-xl shadow-md border border-Hospital-gray-200 p-6">
-            <div className="text-4xl mb-3">✅</div>
-            <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">Optimal Results</h3>
-            <p className="text-sm text-Hospital-gray-600">
-              Achieve the perfect concentration for your specific disinfection needs
-            </p>
-          </div>
-        </div>
+        </section>
 
         {/* Safety Notice */}
         <div className="mt-12 bg-yellow-50 border-2 border-yellow-300 rounded-xl p-6">

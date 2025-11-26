@@ -37,7 +37,7 @@ export default function Home() {
               <p className="text-sm text-Hospital-gray-600">Pathogen Elimination</p>
             </div>
             <div className="bg-white border border-Hospital-gray-200 shadow-sm p-4 sm:p-6 rounded-lg text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">30 Sec</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">5 Mins</div>
               <p className="text-sm text-Hospital-gray-600">Contact Time</p>
             </div>
             <div className="bg-white border border-Hospital-gray-200 shadow-sm p-4 sm:p-6 rounded-lg text-center">

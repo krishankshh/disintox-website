@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PRODUCT_FEATURES, ORGANISMS_KILLED, APPLICATION_METHODS, COMPARISON_DATA, FAQS } from '@/lib/constants';
+import { ORGANISMS_KILLED, APPLICATION_METHODS, COMPARISON_DATA, FAQS } from '@/lib/constants';
 
 export const metadata = {
   title: 'Products - Disintox® Chlorine Dioxide (ClO<sub>2</sub>) Disinfection',
@@ -43,7 +43,7 @@ const products = [
     name: 'Disintox® Gel',
     tagline: 'Ready-to-Use Chlorine Dioxide (ClO<sub>2</sub>) Gel',
     description: 'Viscous gel formulation ideal for vertical surfaces, equipment, and targeted application areas requiring extended contact time.',
-    image: '/logo.png',
+    image: '/products/gel.png',
     applications: ['Vertical Surface Disinfection', 'Bathroom Sanitization', 'Mold Removal', 'Odor Elimination'],
     specifications: [
       { label: 'Efficacy', value: '99.99% pathogen elimination' },
@@ -67,6 +67,56 @@ const products = [
     ]
   },
 ];
+
+// Dimension Scale data
+const dimensionScale = [
+  { name: 'ClO₂ Molecule', size: '0.124 nm', subtext: '(124 pm)' },
+  { name: 'Norovirus', size: '27-38 nm', subtext: '' },
+  { name: 'HIV', size: '120 nm', subtext: '' },
+  { name: 'Mycobacterium tuberculosis', size: '2-4 μm', subtext: '' },
+  { name: 'Fog / Mist Droplet', size: '5 μm', subtext: '' },
+];
+
+// Tested Organisms data
+const testedOrganisms = {
+  'Bacteria': [
+    'Blakeslea tripora',
+    'E. coli O157:H7',
+    'Erwina carotovora',
+    'Fusarium sambucirum',
+    'Legionella',
+    'Listeria monocytogenes',
+    'Salmonella enterica',
+    'Shigella',
+    'Staphylococcus aureus',
+    'Many others'
+  ],
+  'Viruses': [
+    'COVID-19 (SARS-COV-2)',
+    'Influenza-A virus',
+    'Mouse Hepatitis Virus',
+    'Poliovirus-1',
+    'Rotavirus',
+    'Rhinovirus',
+    'Influenza A virus (formerly called swine flu)',
+    'Foot and Mouth disease',
+    'Many others'
+  ],
+  'Bacterial Spores': [
+    'Bacillus anthracis',
+    'Bacillus pumilus',
+    'Bacillus subtillis (multiple)',
+    'Clostridium sporogenes',
+    'Many others'
+  ],
+  'Algae/Fungi/Mold/Yeast': [
+    'Aspergillus clavatus',
+    'Aspergillus (multiple)',
+    'Candida (multiple)',
+    'Fusarum solani',
+    'Many others'
+  ]
+};
 
 export default function ProductsPage() {
   return (
@@ -173,38 +223,117 @@ export default function ProductsPage() {
           ))}
         </div>
 
-        {/* Product Features Section */}
-        <section id="features" className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8 mb-12 scroll-mt-24">
+        {/* Dimension Scale Section */}
+        <section className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8 mb-12 scroll-mt-24">
           <h2 className="text-3xl font-bold text-Hospital-gray-900 mb-6 text-center">
-            Why Choose Disintox® Products?
+            Dimension Scale
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {PRODUCT_FEATURES.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 bg-Hospital-gray-50 p-3 rounded-lg"
-              >
-                <svg className="w-5 h-5 text-secondary-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-sm text-Hospital-gray-700">{typeof feature === 'string' ? feature : feature.text}</span>
+          <p className="text-center text-Hospital-gray-600 mb-8 max-w-3xl mx-auto">
+            Understanding the size spectrum of organisms that Disintox® effectively eliminates
+          </p>
+
+          {/* Horizontal Timeline */}
+          <div className="relative overflow-x-auto pb-8">
+            {/* Background gradient */}
+            <div className="bg-gradient-to-r from-primary-50 via-secondary-50 to-accent-50 rounded-xl p-8 min-w-[900px]">
+              {/* Scale baseline */}
+              <div className="relative">
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-400 via-secondary-400 to-accent-400 rounded-full"></div>
+
+                {/* Timeline items */}
+                <div className="flex items-end justify-around pb-4 relative">
+                  {dimensionScale.map((item, index) => {
+                    // Variable sizes for visual hierarchy
+                    const sizes = ['w-8 h-8', 'w-10 h-10', 'w-12 h-12', 'w-16 h-16', 'w-20 h-20'];
+                    const markerHeights = [60, 80, 100, 120, 140];
+
+                    return (
+                      <div key={index} className="flex flex-col items-center relative" style={{ marginBottom: `${markerHeights[index]}px` }}>
+                        {/* Organism/particle visual */}
+                        <div className={`${sizes[index]} rounded-full mb-4 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 ${
+                          index === 0 ? 'bg-gradient-to-br from-primary-500 to-primary-700 animate-pulse' :
+                          index === 1 ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
+                          index === 2 ? 'bg-gradient-to-br from-purple-500 to-purple-700' :
+                          index === 3 ? 'bg-gradient-to-br from-secondary-500 to-secondary-700' :
+                          'bg-gradient-to-br from-accent-500 to-accent-700'
+                        }`}>
+                          <svg className="w-1/2 h-1/2 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            {index === 0 ? (
+                              // Molecule icon
+                              <path d="M10 3a7 7 0 100 14 7 7 0 000-14zm0 2a5 5 0 110 10 5 5 0 010-10z"/>
+                            ) : index === 1 || index === 2 ? (
+                              // Virus icon
+                              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                            ) : index === 3 ? (
+                              // Bacteria icon
+                              <circle cx="10" cy="10" r="4"/>
+                            ) : (
+                              // Droplet icon
+                              <path d="M10 2s-4 4.5-4 8a4 4 0 008 0c0-3.5-4-8-4-8z"/>
+                            )}
+                          </svg>
+                        </div>
+
+                        {/* Connecting line to baseline */}
+                        <div className="w-0.5 bg-gradient-to-b from-Hospital-gray-400 to-Hospital-gray-600 absolute bottom-0" style={{ height: `${markerHeights[index]}px`, top: 'auto' }}></div>
+
+                        {/* Info card */}
+                        <div className="bg-white rounded-lg shadow-md p-4 text-center border-2 border-Hospital-gray-200 min-w-[140px] relative z-10">
+                          <div className="font-bold text-primary-700 text-xl mb-1">
+                            {item.size}
+                          </div>
+                          {item.subtext && (
+                            <div className="text-xs text-Hospital-gray-500 mb-2 italic">
+                              {item.subtext}
+                            </div>
+                          )}
+                          <div className="text-xs text-Hospital-gray-700 font-semibold leading-tight">
+                            {item.name}
+                          </div>
+                          {/* Arrow pointer */}
+                          <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-Hospital-gray-200"></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            ))}
+
+              {/* Scale labels */}
+              <div className="flex justify-between items-center mt-6 px-4">
+                <div className="text-xs font-semibold text-primary-700 flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  Smallest (nm)
+                </div>
+                <div className="text-center">
+                  <div className="text-sm font-bold text-Hospital-gray-900 uppercase tracking-wide">Size Scale</div>
+                  <div className="text-xs text-Hospital-gray-600">Nanometers (nm) to Micrometers (μm)</div>
+                </div>
+                <div className="text-xs font-semibold text-accent-700 flex items-center gap-2">
+                  Largest (μm)
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Organisms Killed Section */}
+        {/* Tested Organisms Section */}
         <section id="efficacy" className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8 mb-12 scroll-mt-24">
           <h2 className="text-3xl font-bold text-Hospital-gray-900 mb-6 text-center">
-            Proven Efficacy Against Pathogens
+            Tested Organisms
           </h2>
           <p className="text-center text-Hospital-gray-600 mb-8 max-w-3xl mx-auto">
-            Disintox® eliminates 99.99% of the following categories of organisms
+            Disintox® is known to be effective on these tested organisms:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Object.entries(ORGANISMS_KILLED).map(([category, organisms]) => (
+            {Object.entries(testedOrganisms).map(([category, organisms]) => (
               <div key={category} className="bg-Hospital-gray-50 rounded-lg p-6">
-                <h3 className="text-lg font-bold text-primary-600 mb-4 capitalize">{category}</h3>
+                <h3 className="text-lg font-bold text-primary-600 mb-4 uppercase">{category}</h3>
                 <ul className="space-y-2">
                   {organisms.map((organism, index) => (
                     <li key={index} className="text-sm text-Hospital-gray-700 flex items-start gap-2">

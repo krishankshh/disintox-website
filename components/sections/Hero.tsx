@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* LEFT: Content */}
-          <div className="space-y-4 sm:space-y-8 lg:space-y-10">
+          <div className="space-y-4 sm:space-y-8 lg:space-y-10 order-2 lg:order-1">
             {/* Badge - simplified */}
             <div className="inline-flex items-center gap-2 bg-primary-50 border border-primary-200 rounded-full px-4 sm:px-6 py-2 sm:py-3">
               <span className="w-2 h-2 bg-secondary-500 rounded-full"></span>
@@ -53,7 +53,7 @@ export default function Hero() {
                 <div className="text-xs text-Hospital-gray-500 mt-1">Safe for Humans</div>
               </div>
               <div className="bg-white rounded-lg p-4 sm:p-6 shadow-md border border-Hospital-gray-200">
-                <div className="text-4xl font-bold text-accent-600 mb-2">3-4h</div>
+                <div className="text-4xl font-bold text-accent-600 mb-2">3-4 Hours</div>
                 <div className="text-sm font-semibold text-Hospital-gray-700">Fumigation</div>
                 <div className="text-xs text-Hospital-gray-500 mt-1">vs 12-14h Traditional</div>
               </div>
@@ -95,66 +95,29 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT: Visual - simplified */}
-          <div className="relative mt-12 lg:mt-0">
-            {/* Main Product Card - simplified */}
-            <div className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl p-8 shadow-lg mx-auto max-w-md">
-              {/* Removed decorative blur elements */}
-
-              {/* Content */}
-              <div className="text-center text-white space-y-6">
-                {/* ClO₂ Badge - removed animation */}
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-xl shadow-lg">
-                  <span className="text-2xl font-bold text-primary-600">ClO₂</span>
-                </div>
-
-                {/* Tagline - simplified */}
-                <div className="space-y-2">
-                  <p className="text-base font-medium">Chlorine Dioxide (ClO<sub>2</sub>) Disintox® Tablets</p>
-                  <p className="text-lg font-light leading-relaxed">
-                    Empowering healthcare<br />with science-driven hygiene
-                  </p>
-                </div>
-
-                {/* Product Name - removed S.H.I.E.L.D. acronym for simplicity */}
-                <div className="py-6">
-                  <h2 className="text-5xl font-bold tracking-wide">
-                    Disintox®
-                  </h2>
-                  <p className="text-sm mt-2 opacity-90">
-                    Science-driven hygiene for effective disinfection
-                  </p>
-                </div>
-
-                {/* Logo - simplified */}
-                <div className="inline-block bg-white px-6 py-4 rounded-xl shadow-lg">
-                  <Image
-                    src="/logo.png"
-                    alt="Disintox Logo"
-                    width={110}
-                    height={70}
-                    className="mx-auto"
-                  />
-                </div>
-
-                {/* Made in India - simplified */}
-                <div className="inline-block bg-white/20 px-4 py-2 rounded-full">
-                  <span className="font-semibold text-white text-sm">🇮🇳 Made in India</span>
-                </div>
-              </div>
+          {/* RIGHT: Hero Image */}
+          <div className="relative -mt-8 lg:-mt-72 order-1 lg:order-2">
+            {/* COMMENTED OUT - L-shaped frames
+            <div className="absolute -top-2 -left-2 pointer-events-none z-10">
+              <div className="w-[250px] h-5 bg-primary-600"></div>
+              <div className="w-5 h-[300px] bg-primary-600"></div>
             </div>
 
-            {/* Info Cards - simplified */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4 mt-4 sm:mt-6 max-w-md mx-auto">
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-md border border-Hospital-gray-200 text-center">
-                <div className="text-sm font-semibold text-Hospital-gray-600 mb-1">Patent #</div>
-                <div className="text-2xl font-bold text-primary-600">386338</div>
-                <div className="text-xs text-Hospital-gray-500 mt-1">Patent, Govt. of India</div>
-              </div>
-              <div className="bg-white rounded-lg p-3 sm:p-4 shadow-md border border-Hospital-gray-200 text-center">
-                <div className="text-3xl font-bold text-secondary-600 mb-1">1000+</div>
-                <div className="text-sm text-Hospital-gray-700 font-semibold">Hospitals Served</div>
-              </div>
+            <div className="absolute -bottom-2 -right-2 pointer-events-none z-10">
+              <div className="absolute bottom-0 right-0 w-5 h-[300px] bg-secondary-600"></div>
+              <div className="absolute bottom-0 right-0 w-[250px] h-5 bg-secondary-600"></div>
+            </div>
+            */}
+
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl mx-auto max-w-md h-[500px] lg:h-[600px]">
+              <Image
+                src="/hero_image.jpg"
+                alt="Disintox Product Package"
+                fill
+                className="object-contain"
+                priority
+                quality={95}
+              />
             </div>
           </div>
         </div>
