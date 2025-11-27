@@ -102,8 +102,8 @@ export default function CalculatorPage() {
                       key={`${riskCategory}-${index}`}
                       className={
                         riskCategory === 'High risk' ? 'bg-red-50' :
-                        riskCategory === 'Medium risk' ? 'bg-yellow-50' :
-                        'bg-orange-50'
+                          riskCategory === 'Medium risk' ? 'bg-yellow-50' :
+                            'bg-orange-50'
                       }
                     >
                       {index === 0 && (
@@ -111,13 +111,15 @@ export default function CalculatorPage() {
                           className="border border-Hospital-gray-300 px-4 py-3 font-bold text-Hospital-gray-900 capitalize align-top"
                           rowSpan={locations.length}
                         >
-                          <span className={
-                            riskCategory === 'High risk' ? 'text-red-700' :
-                            riskCategory === 'Medium risk' ? 'text-yellow-700' :
-                            'text-orange-700'
-                          }>
-                            {riskCategory}
-                          </span>
+                          <img
+                            src={
+                              riskCategory === 'High risk' ? '/risk-high.png' :
+                                riskCategory === 'Medium risk' ? '/risk-medium.png' :
+                                  '/risk-low.png'
+                            }
+                            alt={riskCategory}
+                            className="w-32 mx-auto"
+                          />
                         </td>
                       )}
                       <td className="border border-Hospital-gray-300 px-4 py-3 text-sm text-Hospital-gray-700">
