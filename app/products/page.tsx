@@ -214,7 +214,7 @@ export default function ProductsPage() {
                       href="/demo"
                       className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors inline-block w-full text-center"
                     >
-                      View Demo →
+                      Gallery →
                     </Link>
                   </div>
                 </div>
@@ -250,26 +250,25 @@ export default function ProductsPage() {
                     return (
                       <div key={index} className="flex flex-col items-center relative" style={{ marginBottom: `${markerHeights[index]}px` }}>
                         {/* Organism/particle visual */}
-                        <div className={`${sizes[index]} rounded-full mb-4 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 ${
-                          index === 0 ? 'bg-gradient-to-br from-primary-500 to-primary-700 animate-pulse' :
-                          index === 1 ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
-                          index === 2 ? 'bg-gradient-to-br from-purple-500 to-purple-700' :
-                          index === 3 ? 'bg-gradient-to-br from-secondary-500 to-secondary-700' :
-                          'bg-gradient-to-br from-accent-500 to-accent-700'
-                        }`}>
+                        <div className={`${sizes[index]} rounded-full mb-4 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 ${index === 0 ? 'bg-gradient-to-br from-primary-500 to-primary-700 animate-pulse' :
+                            index === 1 ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
+                              index === 2 ? 'bg-gradient-to-br from-purple-500 to-purple-700' :
+                                index === 3 ? 'bg-gradient-to-br from-secondary-500 to-secondary-700' :
+                                  'bg-gradient-to-br from-accent-500 to-accent-700'
+                          }`}>
                           <svg className="w-1/2 h-1/2 text-white" fill="currentColor" viewBox="0 0 20 20">
                             {index === 0 ? (
                               // Molecule icon
-                              <path d="M10 3a7 7 0 100 14 7 7 0 000-14zm0 2a5 5 0 110 10 5 5 0 010-10z"/>
+                              <path d="M10 3a7 7 0 100 14 7 7 0 000-14zm0 2a5 5 0 110 10 5 5 0 010-10z" />
                             ) : index === 1 || index === 2 ? (
                               // Virus icon
-                              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 2a6 6 0 110 12 6 6 0 010-12z"/>
+                              <path d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 2a6 6 0 110 12 6 6 0 010-12z" />
                             ) : index === 3 ? (
                               // Bacteria icon
-                              <circle cx="10" cy="10" r="4"/>
+                              <circle cx="10" cy="10" r="4" />
                             ) : (
                               // Droplet icon
-                              <path d="M10 2s-4 4.5-4 8a4 4 0 008 0c0-3.5-4-8-4-8z"/>
+                              <path d="M10 2s-4 4.5-4 8a4 4 0 008 0c0-3.5-4-8-4-8z" />
                             )}
                           </svg>
                         </div>
@@ -382,9 +381,8 @@ export default function ProductsPage() {
                   {COMPARISON_DATA.agents.map((agent, index) => (
                     <th
                       key={index}
-                      className={`border border-Hospital-gray-300 px-4 py-3 text-left font-bold ${
-                        index === 0 ? 'bg-primary-50 text-primary-700' : 'text-Hospital-gray-900'
-                      }`}
+                      className={`border border-Hospital-gray-300 px-4 py-3 text-left font-bold ${index === 0 ? 'bg-primary-50 text-primary-700' : 'text-Hospital-gray-900'
+                        }`}
                     >
                       {agent}
                     </th>
@@ -400,9 +398,8 @@ export default function ProductsPage() {
                     {metric.values.map((value, colIndex) => (
                       <td
                         key={colIndex}
-                        className={`border border-Hospital-gray-300 px-4 py-3 text-sm ${
-                          colIndex === 0 ? 'bg-primary-50 font-semibold text-primary-700' : 'text-Hospital-gray-700'
-                        }`}
+                        className={`border border-Hospital-gray-300 px-4 py-3 text-sm ${colIndex === 0 ? 'bg-primary-50 font-semibold text-primary-700' : 'text-Hospital-gray-700'
+                          }`}
                       >
                         {value}
                       </td>

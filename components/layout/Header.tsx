@@ -59,7 +59,7 @@ export default function Header() {
               </div>
             ))}
             <a href="/demo" className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-              View Demo
+              Gallery
             </a>
           </nav>
 
@@ -133,7 +133,7 @@ export default function Header() {
                 </div>
               ))}
               <a href="/demo" className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors text-center mt-4">
-                View Demo
+                Gallery
               </a>
             </nav>
           </div>

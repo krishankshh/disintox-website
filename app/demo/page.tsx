@@ -1,201 +1,150 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Product Demonstration - Disintox®',
-  description: 'Watch detailed video demonstrations of Disintox® Chlorine Dioxide (ClO<sub>2</sub>) products. Learn proper usage, application methods, and safety protocols.',
-};
+export default function GalleryPage() {
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const [images, setImages] = useState<string[]>([]);
 
-// Demo videos data
-const demoVideos = [
-  {
-    id: 1,
-    title: 'Disintox® Tablets - Complete Usage Guide',
-    description: 'Learn how to properly dissolve and use Disintox® tablets for surface disinfection and fumigation.',
-    videoUrl: '/demo.mp4',
-    duration: '5:30',
-    topics: [
-      'Tablet dissolution procedure',
-      'Proper concentration measurement',
-      'Surface application techniques',
-      'Fumigation setup',
-      'Safety precautions'
-    ]
-  },
-  {
-    id: 2,
-    title: 'Disintox® Gel - Application Demonstration',
-    description: 'Step-by-step guide for applying Disintox® gel on vertical surfaces, bathrooms, and targeted areas.',
-    videoUrl: '/demo.mp4',
-    duration: '4:15',
-    topics: [
-      'Proper application technique',
-      'Coverage guidelines',
-      'Contact time requirements',
-      'Bathroom sanitization',
-      'Mold and odor removal'
-    ]
-  },
-  {
-    id: 3,
-    title: 'Disintox® Solution - Spray & Fog Application',
-    description: 'Comprehensive guide for using pre-mixed solution in spraying and fogging systems.',
-    videoUrl: '/demo.mp4',
-    duration: '6:45',
-    topics: [
-      'Spray bottle setup',
-      'Fogging machine operation',
-      'HVAC system disinfection',
-      'Large area coverage',
-      'Post-application ventilation'
-    ]
-  },
-  {
-    id: 4,
-    title: 'Hospital Fumigation Protocol',
-    description: 'Complete procedure for fumigating hospital rooms, operation theaters, and ICUs using Disintox®.',
-    videoUrl: '/demo.mp4',
-    duration: '8:20',
-    topics: [
-      'Room preparation',
-      'Tablet calculation for room size',
-      'Fumigation execution',
-      'Air quality monitoring',
-      'Room clearance protocol'
-    ]
-  },
-  {
-    id: 5,
-    title: 'Water Treatment Application',
-    description: 'How to use Disintox® tablets for water disinfection in tanks, pipelines, and treatment systems.',
-    videoUrl: '/demo.mp4',
-    duration: '5:50',
-    topics: [
-      'Water volume calculation',
-      'Dosage determination',
-      'Tablet dissolution in water',
-      'Contact time requirements',
-      'Water quality testing'
-    ]
-  },
-  {
-    id: 6,
-    title: 'Safety & Storage Guidelines',
-    description: 'Essential safety protocols, storage requirements, and handling procedures for Disintox® products.',
-    videoUrl: '/demo.mp4',
-    duration: '4:30',
-    topics: [
-      'Personal protective equipment (PPE)',
-      'Storage conditions',
-      'Handling precautions',
-      'Emergency procedures',
-      'Disposal guidelines'
-    ]
-  }
-];
+  // Get all images from the gallery folder
+  useEffect(() => {
+    // This will be populated by images in /public/gallery/
+    // For now, we'll use a placeholder array
+    // In production, you'd use an API route to read the directory
+    const galleryImages: string[] = [];
 
-export default function DemoPage() {
+    // Check for images 1-50 (adjust range as needed)
+    for (let i = 1; i <= 50; i++) {
+      galleryImages.push(`/gallery/${i}.jpg`);
+    }
+
+    setImages(galleryImages);
+  }, []);
+
+  const openLightbox = (index: number) => {
+    setSelectedImage(index);
+  };
+
+  const closeLightbox = () => {
+    setSelectedImage(null);
+  };
+
+  const navigateImage = (direction: 'prev' | 'next') => {
+    if (selectedImage === null) return;
+
+    if (direction === 'prev') {
+      setSelectedImage(selectedImage === 0 ? images.length - 1 : selectedImage - 1);
+    } else {
+      setSelectedImage(selectedImage === images.length - 1 ? 0 : selectedImage + 1);
+    }
+  };
+
   return (
     <main className="min-h-screen pt-24 pb-16 bg-Hospital-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-Hospital-gray-900 mb-4">
-            Product Demonstrations
+            Gallery
           </h1>
           <p className="text-xl text-Hospital-gray-600 max-w-3xl mx-auto">
-            Watch comprehensive video tutorials on how to properly use Disintox® products for maximum efficacy and safety.
+            Explore our collection of Disintox® product images and real-world applications.
           </p>
         </div>
 
-        {/* Quick Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
-            <div className="text-4xl mb-3">🎥</div>
-            <div className="text-2xl font-bold text-primary-600 mb-2">6</div>
-            <div className="text-sm text-Hospital-gray-600">Video Tutorials</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
-            <div className="text-4xl mb-3">⏱️</div>
-            <div className="text-2xl font-bold text-primary-600 mb-2">35 min</div>
-            <div className="text-sm text-Hospital-gray-600">Total Duration</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-6 text-center">
-            <div className="text-4xl mb-3">✅</div>
-            <div className="text-2xl font-bold text-primary-600 mb-2">100%</div>
-            <div className="text-sm text-Hospital-gray-600">Best Practices</div>
-          </div>
-        </div>
-
-        {/* Video Demonstrations */}
-        <div className="space-y-8">
-          {demoVideos.map((video, index) => (
-            <article
-              key={video.id}
-              className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 overflow-hidden"
+        {/* Simple Gallery Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {images.map((imagePath, index) => (
+            <div
+              key={index}
+              className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer aspect-square"
+              onClick={() => openLightbox(index)}
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                {/* Left: Video Player */}
-                <div className="bg-Hospital-gray-900 relative">
-                  <video
-                    controls
-                    className="w-full h-full object-cover"
-                    poster="/logo.png"
-                  >
-                    <source src={video.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  <div className="absolute top-4 right-4 bg-Hospital-gray-900 bg-opacity-75 text-white px-3 py-1 rounded text-sm font-semibold">
-                    {video.duration}
+              <Image
+                src={imagePath}
+                alt={`Gallery image ${index + 1}`}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                onError={(e) => {
+                  // Hide broken images
+                  (e.target as HTMLElement).style.display = 'none';
+                }}
+              />
+
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-Hospital-gray-900 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-4 left-4 right-4 text-white">
+                  <div className="text-sm font-bold">
+                    Image {index + 1}
                   </div>
-                </div>
-
-                {/* Right: Video Info */}
-                <div className="p-8">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="bg-primary-50 text-primary-700 px-3 py-1 rounded-full text-sm font-semibold">
-                      Video {index + 1}
-                    </span>
-                    <span className="text-Hospital-gray-500 text-sm">{video.duration}</span>
-                  </div>
-
-                  <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-3">
-                    {video.title}
-                  </h2>
-
-                  <p className="text-Hospital-gray-700 mb-6 leading-relaxed">
-                    {video.description}
-                  </p>
-
-                  <h3 className="text-lg font-bold text-Hospital-gray-900 mb-3">
-                    Topics Covered:
-                  </h3>
-                  <ul className="space-y-2">
-                    {video.topics.map((topic, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-secondary-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                        </svg>
-                        <span className="text-Hospital-gray-700">{topic}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </div>
-            </article>
+
+              {/* Zoom Icon */}
+              <div className="absolute top-4 right-4 bg-white bg-opacity-90 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-5 h-5 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                </svg>
+              </div>
+            </div>
           ))}
         </div>
 
-        {/* Additional Resources Section */}
+        {/* Upload Instructions */}
+        <div className="mt-16 bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8">
+          <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-4 text-center">
+            📸 How to Add Photos
+          </h2>
+          <div className="max-w-2xl mx-auto">
+            <ol className="space-y-3 text-Hospital-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-primary-600">1.</span>
+                <span>Place your images in the <code className="bg-Hospital-gray-100 px-2 py-1 rounded">public/gallery/</code> folder</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-primary-600">2.</span>
+                <span>Name them: <code className="bg-Hospital-gray-100 px-2 py-1 rounded">1.jpg</code>, <code className="bg-Hospital-gray-100 px-2 py-1 rounded">2.jpg</code>, <code className="bg-Hospital-gray-100 px-2 py-1 rounded">3.jpg</code>, etc.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="font-bold text-primary-600">3.</span>
+                <span>They will automatically appear on this page!</span>
+              </li>
+            </ol>
+            <div className="mt-6 p-4 bg-primary-50 border border-primary-200 rounded-lg">
+              <p className="text-sm text-Hospital-gray-700">
+                <strong>Tip:</strong> Supported formats are JPG, PNG, and WebP. Keep file sizes under 2MB for best performance.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Resources */}
         <div className="mt-12 bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8">
           <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-6 text-center">
-            Need More Information?
+            Explore More
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="text-4xl mb-3">🎥</div>
+              <h3 className="font-bold text-Hospital-gray-900 mb-2">Video Demonstrations</h3>
+              <p className="text-sm text-Hospital-gray-600 mb-4">
+                Watch detailed product usage videos
+              </p>
+              <Link
+                href="/resources#videos"
+                className="text-primary-600 font-semibold hover:text-primary-700"
+              >
+                Watch Videos →
+              </Link>
+            </div>
             <div className="text-center">
               <div className="text-4xl mb-3">📄</div>
               <h3 className="font-bold text-Hospital-gray-900 mb-2">Documentation</h3>
               <p className="text-sm text-Hospital-gray-600 mb-4">
-                Download user manuals, safety data sheets, and technical specifications
+                Download product specs and certificates
               </p>
               <Link
                 href="/resources"
@@ -206,9 +155,9 @@ export default function DemoPage() {
             </div>
             <div className="text-center">
               <div className="text-4xl mb-3">🔬</div>
-              <h3 className="font-bold text-Hospital-gray-900 mb-2">Product Details</h3>
+              <h3 className="font-bold text-Hospital-gray-900 mb-2">Products</h3>
               <p className="text-sm text-Hospital-gray-600 mb-4">
-                Explore complete product specifications and comparison data
+                Explore our complete product range
               </p>
               <Link
                 href="/products"
@@ -217,46 +166,75 @@ export default function DemoPage() {
                 View Products →
               </Link>
             </div>
-            <div className="text-center">
-              <div className="text-4xl mb-3">📞</div>
-              <h3 className="font-bold text-Hospital-gray-900 mb-2">Contact Support</h3>
-              <p className="text-sm text-Hospital-gray-600 mb-4">
-                Get personalized training and support from our technical team
-              </p>
-              <Link
-                href="/contact"
-                className="text-primary-600 font-semibold hover:text-primary-700"
-              >
-                Contact Us →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="mt-12 bg-primary-600 rounded-lg shadow-lg p-8 text-center text-white">
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Get Started with Disintox®?
-          </h2>
-          <p className="text-lg mb-6 opacity-90 max-w-2xl mx-auto">
-            Contact our team for product samples, pricing information, and procurement assistance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/products"
-              className="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-Hospital-gray-50 transition-colors"
-            >
-              View Products
-            </Link>
-            <Link
-              href="/contact"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors"
-            >
-              Contact Sales
-            </Link>
           </div>
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          {/* Close Button */}
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white hover:text-Hospital-gray-300 transition-colors z-10"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Previous Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              navigateImage('prev');
+            }}
+            className="absolute left-4 text-white hover:text-Hospital-gray-300 transition-colors z-10"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              navigateImage('next');
+            }}
+            className="absolute right-4 text-white hover:text-Hospital-gray-300 transition-colors z-10"
+          >
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          {/* Image */}
+          <div
+            className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={images[selectedImage]}
+              alt={`Gallery image ${selectedImage + 1}`}
+              width={1200}
+              height={900}
+              className="max-w-full max-h-full object-contain"
+              quality={95}
+            />
+
+            {/* Image Info */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 text-white">
+              <div className="text-2xl font-bold">
+                Image {selectedImage + 1}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

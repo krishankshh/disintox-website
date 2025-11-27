@@ -65,21 +65,20 @@ export default function PPMCalculator() {
         <div className="flex gap-4 mb-8 justify-center">
           <button
             onClick={() => setCalculatorMode('tablets')}
-            className={`px-8 py-3 rounded-lg font-semibold transition-all ${
-              calculatorMode === 'tablets'
-                ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
-                : 'bg-Hospital-gray-100 text-Hospital-gray-700 hover:bg-Hospital-gray-200'
-            }`}
+            className={`px-8 py-3 rounded-lg font-semibold transition-all flex items-center gap-2 ${calculatorMode === 'tablets'
+              ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
+              : 'bg-Hospital-gray-100 text-Hospital-gray-700 hover:bg-Hospital-gray-200'
+              }`}
           >
-            💊 Tablets
+            <img src="/tablet-icon.png" alt="Tablet" className="w-5 h-5" />
+            Tablets
           </button>
           <button
             onClick={() => setCalculatorMode('gel')}
-            className={`px-8 py-3 rounded-lg font-semibold transition-all ${
-              calculatorMode === 'gel'
-                ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
-                : 'bg-Hospital-gray-100 text-Hospital-gray-700 hover:bg-Hospital-gray-200'
-            }`}
+            className={`px-8 py-3 rounded-lg font-semibold transition-all ${calculatorMode === 'gel'
+              ? 'bg-gradient-to-r from-primary-600 to-secondary-600 text-white shadow-lg'
+              : 'bg-Hospital-gray-100 text-Hospital-gray-700 hover:bg-Hospital-gray-200'
+              }`}
           >
             🧴 Gel
           </button>
@@ -198,9 +197,9 @@ export default function PPMCalculator() {
                   <p className="text-sm text-Hospital-gray-700 mt-3 pt-3 border-t border-Hospital-gray-200">
                     💡 This concentration is suitable for{' '}
                     {ppmResult < 75 ? 'light sanitization' :
-                     ppmResult < 150 ? 'standard disinfection' :
-                     ppmResult < 300 ? 'heavy-duty disinfection' :
-                     ppmResult < 750 ? 'fumigation' : 'deep sterilization'}
+                      ppmResult < 150 ? 'standard disinfection' :
+                        ppmResult < 300 ? 'heavy-duty disinfection' :
+                          ppmResult < 750 ? 'fumigation' : 'deep sterilization'}
                   </p>
                 </div>
               )}

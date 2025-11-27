@@ -2,8 +2,36 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'Resources & Downloads - Disintox®',
-  description: 'Download product specifications, certificates, technical data sheets, and documentation for Disintox® Chlorine Dioxide (ClO<sub>2</sub>) disinfection products.',
+  description: 'Watch video demonstrations and download product specifications, certificates, technical data sheets, and documentation for Disintox® Chlorine Dioxide (ClO₂) disinfection products.',
 };
+
+// Video demonstrations data
+const demoVideos = [
+  {
+    id: 1,
+    title: 'Disintox® Product Overview & Usage Guide',
+    description: 'Comprehensive guide on Disintox® tablets and gel - proper usage, application methods, and safety protocols.',
+    videoUrl: '/demo.mp4',
+    duration: '5:30',
+    thumbnail: '/logo.png'
+  },
+  {
+    id: 2,
+    title: 'Hospital Fumigation Protocol',
+    description: 'Step-by-step demonstration of hospital room fumigation using Disintox® tablets for complete disinfection.',
+    videoUrl: '/demo.mp4',
+    duration: '6:45',
+    thumbnail: '/logo.png'
+  },
+  {
+    id: 3,
+    title: 'Water Treatment Application',
+    description: 'How to use Disintox® for water disinfection in tanks, pipelines, and treatment systems.',
+    videoUrl: '/demo.mp4',
+    duration: '4:50',
+    thumbnail: '/logo.png'
+  }
+];
 
 // Resource categories for B2G procurement
 const resourceCategories = [
@@ -160,6 +188,57 @@ export default function ResourcesPage() {
           ))}
         </div>
 
+        {/* Video Demonstrations Section */}
+        <section id="videos" className="mt-12 scroll-mt-24">
+          <div className="bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8">
+            <div className="flex items-start gap-4 mb-8">
+              <div className="text-5xl">🎥</div>
+              <div>
+                <h2 className="text-3xl font-bold text-Hospital-gray-900 mb-2">
+                  Video Demonstrations
+                </h2>
+                <p className="text-Hospital-gray-600">
+                  Watch detailed tutorials on product usage, application methods, and safety protocols
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {demoVideos.map((video) => (
+                <div
+                  key={video.id}
+                  className="bg-Hospital-gray-50 rounded-lg overflow-hidden border border-Hospital-gray-200 hover:shadow-lg transition-shadow"
+                >
+                  {/* Video Player */}
+                  <div className="relative bg-Hospital-gray-900 aspect-video">
+                    <video
+                      controls
+                      className="w-full h-full object-cover"
+                      poster={video.thumbnail}
+                    >
+                      <source src={video.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                    <div className="absolute top-3 right-3 bg-Hospital-gray-900 bg-opacity-75 text-white px-2 py-1 rounded text-xs font-semibold">
+                      {video.duration}
+                    </div>
+                  </div>
+
+                  {/* Video Info */}
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-Hospital-gray-900 mb-2">
+                      {video.title}
+                    </h3>
+                    <p className="text-sm text-Hospital-gray-600 leading-relaxed">
+                      {video.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <div className="mt-12 bg-white rounded-lg shadow-sm border border-Hospital-gray-200 p-8 text-center">
           <h2 className="text-2xl font-bold text-Hospital-gray-900 mb-4">
@@ -173,7 +252,7 @@ export default function ResourcesPage() {
               href="/demo"
               className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
             >
-              View Demo
+              View Gallery
             </Link>
             <Link
               href="/contact"

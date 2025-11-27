@@ -81,7 +81,7 @@ export default function USPSection() {
             <br />Disinfection Solution
           </h2>
           <p className="text-xl sm:text-2xl text-Hospital-gray-700 max-w-3xl mx-auto px-4 font-medium">
-            Discover the unique advantages of Chlorine Dioxide (ClO<sub>2</sub>) ClO₂ technology
+            Discover the unique advantages of Chlorine Dioxide ClO₂ technology
           </p>
           <div className="flex justify-center">
             <div className="h-1 w-32 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full"></div>
@@ -93,7 +93,7 @@ export default function USPSection() {
           {bentoFeatures.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl border-2 border-primary-200 shadow-lg hover:shadow-2xl hover:scale-105 hover:border-primary-400 transition-all duration-300 p-4 sm:p-6 min-h-[220px] sm:min-h-[280px] flex flex-col relative overflow-hidden group">
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300" style={{background: `linear-gradient(to bottom right, var(--tw-gradient-stops))`}}></div>
+              <div className="absolute inset-0 bg-gradient-to-br opacity-0 group-hover:opacity-5 transition-opacity duration-300" style={{ background: `linear-gradient(to bottom right, var(--tw-gradient-stops))` }}></div>
 
               {/* Icon with enhanced styling */}
               <div className="text-6xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
@@ -126,7 +126,7 @@ export default function USPSection() {
             <div className="hidden sm:block w-px h-20 bg-gradient-to-b from-primary-400 to-secondary-400"></div>
             <div>
               <a href="/demo" className="bg-gradient-to-r from-primary-600 to-secondary-600 text-white px-10 py-4 rounded-xl font-bold hover:from-primary-700 hover:to-secondary-700 transition-all duration-300 inline-block shadow-lg hover:shadow-xl transform hover:scale-105">
-                View Demo →
+                Gallery →
               </a>
             </div>
           </div>

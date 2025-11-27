@@ -100,7 +100,7 @@ export const APPROVALS: Approval[] = [
   { organization: 'US EPA', logo: '/images/approvals/epa.png', year: '1967-1988', description: 'Registered as sanitizer, disinfectant & sterilizer' },
   { organization: 'FDA', logo: '/images/approvals/fda.jpg', year: '1985-2002', description: 'Approved in 5 countries for medical device sterilization' },
   { organization: 'FSSAI', logo: '/images/approvals/fssai.jpg', year: '2024', description: 'Food safety certification' },
- // { organization: 'ISO 9001:2015', logo: '/images/approvals/iso.jpg', year: '2024', description: 'Quality management system' },
+  // { organization: 'ISO 9001:2015', logo: '/images/approvals/iso.jpg', year: '2024', description: 'Quality management system' },
   { organization: 'NSF', logo: '/images/approvals/nsf.png', year: '2024', description: 'Public health standards' },
   { organization: 'Dubai Municipality', logo: '/images/approvals/dubai-municipality.avif', year: '2023', description: 'Water safety certification' },
   { organization: 'Maharashtra Government', logo: '/images/approvals/maharashtra-govt.jpg', year: '2024', description: 'State approval' },
@@ -270,6 +270,7 @@ export const NAVIGATION_LINKS: NavigationLink[] = [
       { name: 'Downloads', href: '/resources#downloads' },
     ]
   },
+  { name: 'Gallery', href: '/demo' },
   { name: 'PPM Calculator', href: '/calculator' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },

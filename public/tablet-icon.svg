@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle (tablet outline) -->
+  <circle cx="12" cy="12" r="10" fill="white" stroke="currentColor" stroke-width="2"/>
+  
+  <!-- Inner shadow/depth effect -->
+  <ellipse cx="12" cy="13" rx="9" ry="8.5" fill="white" opacity="0.3"/>
+  
+  <!-- Diagonal dividing line -->
+  <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- 3D edge effect (bottom) -->
+  <path d="M 4 14 Q 12 18, 20 14" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+</svg>
