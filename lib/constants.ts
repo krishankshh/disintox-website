@@ -3,7 +3,7 @@ import { USP, Sector, Certificate, Approval, NavigationLink, ProductFeature } fr
 export const COMPANY_INFO = {
   name: 'Disinfect Sales & Marketing LLP',
   brand: 'Disintox®',
-  tagline: 'LET THE DISINFECT BEGIN',
+  tagline: 'LET THE DISINFECTION BEGIN',
   founded: 'August 2020',
   patentNumber: '386338',
   address: 'Shop # S001, A-1 CHSL, Chhatrapati Shivaji Road, Off M. G. Road, Kandivali West, Mumbai 400067, Maharashtra, India',
@@ -112,7 +112,7 @@ export const PRODUCT_FEATURES: ProductFeature[] = [
   // Features with realistic photos (7 items)
   { text: 'Effective at lower concentration (100 PPM vs 1000+ PPM)', icon: '/images/product-advantages/low-concentration.jpg', isImage: true },
   { text: 'No large storage required', icon: '/images/product-advantages/no-storage.jpg', isImage: true },
-  { text: 'No Residue or No Harmful by-products', icon: '/images/product-advantages/no-residue.jpg', isImage: true },
+  { text: 'No Residue or Harmful by-products', icon: '/images/product-advantages/no-residue.jpg', isImage: true },
   { text: 'Non-Carcinogenic', icon: '/images/product-advantages/non-carcinogenic.jpg', isImage: true },
   { text: 'Short contact time', icon: '/images/product-advantages/short-contact-time.jpg', isImage: true },
   { text: 'Easy application - no machinery required', icon: '/images/product-advantages/easy-application.jpg', isImage: true },
@@ -149,7 +149,7 @@ export const ORGANISMS_KILLED = {
     'Poliovirus-1',
     'Rotavirus',
     'Rhinovirus',
-    'Influenza A virus (swine flu)',
+    'Influenza A virus (H1N1)',
     'Foot and Mouth disease',
     'Many others',
   ],

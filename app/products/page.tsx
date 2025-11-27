@@ -92,13 +92,13 @@ const testedOrganisms = {
     'Many others'
   ],
   'Viruses': [
-    'COVID-19 (SARS-COV-2)',
+    'COVID-19 (SARS-CoV-2)',
     'Influenza-A virus',
     'Mouse Hepatitis Virus',
     'Poliovirus-1',
     'Rotavirus',
     'Rhinovirus',
-    'Influenza A virus (formerly called swine flu)',
+    'Influenza A virus (H1N1)',
     'Foot and Mouth disease',
     'Many others'
   ],

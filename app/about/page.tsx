@@ -131,9 +131,9 @@ export default function AboutPage() {
               <div className="flex items-start gap-3">
                 <div className="text-2xl">🏆</div>
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Start Up India & Patented</h3>
+                  <h3 className="text-lg font-bold mb-2">Startup India & Patented</h3>
                   <p className="text-sm text-white opacity-90">
-                    We are registered in government initiative 'Start Up India' and our product is Patented, thus ensuring a trusted, compliant, transparent & hassle-free purchasing process.
+                    We are registered in the government initiative 'Startup India' and our product is Patented, thus ensuring a trusted, compliant, transparent & hassle-free purchasing process.
                   </p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 <div>
                   <h3 className="text-lg font-bold mb-2">Cost-Efficient & Scalable Solutions</h3>
                   <p className="text-sm text-white opacity-90">
-                    Broad spectrum functionality, lower concentration methods as compared to conventional disinfectants, that helps in reducing costs. Also, long shelf life & easy storage, minimizing inventory management challenges.
+                    Broad spectrum functionality, lower concentration methods compared to conventional disinfectants, which helps reduce costs. Also, long shelf life & easy storage, minimizing inventory management challenges.
                   </p>
                 </div>
               </div>
