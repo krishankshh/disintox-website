@@ -74,7 +74,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-Hospital-gray-900">Our Vision</h2>
             </div>
             <p className="text-Hospital-gray-700 leading-relaxed">
-              We foresee to be India's leading provider of advanced disinfection solutions, setting new benchmarks in hospital hygiene, infection control, and public health safety including emergency situations & Pandemic.
+              We envision becoming India's leading provider of advanced disinfection solutions, setting new benchmarks in hospital hygiene, infection control, and public health safety including emergency situations & pandemic preparedness.
             </p>
           </div>
         </div>

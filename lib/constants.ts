@@ -6,7 +6,7 @@ export const COMPANY_INFO = {
   tagline: 'LET THE DISINFECT BEGIN',
   founded: 'August 2020',
   patentNumber: '386338',
-  address: 'Shop # S001, A-1 CHSL, Chatrapati Shivaji Road, Off M. G. Road, Kandivali West, Mumbai 400067, Maharashtra, India',
+  address: 'Shop # S001, A-1 CHSL, Chhatrapati Shivaji Road, Off M. G. Road, Kandivali West, Mumbai 400067, Maharashtra, India',
   phone: '+91 7045 66 44 66',
   email: 'customercare@dis-infect.in',
   website: 'www.dis-infect.in',
@@ -15,7 +15,7 @@ export const COMPANY_INFO = {
 
 export const HERO_CONTENT = {
   h1: 'Hospital-Grade Disinfection for Healthcare Facilities',
-  h2: 'Chlorine Dioxide (ClO2) (ClO₂) Disintox® Tablets - The most advanced, patented disinfection technology trusted by hospitals nationwide',
+  h2: 'Chlorine Dioxide (ClO₂) Disintox® Tablets - The most advanced, patented disinfection technology trusted by hospitals nationwide',
   primaryCTA: 'Request a Demo',
   secondaryCTA: 'Download Brochure',
 };
@@ -133,10 +133,10 @@ export const ORGANISMS_KILLED = {
   bacteria: [
     'Blakeslea tripora',
     'E. coli 0157:H7',
-    'Erwina carotovora',
+    'Erwinia carotovora',
     'Fusarium sambucinum',
     'Legionella',
-    'Listeria monocyctogenes',
+    'Listeria monocytogenes',
     'Salmonella enterica',
     'Shigella',
     'Staphylococcus aureus',
@@ -156,7 +156,7 @@ export const ORGANISMS_KILLED = {
   spores: [
     'Bacillus anthracis',
     'Bacillus pumilus',
-    'Bacillus subtillis (multiple)',
+    'Bacillus subtilis (multiple)',
     'Clostridium sporogenes',
     'Many others',
   ],
@@ -164,7 +164,7 @@ export const ORGANISMS_KILLED = {
     'Aspergillus clavatus',
     'Aspergillus (multiple)',
     'Candida (multiple)',
-    'Fusarum solani',
+    'Fusarium solani',
     'Many others',
   ],
 };

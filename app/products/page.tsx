@@ -82,8 +82,8 @@ const testedOrganisms = {
   'Bacteria': [
     'Blakeslea tripora',
     'E. coli O157:H7',
-    'Erwina carotovora',
-    'Fusarium sambucirum',
+    'Erwinia carotovora',
+    'Fusarium sambucinum',
     'Legionella',
     'Listeria monocytogenes',
     'Salmonella enterica',
@@ -105,7 +105,7 @@ const testedOrganisms = {
   'Bacterial Spores': [
     'Bacillus anthracis',
     'Bacillus pumilus',
-    'Bacillus subtillis (multiple)',
+    'Bacillus subtilis (multiple)',
     'Clostridium sporogenes',
     'Many others'
   ],
@@ -113,7 +113,7 @@ const testedOrganisms = {
     'Aspergillus clavatus',
     'Aspergillus (multiple)',
     'Candida (multiple)',
-    'Fusarum solani',
+    'Fusarium solani',
     'Many others'
   ]
 };
@@ -251,10 +251,10 @@ export default function ProductsPage() {
                       <div key={index} className="flex flex-col items-center relative" style={{ marginBottom: `${markerHeights[index]}px` }}>
                         {/* Organism/particle visual */}
                         <div className={`${sizes[index]} rounded-full mb-4 flex items-center justify-center shadow-lg transform transition-transform hover:scale-110 ${index === 0 ? 'bg-gradient-to-br from-primary-500 to-primary-700 animate-pulse' :
-                            index === 1 ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
-                              index === 2 ? 'bg-gradient-to-br from-purple-500 to-purple-700' :
-                                index === 3 ? 'bg-gradient-to-br from-secondary-500 to-secondary-700' :
-                                  'bg-gradient-to-br from-accent-500 to-accent-700'
+                          index === 1 ? 'bg-gradient-to-br from-blue-500 to-blue-700' :
+                            index === 2 ? 'bg-gradient-to-br from-purple-500 to-purple-700' :
+                              index === 3 ? 'bg-gradient-to-br from-secondary-500 to-secondary-700' :
+                                'bg-gradient-to-br from-accent-500 to-accent-700'
                           }`}>
                           <svg className="w-1/2 h-1/2 text-white" fill="currentColor" viewBox="0 0 20 20">
                             {index === 0 ? (
