@@ -85,6 +85,12 @@ const resourceCategories = [
     icon: '🔒',
     resources: [
       {
+        name: 'Lab Report Summary 2025',
+        description: 'Comprehensive summary of all laboratory testing and efficacy reports',
+        fileSize: 'PDF, 43 KB',
+        file: '/pdfs/lab-report-summary-2025.pdf'
+      },
+      {
         name: 'Dubai Municipality Report',
         description: 'Water safety and disinfection efficacy test report',
         fileSize: 'PDF, 157 KB',
