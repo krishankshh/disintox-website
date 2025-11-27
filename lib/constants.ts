@@ -3,7 +3,7 @@ import { USP, Sector, Certificate, Approval, NavigationLink, ProductFeature } fr
 export const COMPANY_INFO = {
   name: 'Disinfect Sales & Marketing LLP',
   brand: 'Disintox®',
-  tagline: 'LET THE DIS-INFECT BEGIN',
+  tagline: 'LET THE DISINFECT BEGIN',
   founded: 'August 2020',
   patentNumber: '386338',
   address: 'Shop # S001, A-1 CHSL, Chatrapati Shivaji Road, Off M. G. Road, Kandivali West, Mumbai 400067, Maharashtra, India',
