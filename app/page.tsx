@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Hero from "@/components/sections/Hero";
 import USPSection from "@/components/sections/USPSection";
 import ApprovalsSection from "@/components/sections/ApprovalsSection";
@@ -66,14 +67,31 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
             {PRODUCT_FEATURES.map((feature, index) => {
-              const IconComponent = ProductIcons[feature.icon as keyof typeof ProductIcons];
+              const isImage = feature.isImage || feature.icon.startsWith('/');
+
               return (
                 <div
                   key={index}
                   className="bg-white border-2 border-Hospital-gray-200 p-4 sm:p-5 rounded-xl shadow-md flex flex-col sm:flex-row items-center sm:items-start space-y-3 sm:space-y-0 sm:space-x-4 hover:shadow-lg hover:border-primary-300 transition-all group"
                 >
                   <div className="flex-shrink-0 transform group-hover:scale-110 transition-transform">
-                    <IconComponent />
+                    {isImage ? (
+                      <div className="w-14 h-14 relative rounded-lg overflow-hidden">
+                        <Image
+                          src={feature.icon}
+                          alt={feature.text}
+                          width={56}
+                          height={56}
+                          className="object-cover rounded-lg"
+                          quality={85}
+                        />
+                      </div>
+                    ) : (
+                      (() => {
+                        const IconComponent = ProductIcons[feature.icon as keyof typeof ProductIcons];
+                        return <IconComponent />;
+                      })()
+                    )}
                   </div>
                   <span className="text-sm sm:text-base text-Hospital-gray-700 font-medium text-center sm:text-left">{feature.text}</span>
                 </div>

@@ -113,3 +113,9 @@ export interface NavigationLink {
     href: string;
   }[];
 }
+
+export interface ProductFeature {
+  text: string;
+  icon: string;
+  isImage?: boolean;
+}

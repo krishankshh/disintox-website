@@ -9,7 +9,7 @@ export default function ApprovalsSection() {
         <h2 className="text-2xl md:text-3xl font-heading font-bold text-center text-Hospital-gray-900 mb-8 sm:mb-12">
           Molecule Approved By Leading Regulatory Bodies
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8 items-center justify-items-center max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-8 items-center justify-items-center justify-center max-w-5xl mx-auto">
           {APPROVALS.map((approval) => (
             <div
               key={approval.organization}

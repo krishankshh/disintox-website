@@ -13,22 +13,16 @@ const resourceCategories = [
     icon: '📄',
     resources: [
       {
-        name: 'Product Specification Sheet',
-        description: 'Complete technical specifications for Disintox® tablets and gel',
-        fileSize: 'PDF, 2.5 MB',
-        file: '/pdfs/product-specification.pdf'
+        name: 'Disintox® Product Brochure',
+        description: 'Comprehensive overview of Disintox® products, applications, and benefits',
+        fileSize: 'PDF, 3.1 MB',
+        file: '/pdfs/disintox-brochure.pdf'
       },
       {
-        name: 'Product Brochure',
-        description: 'Overview of Disintox® products and applications',
-        fileSize: 'PDF, 3.2 MB',
-        file: '/pdfs/product-brochure.pdf'
-      },
-      {
-        name: 'User Manual',
-        description: 'Detailed instructions for use and safety guidelines',
-        fileSize: 'PDF, 1.8 MB',
-        file: '/pdfs/user-manual.pdf'
+        name: 'Product Leaflet',
+        description: 'Quick reference guide for Disintox® disinfection products',
+        fileSize: 'PDF, 1.6 MB',
+        file: '/pdfs/disinfect-leaflet.pdf'
       }
     ]
   },
@@ -38,78 +32,66 @@ const resourceCategories = [
     icon: '🏆',
     resources: [
       {
-        name: 'Patent Certificate, Govt. of India',
-        description: 'Patent No. 386338',
-        fileSize: 'PDF, 0.5 MB',
+        name: 'Patent Certificate (Govt. of India)',
+        description: 'Patent No. 386338 - Official government patent certificate',
+        fileSize: 'PDF, 657 KB',
         file: '/pdfs/patent-certificate.pdf'
       },
       {
         name: 'Maharashtra EDL Listing',
         description: 'Essential Drug List approval certificate',
-        fileSize: 'PDF, 0.8 MB',
-        file: '/pdfs/edl-certificate.pdf'
+        fileSize: 'PDF, 413 KB',
+        file: '/pdfs/edl-maharashtra.pdf'
       },
-      // {
-      //   name: 'ISO 9001:2015 Certificate',
-      //   description: 'Quality management system certification',
-      //   fileSize: 'PDF, 0.6 MB',
-      //   file: '/pdfs/iso-certificate.pdf'
-      // },
       {
-        name: 'Drug License',
-        description: 'Manufacturing and distribution licenses',
-        fileSize: 'PDF, 1.2 MB',
-        file: '/pdfs/drug-license.pdf'
+        name: 'FDA Approval (5 Countries)',
+        description: 'FDA approval documentation from 5 countries for medical device sterilization',
+        fileSize: 'PDF, 2.4 MB',
+        file: '/pdfs/fda-5-countries.pdf'
       }
     ]
   },
   {
     title: 'Safety & Compliance',
-    description: 'Safety data and compliance documentation',
+    description: 'Efficacy reports and test documentation',
     icon: '🔒',
     resources: [
       {
-        name: 'Safety Data Sheet (SDS)',
-        description: 'Material safety and handling information',
-        fileSize: 'PDF, 0.9 MB',
-        file: '/pdfs/sds.pdf'
+        name: 'Dubai Municipality Report',
+        description: 'Water safety and disinfection efficacy test report',
+        fileSize: 'PDF, 157 KB',
+        file: '/pdfs/dubai-municipality.pdf'
       },
       {
-        name: 'Efficacy Test Reports',
-        description: 'Laboratory test results showing 99.99% efficacy',
-        fileSize: 'PDF, 4.5 MB',
-        file: '/pdfs/efficacy-reports.pdf'
+        name: 'MCGM Microbiology Report',
+        description: 'Municipal Corporation of Greater Mumbai laboratory test results and official correspondence',
+        fileSize: 'PDF, 567 KB',
+        file: '/pdfs/mcgm-microbiology-report.pdf'
       },
       {
-        name: 'WHO Guidelines Compliance',
-        description: 'Documentation of WHO guideline adherence',
-        fileSize: 'PDF, 1.1 MB',
-        file: '/pdfs/who-compliance.pdf'
+        name: 'University of Antioquia COVID-19 Study',
+        description: 'Research report and case study on SARS-CoV-2 efficacy',
+        fileSize: 'PDF, 4.8 MB',
+        file: '/pdfs/university-antioquia-covid19.pdf'
+      },
+      {
+        name: 'Shriram Institute Lab Report',
+        description: 'Comprehensive laboratory efficacy test report',
+        fileSize: 'PDF, 6.0 MB',
+        file: '/pdfs/shriram-institute-report.pdf'
       }
     ]
   },
   {
     title: 'Tender Documents',
-    description: 'Ready-to-use procurement documentation',
+    description: 'Reference materials for procurement',
     icon: '📋',
     resources: [
       {
-        name: 'Price List & Rate Card',
-        description: 'Current pricing for government procurement',
-        fileSize: 'PDF, 0.4 MB',
-        file: '/pdfs/price-list.pdf'
-      },
-      {
-        name: 'Company Profile',
-        description: 'Detailed company information and credentials',
-        fileSize: 'PDF, 2.1 MB',
-        file: '/pdfs/company-profile.pdf'
-      },
-      {
-        name: 'Technical Bid Template',
-        description: 'Pre-filled technical specifications for tenders',
-        fileSize: 'PDF, 1.5 MB',
-        file: '/pdfs/technical-bid.pdf'
+        name: 'NMMC Work Order',
+        description: 'Navi Mumbai Municipal Corporation work order (Reference for tenders)',
+        fileSize: 'PDF, 190 KB',
+        file: '/pdfs/nmmc-work-order.pdf'
       }
     ]
   }

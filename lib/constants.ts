@@ -1,4 +1,4 @@
-import { USP, Sector, Certificate, Approval, NavigationLink } from './types';
+import { USP, Sector, Certificate, Approval, NavigationLink, ProductFeature } from './types';
 
 export const COMPANY_INFO = {
   name: 'Disinfect Sales & Marketing LLP',
@@ -91,7 +91,7 @@ export const CERTIFICATES: Certificate[] = [
   {
     name: 'University of Antioquia (COVID-19)',
     thumbnail: '/images/certs/university-thumb.jpg',
-    pdfUrl: '/pdfs/university-antioquia.pdf',
+    pdfUrl: '/pdfs/university-antioquia-covid19.pdf',
   },
 ];
 
@@ -102,24 +102,31 @@ export const APPROVALS: Approval[] = [
   { organization: 'FSSAI', logo: '/images/approvals/fssai.jpg', year: '2024', description: 'Food safety certification' },
  // { organization: 'ISO 9001:2015', logo: '/images/approvals/iso.jpg', year: '2024', description: 'Quality management system' },
   { organization: 'NSF', logo: '/images/approvals/nsf.png', year: '2024', description: 'Public health standards' },
+  { organization: 'Dubai Municipality', logo: '/images/approvals/dubai-municipality.avif', year: '2023', description: 'Water safety certification' },
+  { organization: 'Maharashtra Government', logo: '/images/approvals/maharashtra-govt.jpg', year: '2024', description: 'State approval' },
+  { organization: 'MCGM', logo: '/images/approvals/mcgm.png', year: '2024', description: 'Municipal approval' },
+  { organization: 'University of Antioquia', logo: '/images/approvals/university-antioquia.png', year: '2021', description: 'COVID-19 (SARS-CoV-2) efficacy certification' },
 ];
 
-export const PRODUCT_FEATURES = [
-  { text: 'Non-Corrosive', icon: 'NonCorrosive' },
-  { text: 'Non-Carcinogenic', icon: 'NonCarcinogenic' },
-  { text: 'Non-toxic and environment friendly', icon: 'NonToxic' },
-  { text: 'No Residue or No Harmful by-products', icon: 'NoResidue' },
-  { text: 'No Anti-Microbial resistance', icon: 'NoResistance' },
-  { text: 'Soil Load Reduction', icon: 'SoilLoadReduction' },
-  { text: 'Effective at lower concentration (100 PPM vs 1000+ PPM)', icon: 'LowConcentration' },
-  { text: 'Effective on smallest pathogens (0.124 nm)', icon: 'SmallPathogen' },
-  { text: 'Short contact time', icon: 'ShortContactTime' },
-  { text: 'Easy application - no machinery required', icon: 'EasyToUse' },
-  { text: 'Does not stain fabric', icon: 'NoStain' },
-  { text: 'Broad-Spectrum Antimicrobial', icon: 'BroadSpectrum' },
-  { text: 'No large storage required', icon: 'NoStorage' },
-  { text: 'Versatile (liquid, solid & gaseous forms)', icon: 'Versatility' },
-  { text: 'Cost effective', icon: 'CostEffective' },
+export const PRODUCT_FEATURES: ProductFeature[] = [
+  // Features with realistic photos (7 items)
+  { text: 'Effective at lower concentration (100 PPM vs 1000+ PPM)', icon: '/images/product-advantages/low-concentration.jpg', isImage: true },
+  { text: 'No large storage required', icon: '/images/product-advantages/no-storage.jpg', isImage: true },
+  { text: 'No Residue or No Harmful by-products', icon: '/images/product-advantages/no-residue.jpg', isImage: true },
+  { text: 'Non-Carcinogenic', icon: '/images/product-advantages/non-carcinogenic.jpg', isImage: true },
+  { text: 'Short contact time', icon: '/images/product-advantages/short-contact-time.jpg', isImage: true },
+  { text: 'Easy application - no machinery required', icon: '/images/product-advantages/easy-application.jpg', isImage: true },
+  { text: 'Cost effective', icon: '/images/product-advantages/cost-effective.jpg', isImage: true },
+
+  // Features with SVG icons - placeholders for future photos (8 items)
+  { text: 'Non-Corrosive', icon: '/images/product-advantages/non-corrosive.png', isImage: true },
+  { text: 'Non-toxic and environment friendly', icon: '/images/product-advantages/non-toxic.png', isImage: true },
+  { text: 'No Anti-Microbial resistance', icon: '/images/product-advantages/noresistance.png', isImage: true },
+  { text: 'Soil Load Reduction', icon: '/images/product-advantages/soilloadreduction.png', isImage: true },
+  { text: 'Effective on smallest pathogens (0.124 nm)', icon: '/images/product-advantages/smallpathogen.jpg', isImage: true },
+  { text: 'Does not stain fabric', icon: '/images/product-advantages/nostain.jpg', isImage: true },
+  { text: 'Broad-Spectrum Antimicrobial', icon: '/images/product-advantages/broadspectrum.jpg', isImage: true },
+  { text: 'Versatile (liquid, solid & gaseous forms)', icon: '/images/product-advantages/versatile.png', isImage: true },
 ];
 
 export const ORGANISMS_KILLED = {
