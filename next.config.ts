@@ -1,11 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    // Use system TLS certificates to fix Google Fonts fetching in build environments
-    turbopackUseSystemTlsCerts: true,
-  },
-
   // Image optimization configuration for Netlify
   images: {
     // Netlify handles image optimization via @netlify/plugin-nextjs
